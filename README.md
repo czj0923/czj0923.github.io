@@ -18,6 +18,7 @@ bannerBrand:
   buttons:
     - { text: 简介, link: '/docs/guide/introduce' }
     - { text: 默认样式, link: '/docs/style-default-api/introduce', type: 'plain' }
+    - { text: 组件库, link: '/docs/style-default-api/introduce', type: 'plain' }
 
 isShowTitleInHome: true
 actionText: About

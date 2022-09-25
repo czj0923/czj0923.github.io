@@ -2,29 +2,43 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
 
+// import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+// import { getDirname, path } from '@vuepress/utils'
+// const __dirname = getDirname(import.meta.url)
+
 export default defineUserConfig({
   title: '曹至杰',
   description: 'Just playing around',
   dest:"./dist",
+  head:[
+   //[
+   //  "link",{rel:"stylesheet",href:"/css/index.css"}
+   //]
+  ],
+  plugins: [
+    // 根据组件文件或目录自动注册 Vue 组件。
+    //registerComponentsPlugin({
+    //  componentsDir: path.resolve(__dirname, './components'),
+    //}),
+  ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
-    author: 'czj',
+    author: '曹至杰',
     authorAvatar: '/logo.png',
     docsRepo: 'https://github.com/vuepress-reco/vuepress-theme-reco-next',
     docsBranch: 'main',
     docsDir: 'example',
     lastUpdatedText: '',
-    modules:['Blog'],
     // series 为原 sidebar
     series: {
       '/docs/theme-reco/': [
         {
-          text: 'module one',
+          text: '系列一',
           children: ['home', 'theme']
         },
         {
-          text: 'module two',
+          text: '系列二',
           children: ['api', 'plugin']
         }
       ]
@@ -34,22 +48,23 @@ export default defineUserConfig({
       { text: '主页', link: '/' },
       { text: '分类', link: '/categories/reco/1/' },
       { text: '标签', link: '/tags/tag1/1/' },
-      { text: 'Docs',
+      { text: '文档',
         children: [
           { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
           { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
         ]
       },
     ],
-    bulletin: {
-      body: [
-        {
-          type: 'text',
-          content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
-          style: 'font-size: 12px;'
-        }
-      ],
-    },
+    // 公告 暂时不需要
+    // bulletin: {
+    //   body: [
+    //     {
+    //       type: 'text',
+    //       content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
+    //       style: 'font-size: 12px;'
+    //     }
+    //   ],
+    // },
     // valineConfig 配置与 1.x 一致
     // valineConfig: {
     //   appId: 'xxx',
