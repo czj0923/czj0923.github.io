@@ -1,3 +1,27 @@
-.hero-text h1{
-    color: green;
+.footer-wrapper span:first-child {
+  display: none;
+}
+
+/* .post-item-container {
+  background-color: rgb(242, 240, 239);
+} */
+
+.home-wrapper .banner-brand-wrapper .hero-content h1 {
+  animation: san 4s linear infinite;
+  font-weight: 400;
+}
+
+@keyframes san {
+
+  0%,
+  100% {
+    color: #ffffff;
+    text-shadow: 0 0 5px #20AAEE, 0 0 15px #20AAEE, 0 0 25px #20AAEE, 0 0 50px #20AAEE;
+  }
+
+  40%,
+  60% {
+    color: rgba(32, 170, 238, 0.5);
+    text-shadow: none;
+  }
 }

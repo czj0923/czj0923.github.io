@@ -17,9 +17,18 @@ bannerBrand:
   tagline: 曹至杰的博客。
   buttons:
     - { text: 简介, link: '/docs/guide/introduce' }
-    - { text: 默认样式, link: '/docs/style-default-api/introduce', type: 'plain' }
-    - { text: 组件库, link: '/docs/style-default-api/introduce', type: 'plain' }
-
+    - { text: 默认样式, link: '/docs/theme-reco/api', type: 'plain' }
+    - { text: 组件库, link: '/component/home', type: 'plain' }
+blog:
+  socialLinks:
+    - { icon: 'Brandjuejin', link: "www.baidu.com" }
+    - { icon: 'BrandGithub', link: "https://github.com/czj0923" }
+footer:
+  record: "1"
+  recordLink: "2"
+  cyberSecurityRecord: "3"
+  cyberSecurityLink: "4"
+  startYear: 2022
 isShowTitleInHome: true
 actionText: About
 actionLink: /views/other/about

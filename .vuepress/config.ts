@@ -11,9 +11,9 @@ export default defineUserConfig({
   description: 'Just playing around',
   dest:"./dist",
   head:[
-   //[
-   //  "link",{rel:"stylesheet",href:"/css/index.css"}
-   //]
+    [
+      'script', {type: 'text/javascript', src: '/js/base.js'}
+    ]
   ],
   plugins: [
     // 根据组件文件或目录自动注册 Vue 组件。
@@ -29,6 +29,7 @@ export default defineUserConfig({
     docsRepo: 'https://github.com/vuepress-reco/vuepress-theme-reco-next',
     docsBranch: 'main',
     docsDir: 'example',
+    catalogTitle: '自定义目录标题',
     lastUpdatedText: '',
     // series 为原 sidebar
     series: {
@@ -41,18 +42,36 @@ export default defineUserConfig({
           text: '系列二',
           children: ['api', 'plugin']
         }
+      ],
+      '/component': [
+        {
+          text: '通用组件',
+          children: ['button']
+        },
+        {
+          text: '数据录入组件',
+          children: ['input']
+        },
+        {
+          text: '数据展示组件',
+          children: []
+        },
+        {
+          text: '反馈组件',
+          children: []
+        }
       ]
     },
     navbar:
     [
       { text: '主页', link: '/' },
       { text: '分类', link: '/categories/reco/1/' },
-      { text: '标签', link: '/tags/tag1/1/' },
-      { text: '文档',
-        children: [
-          { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
-          { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
-        ]
+      { text: '标签', link: '/tags/tag/1' },
+      { text: '我的组件库',link:"/component/home"
+        //children: [
+        //  { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
+        //  { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
+        //]
       },
     ],
     // 公告 暂时不需要
