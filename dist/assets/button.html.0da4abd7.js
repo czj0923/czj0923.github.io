@@ -1,0 +1,1 @@
+import{_ as t,o,c as n,b as s,w as c,d as a,e as _,r}from"./app.426445fe.js";const l={},d=a("p",null,"\u6309\u94AE\u7684\u6587\u6863",-1),u=_("\u6309\u94AE");function i(f,m){const e=r("Button");return o(),n("div",null,[d,s(e,{type:"warning"},{default:c(()=>[u]),_:1})])}const h=t(l,[["render",i],["__file","button.html.vue"]]);export{h as default};
