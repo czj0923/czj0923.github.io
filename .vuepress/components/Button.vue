@@ -226,6 +226,9 @@ export default {
             border-radius: 3px;
         }
     }
+    & + .c-button{
+        margin-left:12px;
+    }
 }
 </style>
   

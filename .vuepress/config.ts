@@ -9,31 +9,29 @@ import recoTheme from 'vuepress-theme-reco'
 export default defineUserConfig({
   title: '曹至杰',
   description: 'Just playing around',
-  dest:"./dist",
-  head:[
+  dest: "./dist",
+  head: [
     [
-      'script', {type: 'text/javascript', src: '/js/base.js'}
+      'script', { type: 'text/javascript', src: '/js/base.js' }
+    ],
+    [
+      'script', { type: 'text/javascript', src: '/js/index.js' }
     ]
   ],
-  plugins: [
-    // 根据组件文件或目录自动注册 Vue 组件。
-    //registerComponentsPlugin({
-    //  componentsDir: path.resolve(__dirname, './components'),
-    //}),
-  ],
+  plugins: ['demo-container'],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
     author: '曹至杰',
     authorAvatar: '/logo.png',
-    docsRepo: 'https://github.com/vuepress-reco/vuepress-theme-reco-next',
+    docsRepo: 'https://github.com/czj0923/blog.git',
     docsBranch: 'main',
     docsDir: 'example',
     catalogTitle: '自定义目录标题',
     lastUpdatedText: '',
     // series 为原 sidebar
     series: {
-      '/docs/theme-reco/': [
+      '/docs': [
         {
           text: '系列一',
           children: ['home', 'theme']
@@ -63,17 +61,18 @@ export default defineUserConfig({
       ]
     },
     navbar:
-    [
-      { text: '主页', link: '/' },
-      { text: '分类', link: '/categories/reco/1/' },
-      { text: '标签', link: '/tags/tag/1' },
-      { text: '我的组件库',link:"/component/home"
-        //children: [
-        //  { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
-        //  { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
-        //]
-      },
-    ],
+      [
+        { text: '首页', link: '/' },
+        { text: '分类', link: '/categories/reco/1/' },
+        { text: '标签', link: '/tags/tag/1' },
+        {
+          text: '我的组件库', link: "/component/home"
+          //children: [
+          //  { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
+          //  { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
+          //]
+        },
+      ],
     // 公告 暂时不需要
     // bulletin: {
     //   body: [
