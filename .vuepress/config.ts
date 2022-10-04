@@ -18,7 +18,6 @@ export default defineUserConfig({
       'script', { type: 'text/javascript', src: '/js/index.js' }
     ]
   ],
-  plugins: ['demo-container'],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
