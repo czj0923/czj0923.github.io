@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-533cbc06","path":"/component/ellipsis.html","title":"Ellipsis","lang":"en-US","frontmatter":{"title":"Ellipsis","date":"2022/10/07"},"excerpt":"","headers":[],"git":{"createdTime":null,"updatedTime":null,"contributors":[]},"filePathRelative":"component/ellipsis.md"}');export{e as data};

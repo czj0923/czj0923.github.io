@@ -22,11 +22,11 @@ export default defineUserConfig({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
     author: '曹至杰',
-    authorAvatar: '/logo.png',
+    authorAvatar: '/avatar.png',
     docsRepo: 'https://github.com/czj0923/blog.git',
     docsBranch: 'main',
     docsDir: 'example',
-    catalogTitle: '自定义目录标题',
+    catalogTitle: '目录',
     lastUpdatedText: '',
     // series 为原 sidebar
     series: {
@@ -51,7 +51,7 @@ export default defineUserConfig({
         },
         {
           text: '数据展示组件',
-          children: []
+          children: ['ellipsis']
         },
         {
           text: '反馈组件',
