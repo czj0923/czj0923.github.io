@@ -1,7 +1,8 @@
 ---
 title: 扫雷 mine-sweeper
 date: 2022/04/09
-tag: 扫雷
+tags: 
+ - 扫雷
 categories:
  - 游戏
 ---
