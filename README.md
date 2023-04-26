@@ -13,15 +13,18 @@ bannerBrand:
     margin: '0 auto 2rem'
     borderRadius: '1rem'
   bgImage: '/bg.svg'
-  heroText: 曹至杰的博客
-  tagline: 曹至杰的博客。
+  heroText: 网站导航
+  tagline: 见证者，为见证而来 | 铭记者，因铭记而生
   buttons:
     - { text: 简介, link: '/docs/guide/introduce' }
+    - { text: 笔记, link: '/docs/guide/introduce', type: 'plain' }
+    - { text: 爱好, link: '/docs/guide/introduce', type: 'plain' }
+    - { text: 编程, link: '/docs/guide/introduce', type: 'plain' }
     - { text: 组件库, link: '/component/home', type: 'plain' }
 blog:
   socialLinks:
-    - { icon: 'Brandjuejin', link: "www.baidu.com" }
     - { icon: 'BrandGithub', link: "https://github.com/czj0923" }
+    - { icon: 'Gitlab', link: "https://gitee.com/czj_1051029537" }
 footer:
   record: ""
   recordLink: ""
