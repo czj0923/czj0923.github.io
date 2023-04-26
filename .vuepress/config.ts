@@ -7,7 +7,7 @@ import recoTheme from 'vuepress-theme-reco'
 // const __dirname = getDirname(import.meta.url)
 
 export default defineUserConfig({
-  title: '曹至杰',
+  title: '橘子Orange',
   description: 'Just playing around',
   dest: "./dist",
   head: [
@@ -22,7 +22,7 @@ export default defineUserConfig({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
     author: '曹至杰',
-    authorAvatar: '/avatar.png',
+    authorAvatar: '/avatar.jpg',
     docsRepo: 'https://github.com/czj0923/blog.git',
     docsBranch: 'main',
     docsDir: 'example',
