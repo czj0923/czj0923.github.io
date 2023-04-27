@@ -1,0 +1,1 @@
+import{_ as t,o as e,c,a as s}from"./app.b91bf9ec.js";const o={},r=s("img",{style:{width:"100%"},src:"https://ghchart.rshah.org/czj0923",alt:"czj0923's Github chart"},null,-1),a=[r];function n(_,h){return e(),c("div",null,a)}const i=t(o,[["render",n],["__file","index.html.vue"]]);export{i as default};
