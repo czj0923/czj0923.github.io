@@ -7,12 +7,15 @@
 } */
 
 .home-wrapper .banner-brand-wrapper .hero-content h1 {
-  /* animation: san 4s linear infinite;
-  font-weight: 400; */
+  /* animation: san 4s linear infinite;*/
   background-image: linear-gradient(to right, #5D67E8, #ef4444)!important;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.home-wrapper .banner-brand-wrapper .hero-content >img{
+  border-radius: 50%;
+
 }
 
 @keyframes san {
@@ -42,4 +45,11 @@ i:hover{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hex
 }
 .btn-group >li:hover{
     transform: scale(1.1);
+}
+
+/* 自适应 */
+@media (min-width: 768px){
+  .grid-3{
+    width: calc(100% / 3);
+  }
 }

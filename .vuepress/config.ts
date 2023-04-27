@@ -21,7 +21,7 @@ export default defineUserConfig({
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
     logo: '/logo.png',
-    author: '曹至杰',
+    author: 'Cao Zhijie',
     authorAvatar: '/avatar.jpg',
     docsRepo: 'https://github.com/czj0923/blog.git',
     docsBranch: 'main',
