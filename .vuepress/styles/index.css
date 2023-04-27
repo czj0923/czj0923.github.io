@@ -5,6 +5,11 @@
 /* .post-item-container {
   background-color: rgb(242, 240, 239);
 } */
+.hero-text p{
+  font-size: 1.5rem;
+  color: rgba(60, 60, 67, .75);
+  text-align: center;
+}
 
 .home-wrapper .banner-brand-wrapper .hero-content h1 {
   animation: san 4s linear infinite;

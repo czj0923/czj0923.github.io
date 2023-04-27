@@ -27,7 +27,7 @@ export default defineUserConfig({
     docsBranch: 'main',
     docsDir: 'example',
     catalogTitle: '目录',
-    lastUpdatedText: '',
+    lastUpdatedText: '上次更新',
     // series 为原 sidebar
     series: {
       '/docs': [
