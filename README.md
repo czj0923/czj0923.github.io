@@ -1,9 +1,18 @@
 ---
 home: true
 modules:
+  - Banner
   - BannerBrand
   - Blog
+  - MdContent
   - Footer
+banner:
+  heroText: 橘子Orange
+  tagline: 见证者，为见证而来 | 铭记者，因铭记而生
+  heroImage: /avatar.jpg
+  heroImageStyle:
+    maxWidth: 200px
+    margin: 0 auto 2rem
 bannerBrand:
   heroImage: /logo.png
   heroImageStyle:
@@ -14,6 +23,7 @@ bannerBrand:
     borderRadius: '1rem'
   bgImage: '/bg.svg'
   heroText: 网站导航
+  description: 一款简洁的 vuepress 博客 & 文档 主题。
   tagline: 见证者，为见证而来 | 铭记者，因铭记而生
   buttons:
     - { text: 简介, link: '/docs/guide/introduce' }
@@ -21,6 +31,8 @@ bannerBrand:
     - { text: 爱好, link: '/docs/guide/introduce', type: 'plain' }
     - { text: 编程, link: '/docs/guide/introduce', type: 'plain' }
     - { text: 组件库, link: '/component/home', type: 'plain' }
+  socialLinks:
+    - { icon: 'BrandGithub', link: 'https://github.com/czj0923' }
 blog:
   socialLinks:
     - { icon: 'BrandGithub', link: "https://github.com/czj0923" }
@@ -43,27 +55,4 @@ features:
   details: 吸引更多的朋友参与到开发中来，继续强大功能。
 ---
 
-## 快速开始
-
-**npx**
-
-```bash
-# 初始化，并选择 2.x
-npx @vuepress-reco/theme-cli init
-```
-
-**npm**
-
-```bash
-# 初始化，并选择 2.x
-npm install @vuepress-reco/theme-cli@1.0.7 -g
-theme-cli init
-```
-
-**yarn**
-
-```bash
-# 初始化，并选择 2.x
-yarn global add @vuepress-reco/theme-cli@1.0.7
-theme-cli init
-```
+<img style="width: 100%;" src="https://ghchart.rshah.org/czj0923" alt="czj0923's Github chart" />

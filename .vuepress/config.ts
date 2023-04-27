@@ -11,9 +11,9 @@ export default defineUserConfig({
   description: 'Just playing around',
   dest: "./dist",
   head: [
-    [
-      'script', { type: 'text/javascript', src: '/js/base.js' }
-    ],
+    // [
+    //   'script', { type: 'text/javascript', src: '/js/base.js' }
+    // ],
     [
       'script', { type: 'text/javascript', src: '/js/index.js' }
     ]

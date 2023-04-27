@@ -7,8 +7,12 @@
 } */
 
 .home-wrapper .banner-brand-wrapper .hero-content h1 {
-  animation: san 4s linear infinite;
-  font-weight: 400;
+  /* animation: san 4s linear infinite;
+  font-weight: 400; */
+  background-image: linear-gradient(to right, #5D67E8, #ef4444)!important;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @keyframes san {
