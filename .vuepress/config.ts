@@ -28,6 +28,7 @@ export default defineUserConfig({
     docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
+    autoSetSeries: true, // 自动设置分类
     // series 为原 sidebar
     series: {
       '/docs': [
@@ -57,6 +58,28 @@ export default defineUserConfig({
           text: '反馈组件',
           children: []
         }
+      ],
+      '/frontend': [
+        {
+          text: '基础知识',
+          children: ['foundation']
+        },
+        {
+          text: '进阶知识',
+          children: ['advanced']
+        },
+      ],
+      '/hobby': [
+        {
+          text: '跑步',
+          children: ['run']
+        },
+      ],
+      '/notes': [
+        {
+          text: '笔记',
+          children: ['092101', '121501']
+        },
       ]
     },
     navbar:
@@ -64,12 +87,19 @@ export default defineUserConfig({
         { text: '首页', link: '/' },
         { text: '分类', link: '/categories/reco/1/' },
         { text: '标签', link: '/tags/tag/1' },
+        { 
+          text: '前端物语',
+          // icon: 'SubVolume',
+          children: [
+            { text: 'JavaScript基础知识', link: '/frontend/foundation' },
+            { text: 'JavaScript进阶知识', link: '/frontend/advanced' },
+          ]
+        },
+        {
+          text: '关于我', link: "/docs/introduce"
+        },
         {
           text: '我的组件库', link: "/component/home"
-          //children: [
-          //  { text: 'vuepress-reco', link: '/docs/theme-reco/theme' },
-          //  { text: 'vuepress-theme-reco', link: '/blogs/other/guide' }
-          //]
         },
       ],
     // 公告 暂时不需要

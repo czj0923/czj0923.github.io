@@ -1,6 +1,6 @@
 <template>
   <div class="nav-content-list">
-    <div class="item grid-3" v-for="(item, index) in navList" :key="index">
+    <div class="item grid-6" v-for="(item, index) in navList" :key="index">
       <a href="">
         <div class="box">
           <div class="icon">{{ item.icon }}</div>
@@ -31,32 +31,32 @@ export default {
         {
           icon: "📘",
           title: "日常笔记",
-          desc: "整理前端常用知识点2",
-          seeText: "日常笔记"
+          desc: "记录",
+          seeText: "立即查看"
         },
         {
           icon: "💡",
-          title: "爱好",
-          desc: "爱好",
-          seeText: "爱好"
+          title: "爱好 Hobby",
+          desc: "我的爱好",
+          seeText: "立即查看"
         },
         {
           icon: "🧰",
           title: "提效工具",
           desc: "工欲善其事，必先利其器",
-          seeText: "提效工具"
+          seeText: "立即使用"
         },
         {
           icon: "🐞",
-          title: "踩坑记录",
-          desc: "那些年踩过的坑",
+          title: "代码笔记",
+          desc: "记录平时用到的种种",
           seeText: "踩坑记录"
         },
         {
           icon: "💯",
           title: "八股文",
-          desc: "八股文",
-          seeText: "八股文"
+          desc: "一些前端八股文",
+          seeText: "立即查看"
         },
       ]
     }

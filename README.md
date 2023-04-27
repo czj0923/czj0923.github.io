@@ -24,13 +24,13 @@ bannerBrand:
   bgImage: '/bg.svg'
   heroText: 网站导航
   description: 一款简洁的 vuepress 博客 & 文档 主题。
-  tagline: 见证者，为见证而来 | 铭记者，因铭记而生
+  tagline: 知识是进步的阶梯，争取每天都能进步一点点
   buttons:
-    - { text: 简介, link: '/docs/guide/introduce' }
-    - { text: 笔记, link: '/docs/guide/introduce', type: 'plain' }
-    - { text: 爱好, link: '/docs/guide/introduce', type: 'plain' }
-    - { text: 编程, link: '/docs/guide/introduce', type: 'plain' }
-    - { text: 组件库, link: '/component/home', type: 'plain' }
+    - { text: 关于我, link: '/docs/introduce' }
+    - { text: 笔记, link: '/notes', type: 'plain' }
+    - { text: 爱好, link: '/hobby', type: 'plain' }
+    - { text: 编程, link: '/code', type: 'plain' }
+    - { text: 八股文, link: '/component/home', type: 'plain' }
   socialLinks:
     - { icon: 'BrandGithub', link: 'https://github.com/czj0923' }
 blog:
