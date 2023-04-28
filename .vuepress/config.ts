@@ -80,6 +80,12 @@ export default defineUserConfig({
           text: '笔记',
           children: ['092101', '121501']
         },
+      ],
+      '/interview': [
+        {
+          text: '前端八股文',
+          children: ['html', 'css', 'javascript', 'vue', 'https', 'webpack', 'browser', 'write', 'performance']
+        },
       ]
     },
     navbar:

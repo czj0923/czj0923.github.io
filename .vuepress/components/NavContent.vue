@@ -1,7 +1,7 @@
 <template>
   <div class="nav-content-list">
     <div class="item grid-6" v-for="(item, index) in navList" :key="index">
-      <a href="">
+      <a :href="item.href">
         <div class="box">
           <div class="icon">{{ item.icon }}</div>
           <div class="title">{{ item.title }}</div>
@@ -26,7 +26,8 @@ export default {
           icon: "📖",
           title: "前端物语",
           desc: "整理前端常用知识点",
-          seeText: "前端常用知识"
+          seeText: "前端常用知识",
+          href: ""
         },
         {
           icon: "📘",
@@ -56,7 +57,8 @@ export default {
           icon: "💯",
           title: "八股文",
           desc: "一些前端八股文",
-          seeText: "立即查看"
+          seeText: "立即查看",
+          href: "/interview/html"
         },
       ]
     }
