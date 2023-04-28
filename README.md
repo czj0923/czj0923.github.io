@@ -28,9 +28,9 @@ bannerBrand:
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
     - { text: 笔记, link: '/notes', type: 'plain' }
-    - { text: 爱好, link: '/hobby', type: 'plain' }
+    - { text: 爱好, link: '/hobby/run', type: 'plain' }
     - { text: 编程, link: '/code', type: 'plain' }
-    - { text: 八股文, link: '/component/home', type: 'plain' }
+    - { text: 导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
     - { icon: 'BrandGithub', link: 'https://github.com/czj0923' }
 blog:
@@ -38,7 +38,7 @@ blog:
     - { icon: 'BrandGithub', link: "https://github.com/czj0923" }
     - { icon: 'Gitlab', link: "https://gitee.com/czj_1051029537" }
 footer:
-  record: "vuepress-theme-reco"
+  record: ""
   recordLink: ""
   cyberSecurityRecord: ""
   cyberSecurityLink: ""
