@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as t,b as n}from"./app.c48dc724.js";const o={},_=n("p",null,"\u7B14\u8BB02",-1),a=[_];function s(r,d){return c(),t("div",null,a)}const f=e(o,[["render",s],["__file","advanced.html.vue"]]);export{f as default};
