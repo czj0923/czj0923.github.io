@@ -31,16 +31,7 @@ export default defineUserConfig({
     autoSetSeries: true, // 自动设置分类
     // series 为原 sidebar
     series: {
-      '/docs': [
-        {
-          text: '系列一',
-          children: ['home', 'theme']
-        },
-        {
-          text: '系列二',
-          children: ['api', 'plugin']
-        }
-      ],
+      '/docs': [],
       '/component': [
         {
           text: '通用组件',
@@ -91,11 +82,10 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
-        { text: '分类', link: '/categories/reco/1/' },
+        { text: '分类', link: '/categories/reco/1' },
         { text: '导航', link: '/tools/nav' },
         { 
-          text: '前端物语',
-          // icon: 'SubVolume',
+          text: '前端',
           children: [
             { text: 'JavaScript基础知识', link: '/frontend/foundation' },
             { text: 'JavaScript进阶知识', link: '/frontend/advanced' },

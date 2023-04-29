@@ -2,6 +2,10 @@
   font-size: 1.5rem;
   color: rgba(60, 60, 67, .75);
 }
+.banner-brand-wrapper .hero-content .hero-text .btn-group li .icon-container{
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 .home-wrapper .banner-brand-wrapper .hero-content h1 {
   /* animation: san 4s linear infinite;*/

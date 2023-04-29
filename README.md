@@ -30,7 +30,7 @@ bannerBrand:
     - { text: 笔记, link: '/notes', type: 'plain' }
     - { text: 爱好, link: '/hobby/run', type: 'plain' }
     - { text: 编程, link: '/code', type: 'plain' }
-    - { text: 导航, link: '/tools/nav', type: 'plain' }
+    - { text: 常用导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
     - { icon: 'BrandGithub', link: 'https://github.com/czj0923' }
 blog:
