@@ -92,7 +92,7 @@ export default defineUserConfig({
       [
         { text: '首页', link: '/' },
         { text: '分类', link: '/categories/reco/1/' },
-        { text: '标签', link: '/tags/tag/1' },
+        { text: '导航', link: '/tools/nav' },
         { 
           text: '前端物语',
           // icon: 'SubVolume',
