@@ -79,6 +79,7 @@ export default {
 
     .box-header {
       display: flex;
+      align-items: center;
       margin-bottom: 10px;
 
       .img {
@@ -96,7 +97,7 @@ export default {
           width: 24px;
           height: 24px;
           border-radius: 4px;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
 
@@ -114,6 +115,11 @@ export default {
       font-size: 12px;
       line-height: 1.5;
       color: rgba(60, 60, 67, .75);
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 }

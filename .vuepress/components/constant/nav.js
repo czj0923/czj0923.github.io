@@ -33,7 +33,7 @@ const navList1 = [{
     url: "https://www.json.cn"
   },
   {
-    img: 'https://transform.tools/json-schema-to-typescript',
+    img: 'https://transform.tools/static/favicon.png',
     title: "transform",
     desc: "一个支持多语言的在线转换器",
     url: "https://www.json.cn"
@@ -78,9 +78,77 @@ const navList2 = [{
   }
 ]
 
-const navList3 = []
+const navList3 = [{
+    img: 'https://cn.vuejs.org/logo.svg',
+    title: "Vue 3",
+    desc: "渐进式 JavaScript 框架",
+    url: "https://cn.vuejs.org"
+  },{
+    img: 'https://cn.vuejs.org/logo.svg',
+    title: "Vue 2",
+    desc: "渐进式 JavaScript 框架",
+    url: "https://v2.cn.vuejs.org"
+  },{
+    img: 'https://cn.vuejs.org/logo.svg',
+    title: "Vue Router",
+    desc: "Vue.js 的官方路由为 Vue.js 提供富有表现力、可配置的、方便的路由",
+    url: "https://router.vuejs.org/zh"
+  },{
+    img: 'https://pinia.vuejs.org/logo.svg',
+    title: "Pinia",
+    desc: "符合直觉的 Vue.js 状态管理库",
+    url: "https://pinia.vuejs.org/zh"
+  },{
+    img: 'https://nuxt.com/icon.png',
+    title: "Nuxt.js",
+    desc: "一个基于 Vue.js 的通用应用框架",
+    url: "https://nuxt.com"
+  },{
+    img: 'https://vueuse.org/favicon.svg',
+    title: "VueUse",
+    desc: "Vue Composition API 的常用工具集",
+    url: "https://vueuse.org"
+  },{
+    img: 'https://www.antdv.com/assets/logo.1ef800a8.svg',
+    title: "Element Plus",
+    desc: "基于 Vue 3，面向设计师和开发者的组件库",
+    url: "https://element-plus.org"
+  },{
+    img: 'https://www.antdv.com/assets/logo.1ef800a8.svg',
+    title: "Ant Design Vue",
+    desc: "Ant Design 的 Vue 实现，开发和服务于企业级后台产品",
+    url: "https://antdv.com"
+  },{
+    img: 'https://fastly.jsdelivr.net/npm/@vant/assets/logo.png',
+    title: "Vant",
+    desc: "轻量、可定制的移动端 Vue 组件库",
+    url: "https://vant-ui.github.io/vant"
+  },{
+    img: 'https://webapp.didistatic.com/static/webapp/shield/Cube-UI_logo.ico',
+    title: "Cube UI",
+    desc: "基于 Vue.js 实现的精致移动端组件库",
+    url: "https://didi.github.io/cube-ui"
+  },{
+    img: 'https://img14.360buyimg.com/imagetools/jfs/t1/167902/2/8762/791358/603742d7E9b4275e3/e09d8f9a8bf4c0ef.png',
+    title: "NutUI",
+    desc: "京东风格的轻量级移动端组件库",
+    url: "https://nutui.jd.com"
+  }]
 const navList4 = []
-const navList5 = []
+const navList5 = [
+    {
+        img: 'https://svelte.dev/svelte-logo-horizontal.svg',
+        title: "Svelte",
+        desc: "将声明性组件转换为精准高效更新 DOM 的 JavaScript 代码",
+        url: "https://svelte.dev"
+      },
+      {
+        img: withBase('/img/nav/nav5-2.svg'),
+        title: "jQuery API 中文文档",
+        desc: "一个兼容多浏览器的 JavaScript 框架",
+        url: "https://jquery.cuishifeng.cn"
+      }
+]
 const navList6 = []
 const navList7 = []
 const navList8 = []
