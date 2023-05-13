@@ -60,10 +60,10 @@ export default defineUserConfig({
           children: ['advanced']
         },
       ],
-      '/hobby': [
+      '/blogs/hobby': [
         {
           text: '跑步',
-          children: ['run']
+          children: ['20230431']
         },
       ],
       '/notes': [
@@ -72,7 +72,7 @@ export default defineUserConfig({
           children: ['092101', '121501']
         },
       ],
-      '/interview': [
+      '/blogs/interview': [
         {
           text: '前端八股文',
           children: ['html', 'css', 'javascript', 'vue', 'https', 'webpack', 'browser', 'write', 'performance']
@@ -82,7 +82,7 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
-        { text: '分类', link: '/categories/reco/1' },
+        { text: '分类', link: '/categories/reco' },
         { text: '导航', link: '/tools/nav' },
         { 
           text: '前端',
