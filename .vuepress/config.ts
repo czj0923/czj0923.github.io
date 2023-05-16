@@ -63,7 +63,7 @@ export default defineUserConfig({
       '/blogs/hobby': [
         {
           text: '跑步',
-          children: ['20230431']
+          children: ['20230409', '20230431','20230514']
         },
       ],
       '/notes': [
@@ -72,7 +72,7 @@ export default defineUserConfig({
           children: ['092101', '121501']
         },
       ],
-      '/blogs/interview': [
+      '/interview': [
         {
           text: '前端八股文',
           children: ['html', 'css', 'javascript', 'vue', 'https', 'webpack', 'browser', 'write', 'performance']
