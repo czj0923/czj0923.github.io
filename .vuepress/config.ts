@@ -82,7 +82,7 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
-        { text: '分类', link: '/categories/reco' },
+        { text: '标签', link: '/tags/js/1/' },
         { text: '导航', link: '/tools/nav' },
         { 
           text: '前端',
