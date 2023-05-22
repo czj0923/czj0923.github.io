@@ -40,7 +40,7 @@ export default {
           title: "爱好 Hobby",
           desc: "我的爱好",
           seeText: "立即查看",
-          href: "/blogs/git/1"
+          href: "/blogs/hobby/20230409"
         },
         {
           icon: "🧰",
