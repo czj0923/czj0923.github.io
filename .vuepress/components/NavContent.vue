@@ -60,7 +60,14 @@ export default {
           title: "八股文",
           desc: "一些前端八股文",
           seeText: "立即查看",
-          href: "/blogs/interview/html"
+          href: "/interview/html"
+        },
+        {
+          icon: "💯",
+          title: "阅读",
+          desc: "阅读",
+          seeText: "立即查看",
+          href: "/read/1"
         },
       ]
     }

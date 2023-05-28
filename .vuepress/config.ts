@@ -16,7 +16,10 @@ export default defineUserConfig({
     // ],
     [
       'script', { type: 'text/javascript', src: '/js/index.js' }
-    ]
+    ],
+    // [
+    //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
+    // ]
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
@@ -77,6 +80,12 @@ export default defineUserConfig({
           text: '前端八股文',
           children: ['html', 'css', 'javascript', 'vue', 'https', 'webpack', 'browser', 'write', 'performance']
         },
+      ],
+      '/read': [
+        {
+          text: '阅读',
+          children: ['1', '2', '3']
+        }
       ]
     },
     navbar:
