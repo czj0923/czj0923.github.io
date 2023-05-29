@@ -84,7 +84,7 @@ export default defineUserConfig({
       '/read': [
         {
           text: '阅读',
-          children: ['1', '2', '3']
+          children: ['1', '2', '3', '4', '5']
         }
       ]
     },
