@@ -63,7 +63,7 @@ export default defineUserConfig({
           children: ['advanced']
         },
       ],
-      '/blogs/hobby': [
+      '/hobby': [
         {
           text: '跑步',
           children: ['20230409', '20230431','20230514','20230520']

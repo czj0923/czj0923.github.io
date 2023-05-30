@@ -40,14 +40,14 @@ export default {
           title: "爱好 Hobby",
           desc: "我的爱好",
           seeText: "立即查看",
-          href: "/blogs/hobby/20230409"
+          href: "/hobby/20230409"
         },
         {
           icon: "🧰",
           title: "提效工具",
           desc: "工欲善其事，必先利其器",
           seeText: "立即使用",
-          href: "/blogs/tools/1"
+          href: "/tools/1"
         },
         {
           icon: "🐞",
