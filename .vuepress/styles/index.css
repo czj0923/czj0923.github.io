@@ -77,6 +77,10 @@ i:hover{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hex
   }
 }
 
+.page-container img{
+  width: 50%;
+}
+
 
 /*!
  * Project: Heti
