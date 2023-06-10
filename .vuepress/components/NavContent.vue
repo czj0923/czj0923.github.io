@@ -30,17 +30,11 @@ export default {
           href: ""
         },
         {
-          icon: "📘",
-          title: "日常笔记",
-          desc: "记录",
-          seeText: "立即查看"
-        },
-        {
           icon: "💡",
           title: "爱好 Hobby",
           desc: "我的爱好",
           seeText: "立即查看",
-          href: "/hobby/20230409"
+          href: "/blogs/other/hobby-guide"
         },
         {
           icon: "🧰",
@@ -63,10 +57,10 @@ export default {
           href: "/interview/html"
         },
         {
-          icon: "💯",
+          icon: "📘",
           title: "阅读",
           desc: "阅读",
-          seeText: "立即查看",
+          seeText: "前往",
           href: "/read/1"
         },
       ]

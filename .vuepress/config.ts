@@ -23,6 +23,7 @@ export default defineUserConfig({
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
+    primaryColor: '#f00', // 主题色
     logo: '/logo.png',
     author: 'Cao Zhijie',
     authorAvatar: '/avatar.jpg',
@@ -63,11 +64,45 @@ export default defineUserConfig({
           children: ['advanced']
         },
       ],
-      '/hobby': [
+      '/hobby/run': [
         {
-          text: '跑步',
-          children: ['20230409', '20230431','20230514','20230520']
+          text: '攻略',
+          children: ['a-1']
         },
+        {
+          text: '比赛记录',
+          children: ['b-1', 'b-2', 'b-3', 'b-4']
+        }
+      ],
+      '/hobby/ride': [
+        {
+          text: '攻略',
+          children: ['a-1']
+        },
+        {
+          text: '记录',
+          children: []
+        }
+      ],
+      '/hobby/climbing': [
+        {
+          text: '攻略',
+          children: ['a-1', 'a-2']
+        },
+        {
+          text: '记录',
+          children: ['b-1']
+        }
+      ],
+      '/hobby/cross': [
+        {
+          text: '攻略',
+          children: ['a-1']
+        },
+        {
+          text: '记录',
+          children: ['b-1']
+        }
       ],
       '/notes': [
         {
@@ -93,11 +128,55 @@ export default defineUserConfig({
         { text: '首页', link: '/' },
         { text: '标签', link: '/tags/js/1/' },
         { text: '导航', link: '/tools/nav' },
-        { 
-          text: '前端',
+        {
+          text: '爱好', children:
+            [
+              {
+                text: '跑步', children:
+                  [
+                    { text: '攻略', link: '/hobby/run/a-1' },
+                    { text: '比赛记录', link: '/hobby/run/b-1' }
+                  ]
+              },
+              {
+                text: '爬山', children:
+                  [
+                    { text: '攻略', link: '/hobby/climbing/a-1' },
+                    { text: '记录', link: '/hobby/run/b-1' }
+                  ]
+              },
+              {
+                text: '骑行', children:
+                  [
+                    { text: '攻略', link: '/hobby/ride/a-1' },
+                    { text: '记录', link: '' }
+                  ]
+              },
+              {
+                text: '越野', children:
+                  [
+                    { text: '攻略', link: '/hobby/cross/a-1' },
+                    { text: '记录', link: '/hobby/run/b-1' }
+                  ]
+              }
+            ]
+        },
+        {
+          text: '编程',
           children: [
-            { text: 'JavaScript基础知识', link: '/frontend/foundation' },
-            { text: 'JavaScript进阶知识', link: '/frontend/advanced' },
+            {
+              text: '前端', children:
+                [
+                  { text: '基础知识', link: '/frontend/foundation' },
+                  { text: '八股文', link: '/interview/html' }
+                ]
+            },
+            {
+              text: 'php', children:
+                [
+                  { text: '基础知识', link: "/php/foundation" }
+                ]
+            },
           ]
         },
         {
