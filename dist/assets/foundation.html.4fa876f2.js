@@ -1,0 +1,1 @@
+import{_ as e,o,c as t,b as n}from"./app.082c3aa3.js";const c={},_=n("p",null,"\u7B14\u8BB02",-1),s=[_];function a(r,l){return o(),t("div",null,s)}const f=e(c,[["render",a],["__file","foundation.html.vue"]]);export{f as default};
