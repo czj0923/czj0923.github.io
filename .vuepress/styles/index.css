@@ -80,6 +80,13 @@ i:hover{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hex
 .page-container img{
   width: 50%;
 }
+@font-face {
+  font-family: zhuziAwa;
+  src: url(/font/zhuziAwa1n.ttf);
+}
+body{
+  font-family: 'zhuziAwa';
+}
 
 
 /*!

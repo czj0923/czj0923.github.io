@@ -67,11 +67,15 @@ export default defineUserConfig({
       '/hobby/run': [
         {
           text: '攻略',
-          children: ['a-1']
+          children: ['a-1', 'a-2']
         },
         {
           text: '比赛记录',
           children: ['b-1', 'b-2', 'b-3', 'b-4']
+        },
+        {
+          text: '笔记',
+          children: ['c-1']
         }
       ],
       '/hobby/ride': [
@@ -127,7 +131,6 @@ export default defineUserConfig({
       [
         { text: '首页', link: '/' },
         { text: '标签', link: '/tags/js/1/' },
-        { text: '导航', link: '/tools/nav' },
         {
           text: '爱好', children:
             [
