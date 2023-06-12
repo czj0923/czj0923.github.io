@@ -1,1 +1,0 @@
-import{_ as s,o as t,c as l,a as c,r as o}from"./app.6d5982fd.js";const n={};function _(r,i){const e=o("c-ellipsis");return t(),l("div",null,[c(e,{length:10,text:"\u5475\u5475\u5475\u5475\u5475\u5475\u5475\u5475\u5475\u5475\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u8FD8\u597D"})])}const p=s(n,[["render",_],["__file","ellipsis.html.vue"]]);export{p as default};

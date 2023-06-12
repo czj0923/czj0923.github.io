@@ -56,12 +56,24 @@ export default defineUserConfig({
       ],
       '/frontend': [
         {
-          text: '基础知识',
-          children: ['foundation']
+          text: 'JavaScript基础知识',
+          children: ['/frontend/js/clone','/frontend/js/types','/frontend/js/conversions','/frontend/js/prototype','/frontend/js/inherit']
         },
         {
-          text: '进阶知识',
-          children: ['advanced']
+          text: 'ES6常用知识点',
+          children: ['/frontend/es6/1']
+        },
+        {
+          text: 'HTML/CSS',
+          children: ['/frontend/html','/frontend/css']
+        },
+        {
+          text: 'webpack',
+          children: ['/frontend/webpack']
+        },
+        {
+          text: '浏览器与网络',
+          children: ['/frontend/browser','/frontend/network/tcp','/frontend/network/http']
         },
       ],
       '/hobby/run': [
@@ -170,7 +182,7 @@ export default defineUserConfig({
             {
               text: '前端', children:
                 [
-                  { text: '基础知识', link: '/frontend/foundation' },
+                  { text: 'JavaScript基础知识', link: '/frontend/javascript' },
                   { text: '八股文', link: '/interview/html' }
                 ]
             },

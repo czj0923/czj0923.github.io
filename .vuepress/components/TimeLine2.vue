@@ -119,12 +119,12 @@ export default {
                         content2: "桐乡"
                     },
                     {
-                        title: "2022年11月05日",
+                        title: "2022年11月26日",
                         content: "PB 01:48:30",
                         content2: "桐乡"
                     },
                     {
-                        title: "2022年11月05日",
+                        title: "2023年04月30日",
                         content: "PB 01:44:15",
                         content2: "龙游马拉松"
                     },

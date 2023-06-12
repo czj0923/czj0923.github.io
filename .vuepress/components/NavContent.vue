@@ -27,7 +27,7 @@ export default {
           title: "前端物语",
           desc: "整理前端常用知识点",
           seeText: "前端常用知识",
-          href: ""
+          href: "/frontend/js/types"
         },
         {
           icon: "💡",
