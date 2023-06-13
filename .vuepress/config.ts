@@ -32,7 +32,8 @@ export default defineUserConfig({
     docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
-    autoSetSeries: true, // 自动设置分类
+    autoSetBlogCategories: true, // 自动设置分类
+    autoSetSeries: true, // 自动设置系列
     // series 为原 sidebar
     series: {
       '/docs': [],
@@ -57,7 +58,7 @@ export default defineUserConfig({
       '/frontend': [
         {
           text: 'JavaScript基础知识',
-          children: ['/frontend/js/clone','/frontend/js/types','/frontend/js/conversions','/frontend/js/prototype','/frontend/js/inherit']
+          children: ['/frontend/js/types','/frontend/js/clone','/frontend/js/conversions','/frontend/js/prototype','/frontend/js/inherit']
         },
         {
           text: 'ES6常用知识点',
@@ -182,7 +183,10 @@ export default defineUserConfig({
             {
               text: '前端', children:
                 [
-                  { text: 'JavaScript基础知识', link: '/frontend/javascript' },
+                  { text: 'JavaScript基础知识', link: '/frontend/js/types' },
+                  { text: 'ES6常用知识点', link: '/frontend/es6/1' },
+                  { text: 'HTML/CSS', link: '/frontend/es6/html' },
+                  { text: '浏览器相关', link: '/frontend/browser' },
                   { text: '八股文', link: '/interview/html' }
                 ]
             },
