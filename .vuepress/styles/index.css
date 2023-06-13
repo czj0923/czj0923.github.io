@@ -1,36 +1,29 @@
-.hero-text p{
+.home-wrapper .tagline{
   font-size: 1.5rem;
   color: rgba(60, 60, 67, .75);
 }
-.banner-brand-wrapper .hero-content .hero-text .btn-group li .icon-container{
+.banner-brand__wrapper .hero-content .hero-text .btn-group li .icon-container{
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.home-wrapper .banner-brand-wrapper .hero-content h1 {
+.home-wrapper .banner-brand__wrapper .description {
   /* animation: san 4s linear infinite;*/
   background-image: linear-gradient(to right, #5D67E8, #ef4444)!important;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.home-wrapper .banner-brand-wrapper .hero-content >img{
-  border-radius: 50%;
-  transition:all .5s;
-}
-.home-wrapper .banner-brand-wrapper .hero-content >img:hover{
-  transform:rotate(360deg);
+  font-size: 72px;
+  font-weight: 600;
 }
 
-.series-container a.series-item::before{
-  background: url(/online.svg) no-repeat;
-}
 .series-container a.series-item.router-link-active::before{
-  width: 20px;
-  height: 20px;
-}
-.series-container a.series-item.router-link-active{
-  padding-left: 25px;
+  width: 20px !important;
+  height: 20px !important;
+  background: url(/online.svg) no-repeat;
+  margin-left: -4px !important;
+  border-radius: 0;
+  transition: none !important;
 }
 
 @keyframes san {
@@ -85,14 +78,15 @@ i:hover{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hex
   src: url(/font/zhuziAwa1n.ttf);
 }
 body{
-  font-family: 'zhuziAwa';
+  font-family: 'zhuziAwa',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 :root{
   --czj-primary-color: #00a98e;
 }
-*{
+/* 文字颜色过渡效果 */
+/* *{
   transition: color ease 1s, border ease 1s;
-}
+} */
 
 
 /*!

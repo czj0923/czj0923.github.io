@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-9c8e2c32","path":"/read/2.html","title":"庄子·秋水","lang":"en-US","frontmatter":{"title":"庄子·秋水","date":"2023/05/28","categories":["阅读"]},"headers":[],"git":{"createdTime":1685263027000,"updatedTime":1685263027000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"read/2.md"}');export{e as data};

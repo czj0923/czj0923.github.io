@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-200b592f","path":"/component/home.html","title":"vue2组件库","lang":"en-US","frontmatter":{"title":"vue2组件库","date":"2022/09/26"},"headers":[],"git":{"createdTime":1664199409000,"updatedTime":1664199409000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"component/home.md"}');export{e as data};

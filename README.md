@@ -14,23 +14,15 @@ banner:
     maxWidth: 200px
     margin: 0 auto 2rem
 bannerBrand:
-  heroImage: /avatar.jpg
-  heroImageStyle:
-    maxWidth: '200px'
-    width: '100%'
-    display: block
-    margin: '0 auto 2rem'
-    borderRadius: '50%'
   bgImage: '/bg.svg'
-  heroText: 网站导航
-  description: 一款简洁的 vuepress 博客 & 文档 主题。
+  title: 网站导航
   tagline: 知识是进步的阶梯，争取每天都能进步一点点
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
     - { text: 爱好, link: '/blogs/other/hobby-guide', type: 'plain' }
     - { text: 常用导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
-    - { icon: 'BrandGithub', link: 'https://github.com/czj0923' }
+    - { icon: 'Star', link: 'https://github.com/czj0923' }
 blog:
   socialLinks:
     - { icon: 'BrandGithub', link: "https://github.com/czj0923" }

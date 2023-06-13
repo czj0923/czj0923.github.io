@@ -1,1 +1,0 @@
-import{_ as e,o as c,c as t,b as o}from"./app.53965346.js";const _={},s=o("p",null,"Webpack",-1),a=[s];function n(r,l){return c(),t("div",null,a)}const d=e(_,[["render",n],["__file","webpack.html.vue"]]);export{d as default};

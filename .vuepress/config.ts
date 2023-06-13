@@ -23,7 +23,7 @@ export default defineUserConfig({
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
-    primaryColor: '#f00', // 主题色
+    primaryColor: '#00a98e', // 主题色
     logo: '/logo.png',
     author: 'Cao Zhijie',
     authorAvatar: '/avatar.jpg',
