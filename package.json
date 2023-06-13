@@ -2,8 +2,8 @@
   "name": "vuepress-theme-reco-demo",
   "version": "2.0.0",
   "description": "czj blog",
-  "repository": "https://github.com/czj0923/blog.git",
-  "author": "czj",
+  "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
+  "author": "reco_luan <recoluan@outlook.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev .",
@@ -11,11 +11,7 @@
     "build": "vuepress build ."
   },
   "dependencies": {
-    "vuepress": "2.0.0-beta.51",
-    "vuepress-theme-reco": "2.0.0-beta.41"
-  },
-  "devDependencies": {
-    "@vuepress/plugin-register-components": "^2.0.0-beta.51",
-    "vuepress-plugin-sakura": "^1.2.1"
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-theme-reco": "2.0.0-beta.63"
   }
 }
