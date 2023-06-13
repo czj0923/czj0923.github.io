@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-95bac9b6","path":"/read/4.html","title":"滕王阁序","lang":"en-US","frontmatter":{"title":"滕王阁序","date":"2023/05/29","categories":["阅读"]},"headers":[],"git":{"createdTime":1685367442000,"updatedTime":1685367442000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"read/4.md"}');export{e as data};

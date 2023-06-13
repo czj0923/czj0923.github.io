@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-99247af4","path":"/read/3.html","title":"道德经","lang":"en-US","frontmatter":{"title":"道德经","date":"2023/05/28","categories":["阅读"]},"headers":[],"git":{"createdTime":1685263027000,"updatedTime":1685263027000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"read/3.md"}');export{e as data};
