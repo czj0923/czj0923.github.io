@@ -22,11 +22,11 @@ bannerBrand:
     - { text: 爱好, link: '/blogs/other/hobby-guide', type: 'plain' }
     - { text: 常用导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
-    - { icon: 'Star', link: 'https://github.com/czj0923' }
+    - { icon: 'LogoGithub', link: 'https://github.com/czj0923' }
 blog:
   socialLinks:
-    - { icon: 'BrandGithub', link: "https://github.com/czj0923" }
-    - { icon: 'Gitlab', link: "https://gitee.com/czj_1051029537" }
+    - { icon: 'LogoGithub', link: "https://github.com/czj0923" }
+    - { icon: 'Code', link: "https://gitee.com/czj_1051029537" }
 footer:
   record: ""
   recordLink: ""

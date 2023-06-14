@@ -32,7 +32,7 @@ export default defineUserConfig({
     docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
-    autoSetBlogCategories: true, // 自动设置分类
+    // autoSetBlogCategories: true, // 自动设置分类
     autoSetSeries: true, // 自动设置系列
     // series 为原 sidebar
     series: {
@@ -205,6 +205,15 @@ export default defineUserConfig({
           text: '我的组件库', link: "/component/home"
         },
       ],
+    // 评论
+    commentConfig: {
+      type: 'valine',
+      options: {
+        appId: 'AUPGDMXPseZm27D9DPjPh6J4-gzGzoHsz', // your appId
+        appKey: 'lmW3jzNlvzuxVgOvvBltkoHM', // your appKey
+        hideComments: false, // 全局隐藏评论，默认 false
+      },
+    },
     // 公告 暂时不需要
     // bulletin: {
     //   body: [
