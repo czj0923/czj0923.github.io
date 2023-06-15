@@ -143,6 +143,7 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
+        { text: '导航', link: '/tools/nav'},
         { text: '标签', link: '/tags/js/1/' },
         {
           text: '爱好', children:
