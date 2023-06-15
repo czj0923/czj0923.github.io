@@ -1,1 +1,0 @@
-import{_ as e,o as t,c,b as n}from"./app-338c7247.js";const o={},_=n("p",null,"继承",-1),s=[_];function r(a,i){return t(),c("div",null,s)}const d=e(o,[["render",r],["__file","inherit.html.vue"]]);export{d as default};
