@@ -81,7 +81,7 @@ body{
   font-family: 'zhuziAwa',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
 :root{
-  --czj-primary-color: #00a98e;
+  --czj-primary-color: #d27e00;
 }
 /* 文字颜色过渡效果 */
 /* *{
