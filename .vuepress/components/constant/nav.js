@@ -2,6 +2,7 @@ import {
   withBase
 } from '@vuepress/client'
 
+// 常用工具
 const navList1 = [{
   img: "https://caniuse.com/img/favicon-128.png",
   title: "Can I Use",
@@ -39,7 +40,7 @@ const navList1 = [{
   url: "https://www.json.cn"
 }
 ]
-
+// AI导航
 const navList2 = [{
   img: withBase('/img/nav/nav2-1.png'),
   title: "ChatGPT（最强）",
@@ -77,7 +78,7 @@ const navList2 = [{
   url: "https://www.beautiful.ai"
 }
 ]
-
+// Vue生态
 const navList3 = [{
   img: 'https://cn.vuejs.org/logo.svg',
   title: "Vue 3",
@@ -134,6 +135,7 @@ const navList3 = [{
   desc: "京东风格的轻量级移动端组件库",
   url: "https://nutui.jd.com"
 }]
+// React生态
 const navList4 = [
   {
     img: "https://zh-hans.reactjs.org/favicon.ico",
@@ -208,6 +210,7 @@ const navList4 = [
     url: "https://ahooks.js.org/zh-CN"
   },
 ]
+// JavaScript 框架类库
 const navList5 = [
   {
     img: 'https://svelte.dev/svelte-logo-horizontal.svg',
@@ -222,16 +225,384 @@ const navList5 = [
     url: "https://jquery.cuishifeng.cn"
   }
 ]
-const navList6 = []
-const navList7 = []
-const navList8 = []
-const navList9 = []
-const navList10 = []
-const navList11 = []
-const navList12 = []
-const navList13 = []
-const navList14 = []
-const navList15 = []
+// CSS 相关
+const navList6 = [
+    {
+      img: "https://postcss.org/assets/logo-3e39b0aa.svg",
+      title: "PostCSS",
+      desc: "一个用 JavaScript 转换 CSS 的工具",
+      url: "https://postcss.org/"
+    },
+    {
+      img: "https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg",
+      title: "Sass",
+      desc: "一个成熟，稳定，功能强大的专业级 CSS 扩展语言",
+      url: "https://sass-lang.com/"
+    },
+    {
+      img: "",
+      title: "TailwindCSS 中文网",
+      desc: "一个功能类优先的 CSS 框架",
+      url: "https://www.tailwindcss.cn/"
+    },
+    {
+      img: "https://unocss.dev/logo.svg",
+      title: "UnoCSS",
+      desc: "一个即时的原子化 CSS 引擎",
+      url: "https://unocss.dev/"
+    },
+]
+// 小程序相关
+const navList7 = [
+  {
+    img: "https://res.wx.qq.com/a/wx_fed/assets/res/OTE0YTAw.png",
+    title: "微信小程序文档",
+    desc: "微信小程序官方开发者文档",
+    url: "https://developers.weixin.qq.com/miniprogram/dev/framework/"
+  },
+  {
+    img: withBase('/img/nav/nav7-2.svg'),
+    title: "Taro",
+    desc: "多端统一开发解决方案",
+    url: "https://taro.jd.com/"
+  },
+  {
+    img: "https://web-assets.dcloud.net.cn/unidoc/zh/icon.png",
+    title: "uni-app",
+    desc: "一个使用 Vue.js 开发所有前端应用的框架",
+    url: "https://uniapp.dcloud.net.cn/"
+  },
+  {
+    img: "https://mpxjs.cn/favicon.ico",
+    title: "Mpx",
+    desc: "增强型跨端小程序框架",
+    url: "https://mpxjs.cn/"
+  },
+]
+// Node 相关
+const navList8 = [
+  {
+    img: withBase('/img/nav/nav8-1.svg'),
+    title: "Node.js",
+    desc: "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境",
+    url: "https://nodejs.org/zh-cn"
+  },
+  {
+    img: "https://expressjs.com/images/favicon.png",
+    title: "Express",
+    desc: "基于 Node.js 平台，快速、开放、极简的 Web 开发框架",
+    url: "https://expressjs.com/"
+  },
+  {
+    img: withBase('/img/nav/nav8-3.svg'),
+    title: "Koa",
+    desc: "基于 Node.js 平台的下一代 web 开发框架",
+    url: "https://koajs.com/"
+  },
+  {
+    img: "https://www.eggjs.org/favicon.png",
+    title: "Egg",
+    desc: "为企业级框架和应用而生",
+    url: "https://www.eggjs.org/zh-CN"
+  },
+  {
+    img: "https://d33wubrfki0l68.cloudfront.net/e937e774cbbe23635999615ad5d7732decad182a/26072/logo-small.ede75a6b.svg",
+    title: "Nest.js 中文文档",
+    desc: "用于构建高效且可伸缩的服务端应用程序的渐进式 Node.js 框架",
+    url: "https://docs.nestjs.cn/"
+  }
+]
+// 可视化
+const navList9 = [
+  {
+    img: "",
+    title: "ECharts",
+    desc: "一个基于 JavaScript 的开源可视化图表库",
+    url: "https://echarts.apache.org/zh/index.html"
+  },
+  {
+    img: "",
+    title: "AntV",
+    desc: "蚂蚁集团全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。",
+    url: "https://antv.vision/zh/"
+  },
+  {
+    img: "https://d3js.org/favicon.png",
+    title: "D3.js",
+    desc: "一个遵循 Web 标准用于可视化数据的 JavaScript 库",
+    url: "https://d3js.org/"
+  },
+  {
+    img: "https://www.chartjs.org/favicon.ico",
+    title: "Chart.js",
+    desc: "一个简单而灵活的 JavaScript 图表库",
+    url: "https://www.chartjs.org/"
+  },
+  {
+    img: "https://threejs.org/files/favicon.ico",
+    title: "Three.js",
+    desc: "JavaScript 3d 库",
+    url: "https://threejs.org/"
+  },
+]
+// 编译&构建&打包
+const navList10 = [
+  {
+    img: "https://www.webpackjs.com/icon_180x180.png",
+    title: "Webpack 中文网",
+    desc: "一个用于现代 JavaScript 应用程序的静态模块打包工具",
+    url: "https://www.webpackjs.com/"
+  },
+  {
+    img: "https://cn.vitejs.dev/logo.svg",
+    title: "Vite 中文文档",
+    desc: "下一代前端工具链",
+    url: "https://cn.vitejs.dev/"
+  },
+  {
+    img: "https://www.rollupjs.com/img/favicon.png",
+    title: "Rollup",
+    desc: "Rollup 是一个 JavaScript 模块打包器",
+    url: "https://www.rollupjs.com/"
+  },
+  {
+    img: "https://turbo.build/images/favicon-dark/apple-touch-icon.png",
+    title: "Turbo",
+    desc: "Turbo is an incremental bundler and build system optimized for JavaScript and TypeScript, written in Rust",
+    url: "https://turbo.build/"
+  },
+  {
+    img: "https://www.babeljs.cn/img/favicon.png",
+    title: "Babel",
+    desc: "Babel 是一个 JavaScript 编译器",
+    url: "https://www.babeljs.cn/"
+  },
+  {
+    img: "https://esbuild.github.io/favicon.svg",
+    title: "esbuild",
+    desc: "An extremely fast bundler for the web",
+    url: "https://esbuild.github.io/"
+  },
+  {
+    img: "https://swc.rs/favicon/apple-touch-icon.png",
+    title: "SWC",
+    desc: "Rust-based platform for the Web",
+    url: "https://swc.rs/"
+  },
+]
+// 图标库
+const navList11 = [
+  {
+    img: "https://img.alicdn.com/imgextra/i4/O1CN01Z5paLz1O0zuCC7osS_!!6000000001644-55-tps-83-82.svg",
+    title: "iconfont",
+    desc: "国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能",
+    url: "https://www.iconfont.cn/"
+  },
+  {
+    img: "https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg",
+    title: "IconPark 图标库",
+    desc: "IconPark图标库是一个通过技术驱动矢量图标样式的开源图标库，可以实现根据单一 SVG 源文件变换出多种主题， 具备丰富的分类、更轻量的代码和更灵活的使用场景；致力于构建高质量、统一化、可定义的图标资源，让大多数人都能够选择适合自己的风格图标",
+    url: "https://iconpark.oceanengine.com/official"
+  },
+  {
+    img: "https://icones.js.org/favicon.svg",
+    title: "Icônes",
+    desc: "基于 Iconify 的图标浏览器",
+    url: "https://icones.js.org/"
+  },
+  {
+    img: "https://icones.js.org/favicon.svg",
+    title: "Simple Icons",
+    desc: "包含 2457 种流行品牌的免费 SVG 图标库",
+    url: "https://simpleicons.org/"
+  },
+  {
+    img: "https://emoji.muan.co/appicon.png",
+    title: "Emoji searcher",
+    desc: "emoji 表情大全",
+    url: "https://emoji.muan.co/"
+  },
+  {
+    img: "https://www.webfx.com/wp-content/uploads/2021/10/favicon.png",
+    title: "Emoji Cheat Sheet",
+    desc: "可以在 GitHub 中使用的 emoji 表情",
+    url: "https://www.webfx.com/tools/emoji-cheat-sheet"
+  },
+  {
+    img: "https://gitmoji.dev/static/apple-icon-144x144.png",
+    title: "gitmoji",
+    desc: "可以在 git 中使用的 emoji 表情",
+    url: "https://gitmoji.dev/"
+  },
+]
+// 前端学习资料
+const navList12 = [
+  {
+    img: "https://developer.mozilla.org/apple-touch-icon.6803c6f0.png",
+    title: "MDN | Web 开发者指南",
+    desc: "Mozilla 的开发者平台，提供了大量关于 HTML、CSS 和 JavaScript 的详细文档以及广泛的 Web API 参考资",
+    url: "https://developer.mozilla.org/zh-CN"
+  },
+  {
+    img: "https://static.runoob.com/images/favicon.ico",
+    title: "菜鸟教程",
+    desc: "学的不仅是技术，更是梦想！",
+    url: "https://www.runoob.com/"
+  },
+  {
+    img: withBase('/img/nav/nav12-3.ico'),
+    title: "ES6 入门教程",
+    desc: "阮一峰的网络日志",
+    url: "http://es6.ruanyifeng.com/"
+  },
+]
+// 社区
+const navList13 = [
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+]
+// 高质量周刊与博客
+const navList14 = [
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+]
+// 摸鱼专用
+const navList15 = [
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  },
+  {
+    img: "",
+    title: "",
+    desc: "",
+    url: ""
+  }
+]
 export {
   navList1,
   navList2,

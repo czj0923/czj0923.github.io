@@ -186,7 +186,7 @@ export default defineUserConfig({
                 [
                   { text: 'JavaScript基础知识', link: '/frontend/js/types' },
                   { text: 'ES6常用知识点', link: '/frontend/es6/1' },
-                  { text: 'HTML/CSS', link: '/frontend/es6/html' },
+                  { text: 'HTML/CSS', link: '/frontend/html' },
                   { text: '浏览器相关', link: '/frontend/browser' },
                   { text: '八股文', link: '/interview/html' }
                 ]

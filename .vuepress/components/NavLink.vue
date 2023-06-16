@@ -3,7 +3,7 @@
     <a :href="item.url" target="_blank" v-for="(item, index) in curNav" :key="index">
       <div class="box">
         <div class="box-header">
-          <div class="img">
+          <div class="img" v-if="item.img">
             <img :src="item.img">
           </div>
           <div class="title">{{ item.title }}</div>
