@@ -15,7 +15,7 @@ banner:
     margin: 0 auto 2rem
 bannerBrand:
   bgImage: '/bg.svg'
-  title: 网站导航
+  title: 橘子OrangeのBlog
   tagline: 知识是进步的阶梯，争取每天都能进步一点点
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
