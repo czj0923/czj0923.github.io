@@ -23,6 +23,7 @@ bannerBrand:
     - { text: 常用导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
     - { icon: 'LogoGithub', link: 'https://github.com/czj0923' }
+    - { icon: 'Code', link: "https://gitee.com/czj_1051029537" }
 blog:
   socialLinks:
     - { icon: 'LogoGithub', link: "https://github.com/czj0923" }

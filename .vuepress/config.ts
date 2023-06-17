@@ -76,6 +76,10 @@ export default defineUserConfig({
           text: '浏览器与网络',
           children: ['/frontend/browser','/frontend/network/tcp','/frontend/network/http']
         },
+        {
+          text: '编程题',
+          children: ['/frontend/coding']
+        },
       ],
       '/hobby/run': [
         {
@@ -188,13 +192,14 @@ export default defineUserConfig({
                   { text: 'ES6常用知识点', link: '/frontend/es6/1' },
                   { text: 'HTML/CSS', link: '/frontend/html' },
                   { text: '浏览器相关', link: '/frontend/browser' },
+                  { text: '编程题', link: '/frontend/coding' },
                   { text: '八股文', link: '/interview/html' }
                 ]
             },
             {
-              text: 'php', children:
+              text: '后端', children:
                 [
-                  { text: '基础知识', link: "/php/foundation" }
+                  { text: 'php基础知识', link: "/php/foundation" }
                 ]
             },
           ]
@@ -224,16 +229,6 @@ export default defineUserConfig({
     //       style: 'font-size: 12px;'
     //     }
     //   ],
-    // },
-    // valineConfig 配置与 1.x 一致
-    // valineConfig: {
-    //   appId: 'xxx',
-    //   appKey: 'xxx',
-    //   placeholder: '填写邮箱可以收到回复提醒哦！',
-    //   verify: true, // 验证码服务
-    //   // notify: true,
-    //   recordIP: true,
-    //   // hideComments: true // 隐藏评论
     // },
   }),
   // debug: true,
