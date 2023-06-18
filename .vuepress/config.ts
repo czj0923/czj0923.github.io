@@ -21,6 +21,12 @@ export default defineUserConfig({
     [
       'script', { type: 'text/javascript', src: '/js/index.js' }
     ],
+    [
+      'script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744'}
+    ],
+    [
+      'link', {rel:'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'}
+    ],
     // [
     //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
     // ]
@@ -112,7 +118,7 @@ export default defineUserConfig({
         },
         {
           text: '记录',
-          children: []
+          children: ['b-1']
         }
       ],
       '/hobby/climbing': [
@@ -174,21 +180,21 @@ export default defineUserConfig({
                 text: '爬山', children:
                   [
                     { text: '攻略', link: '/hobby/climbing/a-1' },
-                    { text: '记录', link: '/hobby/run/b-1' }
+                    { text: '记录', link: '/hobby/climbing/b-1' }
                   ]
               },
               {
                 text: '骑行', children:
                   [
                     { text: '攻略', link: '/hobby/ride/a-1' },
-                    { text: '记录', link: '' }
+                    { text: '记录', link: '/hobby/ride/b-1' }
                   ]
               },
               {
                 text: '越野', children:
                   [
                     { text: '攻略', link: '/hobby/cross/a-1' },
-                    { text: '记录', link: '/hobby/run/b-1' }
+                    { text: '记录', link: '/hobby/cross/b-1' }
                   ]
               }
             ]

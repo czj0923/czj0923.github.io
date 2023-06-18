@@ -15,8 +15,8 @@ banner:
     margin: 0 auto 2rem
 bannerBrand:
   bgImage: '/bg.svg'
-  title: 橘子OrangeのBlog
-  tagline: 知识是进步的阶梯，争取每天都能进步一点点
+  title: 橘子のBlog
+  tagline: 生命在于运动
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
     - { text: 爱好, link: '/blogs/other/hobby-guide', type: 'plain' }

@@ -1,8 +1,10 @@
 ---
-title: 导航
+title: hobby导航
 date: 2023/06/09
 ---
 
+马拉松，越野，爬山，骑行
+<Map></Map>
 #### 跑步
 <a href="/hobby/run/a-1">前往该页面</a>
 

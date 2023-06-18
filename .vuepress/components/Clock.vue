@@ -29,22 +29,33 @@ export default {
             minutesList: [],
             secondsList: [],
             timeStr: "",
-            hourRotate: 0,
-            minuteRotate: 0,
-            secondRotate: 0,
+            hour: 0,
+            minute: 0,
+            second: 0,
             timer: null,
         }
     },
     created() {
         this.generateTimeList()
         this.getDate()
-        this.setNeedle()
+        this.initNeedle()
         this.timer = setInterval(() => {
             this.setNeedle()
         }, 1000)
     },
     destroyed() {
         clearInterval(this.timer)
+    },
+    computed:{
+        hourRotate(){
+            return (this.hour - 1) * 15
+        },
+        minuteRotate(){
+            return (this.minute - 1) * 6
+        },
+        secondRotate(){
+            return (this.second - 1) * 6
+        }
     },
     methods: {
         // 阿拉伯数字转中文数字
@@ -102,15 +113,20 @@ export default {
                 this.secondsList.push(secondObj)
             }
         },
-        setNeedle() {
+        initNeedle() {
             const date = new Date() // 获取时间
-            const hour = date.getHours() // 获取小时
-            const minute = date.getMinutes() // 获取分钟
-            const second = date.getSeconds() // 获取秒
-
-            this.hourRotate = (hour - 1) * 15
-            this.minuteRotate = (minute - 1) * 6
-            this.secondRotate = (second - 1) * 6
+            this.hour = date.getHours() // 获取小时
+            this.minute = date.getMinutes() // 获取分钟
+            this.second = date.getSeconds() // 获取秒
+        },
+        setNeedle(){
+            this.second ++ 
+            if(this.second%60 == 0){
+                this.minute ++
+                if(this.minute%60 == 0){
+                    this.hour ++ 
+                }
+            }
         },
         getDate() {
             let numStr = '零一二三四五六七八九'
@@ -140,99 +156,86 @@ export default {
     user-select: none;
     position: relative;
     font-size: 14px;
-}
 
-.clock .date {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    top: 340px;
-    left: 0
-}
+    .date {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        top: 340px;
+        left: 0
+    }
 
-.clock .hour {
-    position: absolute;
-    z-index: 3;
-    width: 360px;
-    height: 20px;
-    top: 340px;
-    left: 170px;
-    transition: transform .3s ease-in-out 0s;
-    transform: rotate(0deg)
-}
+    .hour {
+        position: absolute;
+        z-index: 3;
+        width: 360px;
+        height: 20px;
+        top: 340px;
+        left: 170px;
+        transition: transform .3s ease-in-out 0s;
+        transform: rotate(0deg)
+    }
 
-.clock .hour>div {
-    position: absolute;
-    width: 100%;
-    right: 0;
-    top: 0;
-    transition: transform 1s ease-in-out 0s;
-    transform: rotate(0deg)
-}
+    .hour>div {
+        position: absolute;
+        width: 100%;
+        right: 0;
+        top: 0;
+        transition: transform 1s ease-in-out 0s;
+        transform: rotate(0deg);
+    }
 
-.clock .hour>div>div {
-    float: right;
-    width: 60px;
-    text-align: right
-}
+    .hour>div>div {
+        float: right;
+        width: 60px;
+        text-align: right;
+        color: #f00;
+    }
 
-.clock .minute {
-    position: absolute;
-    z-index: 4;
-    width: 520px;
-    height: 20px;
-    top: 340px;
-    left: 90px
-}
+    .minute {
+        position: absolute;
+        z-index: 4;
+        width: 520px;
+        height: 20px;
+        top: 340px;
+        left: 90px;
+    }
 
-.clock .sec {
-    position: absolute;
-    z-index: 5;
-    width: 680px;
-    height: 20px;
-    top: 340px;
-    left: 10px
-}
+    .sec {
+        position: absolute;
+        z-index: 5;
+        width: 680px;
+        height: 20px;
+        top: 340px;
+        left: 10px;
+    }
 
-.clock>hr {
-    height: 0;
-    width: 0%;
-    position: absolute;
-    z-index: 1;
-    border: #000 solid 0;
-    border-bottom-width: 1px;
-    margin: 10px 0 0;
-    left: 50%;
-    top: 50%;
-    transition: width .3s ease-in-out 0s;
-    overflow: visible
-}
+    &>hr {
+        height: 0;
+        width: 0%;
+        position: absolute;
+        z-index: 1;
+        border: #000 solid 0;
+        border-bottom-width: 1px;
+        margin: 10px 0 0;
+        left: 50%;
+        top: 50%;
+        transition: width .3s ease-in-out 0s;
+        overflow: visible;
 
-.clock>hr.active:before {
-    content: '';
-    display: block;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #000;
-    top: -2px;
-    left: 0;
-    position: absolute
-}
-
-.clock .copyright {
-    position: absolute;
-    font-size: 42px;
-    width: 300px;
-    line-height: 40px;
-    left: 200px;
-    opacity: .1;
-    color: red;
-    text-align: center;
-    top: 330px;
-    letter-spacing: 10px;
-    transform: rotate(-35deg)
+        &.active:before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #000;
+            top: -2px;
+            left: 0;
+            position: absolute;
+        }
+    }
 }
 </style>
