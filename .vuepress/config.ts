@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import recoTheme from 'vuepress-theme-reco'
+import {MyPlugin} from "./public/MyPlugin"
 
 // import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 // import { getDirname, path } from '@vuepress/utils'
@@ -11,6 +12,9 @@ export default defineUserConfig({
   description: 'Just playing around',
   dest: "./dist",
   head: [
+    [
+      'link', { rel: 'icon', href: '/avatar.jpg' }
+    ],
     // [
     //   'script', { type: 'text/javascript', src: '/js/base.js' }
     // ],
@@ -20,6 +24,11 @@ export default defineUserConfig({
     // [
     //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
     // ]
+  ],
+  plugins: [
+    [
+      MyPlugin()
+    ]
   ],
   theme: recoTheme({
     style: '@vuepress-reco/style-default',
@@ -32,6 +41,7 @@ export default defineUserConfig({
     docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
+    componentsDir: ".vuepress/components", // 全局注册组件的路径
     // autoSetBlogCategories: true, // 自动设置分类
     autoSetSeries: true, // 自动设置系列
     // series 为原 sidebar
@@ -147,7 +157,8 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
-        { text: '导航', link: '/tools/nav'},
+        { text: '导航', link: '/tools/nav', icon: 'Compass'},
+        { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass'},
         { text: '标签', link: '/tags/js/1/' },
         {
           text: '爱好', children:
@@ -184,6 +195,7 @@ export default defineUserConfig({
         },
         {
           text: '编程',
+          icon: 'Code',
           children: [
             {
               text: '前端', children:
