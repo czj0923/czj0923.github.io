@@ -459,148 +459,148 @@ const navList12 = [
 // 社区
 const navList13 = [
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav13-1.svg'),
+    title: "Github",
+    desc: "一个面向开源及私有软件项目的托管平台",
+    url: "https://github.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://cdn.sstatic.net/Sites/stackoverflow/Img/apple-touch-icon.png?v=c78bd457575a",
+    title: "Stack Overflow",
+    desc: "全球最大的技术问答网站",
+    url: "https://stackoverflow.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://lf3-cdn-tos.bytescm.com/obj/static/xitu_juejin_web//static/favicons/apple-touch-icon.png",
+    title: "稀土掘金",
+    desc: "面向全球中文开发者的技术内容分享与交流平台",
+    url: "https://juejin.cn/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://www.v2ex.com/static/icon-192.png",
+    title: "V2EX",
+    desc: "一个关于分享和探索的地方",
+    url: "https://www.v2ex.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://static.segmentfault.com/main_site_next/0dc4bace/touch-icon.png",
+    title: "SegmentFault 思否",
+    desc: "技术问答开发者社区",
+    url: "https://segmentfault.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav13-6.svg'),
+    title: "博客园",
+    desc: "博客园是一个面向开发者的知识分享社区",
+    url: "https://www.cnblogs.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png",
+    title: "知乎",
+    desc: "中文互联网高质量的问答社区和创作者聚集的原创内容平台",
+    url: "https://juejin.cn/"
   },
 ]
 // 高质量周刊与博客
 const navList14 = [
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav14-1.png'),
+    title: "Frontend Weekly",
+    desc: "前端周刊",
+    url: "https://frontender-ua.medium.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav14-2.jpeg'),
+    title: "科技爱好者周刊",
+    desc: "阮一峰的科技爱好者周刊",
+    url: "https://www.ruanyifeng.com/blog/archives.html"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://s0.ssl.qhres2.com/static/3444fd94a3c31e92.ico",
+    title: "奇舞周刊",
+    desc: "领略前端技术 阅读奇舞周刊（360 前端团队）",
+    url: "https://weekly.75.team/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://img.alicdn.com/imgextra/i3/O1CN01uKTVpD1UK8BCxFBwo_!!6000000002498-2-tps-500-500.png",
+    title: "MDH Weekly",
+    desc: "云谦的前端周刊",
+    url: "https://mdhweekly.com/weekly"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://overreacted.io/icons/icon-96x96.png?v=8c19a894ebc3f54d282a8f2418cf5398",
+    title: "Overreacted",
+    desc: "Dan Abramov 的个人博客",
+    url: "https://overreacted.io/zh-hans"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://xiaolincoding.com/logo.webp",
+    title: "小林coding",
+    desc: "小林 x 图解计算机基础（计算机网络、操作系统、计算机组成、数据库）",
+    url: "https://xiaolincoding.com/"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://antfu.me/favicon.svg",
+    title: "Blog - Anthony Fu",
+    desc: "Vue, Vite, Nuxt 核心团队成员 | VueUse, Slidev, Vitest, UnoCSS 作者",
+    url: "https://antfu.me/posts"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: "https://cdn.zhangxinxu.com/zxx_ico.png",
+    title: "鑫空间-鑫生活",
+    desc: "张鑫旭的个人博客",
+    url: "https://www.zhangxinxu.com/wordpress"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav14-9.png'),
+    title: "前端精读周刊",
+    desc: "帮你理解最前沿、实用的技术",
+    url: "https://github.com/ascoders/weekly"
   },
   {
-    img: "",
-    title: "",
-    desc: "",
-    url: ""
+    img: withBase('/img/nav/nav14-10.jpeg'),
+    title: "冴羽博客",
+    desc: "四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列",
+    url: "https://github.com/mqyqingfeng/Blog"
   },
 ]
 // 摸鱼专用
 const navList15 = [
   {
-    img: "",
-    title: "",
+    img: "https://momoyu.cc/icon-192.png",
+    title: "摸摸鱼热榜",
     desc: "",
-    url: ""
+    url: "https://momoyu.cc/"
   },
   {
-    img: "",
-    title: "",
+    img: "https://v.qq.com/favicon.ico",
+    title: "腾讯视频",
     desc: "",
-    url: ""
+    url: "https://v.qq.com/"
   },
   {
-    img: "",
-    title: "",
+    img: "https://static.hdslb.com/mobile/img/512.png",
+    title: "哔哩哔哩",
     desc: "",
-    url: ""
+    url: "https://www.bilibili.com/"
   },
   {
-    img: "",
-    title: "",
+    img: "https://www.youtube.com/s/desktop/014dbbed/img/favicon_48x48.png",
+    title: "YouTube",
     desc: "",
-    url: ""
+    url: "https://www.youtube.com/"
   },
   {
-    img: "",
-    title: "",
+    img: withBase('/img/nav/nav15-5.svg'),
+    title: "Twitter",
     desc: "",
-    url: ""
+    url: "https://twitter.com/"
   },
   {
-    img: "",
-    title: "",
+    img: withBase('/img/nav/nav15-6.png'),
+    title: "Pixiv",
     desc: "",
-    url: ""
+    url: "https://www.pixiv.net/"
   }
 ]
 export {

@@ -164,8 +164,8 @@ export default defineUserConfig({
       [
         { text: '首页', link: '/' },
         { text: '导航', link: '/tools/nav', icon: 'Compass'},
-        { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass'},
-        { text: '标签', link: '/tags/js/1/' },
+        { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'ToolKit'},
+        { text: '标签', link: '/tags/js/1/', icon: 'Tag' },
         {
           text: '爱好', children:
             [
@@ -174,30 +174,31 @@ export default defineUserConfig({
                   [
                     { text: '攻略', link: '/hobby/run/a-1' },
                     { text: '比赛记录', link: '/hobby/run/b-1' }
-                  ]
+                  ],icon: 'TaskView'
               },
               {
                 text: '爬山', children:
                   [
                     { text: '攻略', link: '/hobby/climbing/a-1' },
                     { text: '记录', link: '/hobby/climbing/b-1' }
-                  ]
+                  ],icon: 'TaskView'
               },
               {
                 text: '骑行', children:
                   [
                     { text: '攻略', link: '/hobby/ride/a-1' },
                     { text: '记录', link: '/hobby/ride/b-1' }
-                  ]
+                  ],icon: 'TaskView'
               },
               {
                 text: '越野', children:
                   [
                     { text: '攻略', link: '/hobby/cross/a-1' },
                     { text: '记录', link: '/hobby/cross/b-1' }
-                  ]
+                  ],icon: 'TaskView'
               }
-            ]
+            ],
+            icon: 'UserFavoriteAltFilled'
         },
         {
           text: '编程',
@@ -223,7 +224,7 @@ export default defineUserConfig({
           ]
         },
         {
-          text: '关于我', link: "/docs/introduce"
+          text: '关于我', link: "/docs/introduce", icon: 'UserAvatar'
         },
         {
           text: '我的组件库', link: "/component/home"
