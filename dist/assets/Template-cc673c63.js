@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as o}from"./app-11db9fe7.js";const a={data(){return{}},methods:{}};function r(c,n,s,_,p,l){return t(),o("div",null,"1111")}const f=e(a,[["render",r],["__file","Template.vue"]]);export{f as default};

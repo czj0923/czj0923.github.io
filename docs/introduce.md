@@ -12,7 +12,7 @@ date: 2023/04/27
 爱好：马拉松，骑行，爬山，越野
 
 ## 会点啥？
-目前技术栈以Vue全家桶为主，会点php和laravel框架，在公司负责前端+后端开发\
+目前技术栈以Vue全家桶为主，会php和laravel框架，在公司负责前端+后端开发\
 熟练掌握css,html,javascript三件套和Vue2.x和Vue3.x框架\
 辅助技能:php,uniapp,微信小程序,TypeScript\
 React做过项目，现在忘得差不多了。。。
