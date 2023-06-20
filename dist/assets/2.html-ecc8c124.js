@@ -1,0 +1,1 @@
+import{_ as o,r as t,o as c,c as n,a as _}from"./app-f30de0ee.js";const a={};function r(s,l){const e=t("Map");return c(),n("div",null,[_(e)])}const p=o(a,[["render",r],["__file","2.html.vue"]]);export{p as default};

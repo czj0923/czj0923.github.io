@@ -6,6 +6,9 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.banner-brand__wrapper .banner-brand__content .title{
+  height: 140px;
+}
 
 .home-wrapper .banner-brand__wrapper .description {
   /* animation: san 4s linear infinite;*/
@@ -73,10 +76,10 @@ i:hover{cursor:url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hex
 .page-container img{
   width: 50%;
 }
-@font-face {
+/* @font-face {
   font-family: zhuziAwa;
   src: url(/font/zhuziAwa1n.ttf);
-}
+} */
 body{
   font-family: 'zhuziAwa',ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
 }
