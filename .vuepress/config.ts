@@ -164,8 +164,12 @@ export default defineUserConfig({
       [
         { text: '首页', link: '/' },
         { text: '导航', link: '/tools/nav', icon: 'Compass'},
-        { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'ToolKit'},
-        { text: '标签', link: '/tags/js/1/', icon: 'Tag' },
+        { text: '在线工具', icon: 'ToolKit',
+          children: [
+            {text: '时钟罗盘', link: '/blogs/other/clock', icon: 'ToolKit'},
+            {text: '地图', link: '/blogs/other/2', icon: 'Compass'},
+          ]
+        },
         {
           text: '爱好', children:
             [
@@ -226,9 +230,9 @@ export default defineUserConfig({
         {
           text: '关于我', link: "/docs/introduce", icon: 'UserAvatar'
         },
-        {
-          text: '我的组件库', link: "/component/home"
-        },
+        // {
+        //   text: '我的组件库', link: "/component/home"
+        // },
       ],
     // 评论
     commentConfig: {
