@@ -16,6 +16,40 @@ categories:
 接口继承在 `ECMAScript` 中是不可能的，因为函数没有签名，因此实现继承是 `ECMAScript` 唯一支持的继承方式，而且其**实现继承主要是依靠原型链来实现**的。
 
 ## 原型链继承
+构造函数、原型和实例的关系：每个构造函数都有一个原型对象，原型有一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想
+<CustomBlock title="原型链继承" content="<div>原型链继承是通过重写子类的原型<strong>将父类的实例作为子类的原型</strong></div><div>缺点</div><ul><li>父类上的引用类型属性会被所有实例共享，其中一个实例进行修改时会影响其他实例</li><li>创建子类实例时不能向父类构造函数传参</li></ul>"></CustomBlock>
+
+``` javascript
+function SuperType() {
+  this.property = 'Super'
+  this.colors = ['red', 'blue', 'green']
+}
+
+SuperType.prototype.getSuperValue = function () {
+  return this.property
+}
+
+function SubType() {
+  this.subproperty = false
+}
+
+// 关键点：创建父类 SuperType 的实例并将其赋值给子类的原型 SubType.prototype
+SubType.prototype = new SuperType()
+
+SubType.prototype.getSubValue = function () {
+  return this.subproperty
+}
+
+const instance1 = new SubType()
+console.log('instance1', instance1.getSuperValue()) // 'Super'
+// 在其中一个子类实例上修改父类上的引用属性
+instance1.colors.push('black')
+
+const instance2 = new SubType()
+console.log('instance2', instance2.getSuperValue()) // 'Super'
+// 在另一个子类实例上输出父类上的引用属性
+console.log('instance2', instance2.colors) // ['red', 'blue', 'green', 'black']
+```
 ## 借用构造函数继承（经典继承）
 ## 组合继承
 ## 原型式继承
