@@ -104,7 +104,7 @@ export default defineUserConfig({
         },
         {
           text: '比赛记录',
-          children: ['b-1', 'b-2', 'b-3', 'b-4']
+          children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5']
         },
         {
           text: '笔记',
