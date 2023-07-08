@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-67caad8e","path":"/blogs/other/hobby-guide.html","title":"导航","lang":"en-US","frontmatter":{"title":"导航","date":"2023/06/09"},"headers":[],"git":{"createdTime":1686924595000,"updatedTime":1686924595000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"blogs/other/hobby-guide.md"}');export{e as data};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,f as o}from"./app-0259adbc.js";const _={};function a(n,r){return t(),c("div",null,[o(" <Map></Map> ")])}const l=e(_,[["render",a],["__file","2.html.vue"]]);export{l as default};
