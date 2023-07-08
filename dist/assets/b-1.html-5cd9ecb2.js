@@ -1,0 +1,1 @@
+import{_ as s,o as c,c as o,b as e,d as t}from"./app-0259adbc.js";const _="/assets/1-1-12cd3878.png",r={},n=e("p",null,[t("自行车：滴滴青桔共享单车"),e("br"),t(" 距离：60km"),e("br"),t(" 用时：4小时05分 "),e("img",{src:_,alt:""})],-1),a=[n];function l(d,i){return c(),o("div",null,a)}const f=s(r,[["render",l],["__file","b-1.html.vue"]]);export{f as default};

@@ -1,1 +1,0 @@
-import{_ as e,o,c as t,b as n}from"./app-8cbcf23b.js";const c={},_=n("p",null,"php基础知识",-1),s=[_];function a(r,l){return o(),t("div",null,s)}const f=e(c,[["render",a],["__file","foundation.html.vue"]]);export{f as default};
