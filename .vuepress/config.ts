@@ -21,13 +21,13 @@ export default defineUserConfig({
     [
       'script', { type: 'text/javascript', src: '/js/index.js' }
     ],
-    // [
-    //   'script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744'}
-    // ],
-    // [
-    //   'link', {rel:'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'}
-    // ],
-    // [
+    [
+      'script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744'}
+    ],
+    [
+      'link', {rel:'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'}
+    ],
+    //[
     //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
     // ]
   ],
