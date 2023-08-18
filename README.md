@@ -16,7 +16,7 @@ banner:
 bannerBrand:
   bgImage: '/bg.svg'
   title: 橘子OrangeのBlog
-  tagline: 欲买桂花同载酒，终不似，少年游。
+  tagline: 知识是进步的阶梯，争取每天都进步一点点。
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
     - { text: 爱好, link: '/blogs/other/hobby-guide', type: 'plain' }
