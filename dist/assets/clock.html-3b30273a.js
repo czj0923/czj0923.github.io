@@ -1,1 +1,0 @@
-import{_ as c,r as o,o as t,c as n,a as l}from"./app-0259adbc.js";const r={};function _(s,a){const e=o("Clock");return t(),n("div",null,[l(e)])}const f=c(r,[["render",_],["__file","clock.html.vue"]]);export{f as default};
