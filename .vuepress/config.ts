@@ -222,7 +222,8 @@ export default defineUserConfig({
             {
               text: '后端', children:
                 [
-                  { text: 'php基础知识', link: "/php/foundation" }
+                  { text: 'php基础知识', link: "/php/foundation" },
+                  { text: '数据库', link: "/php/sql" }
                 ]
             },
           ]
