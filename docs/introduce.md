@@ -15,10 +15,11 @@ date: 2023/04/27
 目前技术栈以Vue全家桶为主，会php和laravel框架，在公司负责前端+后端开发\
 熟练掌握css,html,javascript三件套和Vue2.x和Vue3.x框架\
 辅助技能:php,uniapp,微信小程序,TypeScript\
-React做过项目，现在忘得差不多了。。。
+React做过项目
 
 ## 未来目标？
 不断提升技术
 
 ## 联系我？
-QQ：1051029537
+微信:18857380837\
+QQ：[1051029537](tencent://message/?Menu=yes&uin=1051029537&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45)
