@@ -47,7 +47,7 @@ export default {
                     {
                         title: "2020年10月2日",
                         content: "PB 24:44",
-                        content2: "中国计量大学北操场"
+                        content2: "桐乡"
                     },
                     {
                         title: "2020年10月20日",
@@ -127,6 +127,11 @@ export default {
                         title: "2023年04月30日",
                         content: "PB 01:44:15",
                         content2: "龙游马拉松"
+                    },
+                    {
+                        title: "2023年10月29日",
+                        content: "PB 01:40:52",
+                        content2: "桐庐半程马拉松"
                     },
                 ]
             }
