@@ -1,0 +1,1 @@
+import{_ as t}from"./10-23d35a5f.js";import{_ as o,o as s,c as _,b as e,d as c}from"./app-e7690ab6.js";const r={},a=e("p",null,[c("PB 1:39:29 "),e("img",{src:t})],-1),n=[a];function l(i,m){return s(),_("div",null,n)}const p=o(r,[["render",l],["__file","b-11.html.vue"]]);export{p as default};

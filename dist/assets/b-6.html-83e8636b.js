@@ -1,1 +1,0 @@
-import{_ as t,o as s,c,b as e,d as o}from"./app-79e2c423.js";const _="/assets/6-4e748bc1.png",n={},r=e("p",null,[o("1:48:11完赛 "),e("img",{src:_})],-1),a=[r];function l(d,i){return s(),c("div",null,a)}const f=t(n,[["render",l],["__file","b-6.html.vue"]]);export{f as default};

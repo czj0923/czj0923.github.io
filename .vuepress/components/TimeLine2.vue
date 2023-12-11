@@ -133,6 +133,16 @@ export default {
                         content: "PB 01:40:52",
                         content2: "桐庐半程马拉松"
                     },
+                    {
+                        title: "2023年11月19日",
+                        content: "PB 01:40:38",
+                        content2: "苏州环太湖1号公路马拉松"
+                    },
+                    {
+                        title: "2023年12月10日",
+                        content: "PB 01:39:29",
+                        content2: "诸暨西施马拉松"
+                    },
                 ]
             }
         };
