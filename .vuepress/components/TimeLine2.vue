@@ -64,6 +64,11 @@ export default {
                         content: "PB 22:23",
                         content2: "余杭塘河绿道"
                     },
+                    {
+                        title: "2023年12月31日",
+                        content: "PB 21:51",
+                        content2: "浙江路跑10公里大众达标系列赛(嘉兴站) 5公里分段"
+                    }
                 ],
                 2: [
                     {
@@ -105,6 +110,11 @@ export default {
                         title: "2023年5月20日",
                         content: "PB 45:19",
                         content2: "嘉善大云中国十公里精英赛"
+                    },
+                    {
+                        title: "2023年12月31日",
+                        content: "PB 43:45",
+                        content2: "浙江路跑10公里大众达标系列赛(嘉兴站)"
                     },
                 ],
                 3: [

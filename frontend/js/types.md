@@ -7,7 +7,8 @@ categories:
  - 前端物语
 ---
 
-<CustomBlock title="温馨提示" content="阅读<a href='https://www.ituring.com.cn/book/2472' target='_blank'>《JavaScript 高级程序设计（第 4 版）》</a>和各个大佬的文章所归纳的总结，<strong>如有异议按你的理解为主</strong>"></CustomBlock>
+<!-- <CustomBlock title="温馨提示" content="阅读<a href='https://www.ituring.com.cn/book/2472' target='_blank'>《JavaScript 高级程序设计（第 4 版）》</a>和各个大佬的文章所归纳的总结，<strong>如有异议按你的理解为主</strong>"></CustomBlock> -->
+<CustomBlock title="温馨提示" content="内容收集自网络"></CustomBlock>
 `JavaScript`中的数据类型分为基本数据类型和引用数据类型
 
 ## 基本类型
