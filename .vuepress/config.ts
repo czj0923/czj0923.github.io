@@ -27,6 +27,9 @@ export default defineUserConfig({
     [
       'link', {rel:'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'}
     ],
+    [
+      'link', {rel:'stylesheet', href: '/css/ant-design-vue.css'}
+    ],
     //[
     //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
     // ]

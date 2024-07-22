@@ -1,0 +1,1 @@
+import{_ as e,o as t,c,b as n}from"./app-2c798668.js";const o={},_=n("p",null,"输入框的文档",-1),s=[_];function r(a,l){return t(),c("div",null,s)}const u=e(o,[["render",r],["__file","input.html.vue"]]);export{u as default};
