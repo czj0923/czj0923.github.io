@@ -1,1 +1,0 @@
-const r=typeof window<"u";function o(){const a=new Date("2020-08-01"),n=new Date("2024-07-18");let e=[];for(let t=a;t<=n;t.setDate(t.getDate()+1))e.push({year:t.getFullYear(),month:t.getMonth()+1,day:t.getDate(),distance:0,extra:""});return console.log(e,"dayArray"),e}export{o as a,r as i};
