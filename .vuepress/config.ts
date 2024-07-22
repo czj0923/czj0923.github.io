@@ -108,7 +108,7 @@ export default defineUserConfig({
         },
         {
           text: '笔记',
-          children: ['c-1']
+          children: ['c-1', 'c-2', 'c-3']
         }
       ],
       '/hobby/ride': [

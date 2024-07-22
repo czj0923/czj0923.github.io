@@ -15,6 +15,7 @@
 </template>
 <script>
 import {record} from "./constant/record"
+
 export default {
     data() {
         return {

@@ -131,6 +131,16 @@ const record = {
           content: "PB 01:39:29",
           content2: "诸暨西施马拉松"
       },
+      {
+        title: "2024年3月31日",
+        content: "PB 01:37:38",
+        content2: "杭州梦想小镇半程马拉松"
+    },
+    {
+        title: "2024年5月5日",
+        content: "PB 01:35:09",
+        content2: "苏州太湖数字半程马拉松"
+    },
   ]
 }
 
