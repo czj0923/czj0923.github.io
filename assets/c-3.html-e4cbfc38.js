@@ -1,0 +1,1 @@
+import{_ as t,r as c,o,c as n,a as r}from"./app-95b03150.js";const a={};function _(s,l){const e=c("PBChart");return o(),n("div",null,[r(e)])}const f=t(a,[["render",_],["__file","c-3.html.vue"]]);export{f as default};
