@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t,b as c}from"./app-23efdb74.js";const o="/assets/15-e440140d.png",_={},n=c("img",{src:o},null,-1),r=[n];function a(l,i){return s(),t("div",null,r)}const m=e(_,[["render",a],["__file","b-15.html.vue"]]);export{m as default};
