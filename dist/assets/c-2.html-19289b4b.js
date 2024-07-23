@@ -1,0 +1,1 @@
+import{_ as c,r as o,o as t,c as n,a as r}from"./app-23efdb74.js";const a={};function _(s,l){const e=o("RunRecordChart");return t(),n("div",null,[r(e)])}const d=c(a,[["render",_],["__file","c-2.html.vue"]]);export{d as default};
