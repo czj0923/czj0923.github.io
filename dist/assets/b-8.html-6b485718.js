@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,b as e,d as o}from"./app-95b03150.js";const _="/assets/8-f219b3ba.png",n={},a=e("p",null,[o("2.5km迷你跑 10:04 第三名站台 "),e("img",{src:_})],-1),r=[a];function l(d,i){return s(),c("div",null,r)}const f=t(n,[["render",l],["__file","b-8.html.vue"]]);export{f as default};

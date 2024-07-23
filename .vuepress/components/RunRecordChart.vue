@@ -64,57 +64,28 @@ export default {
   },
   watch: {
     year: {
-      handler(v) {
-        // 年
+      handler() {
         if (this.dataType == 1) {
-          const xData = Object.keys(this.runRecord[this.year]).map(item => `${item}月`)
-          const yData = Object.values(this.runRecord[this.year])
-          this.initChart(xData, yData, `${this.year}年`)
+          this.handlerYear()
         } else {
-          // 月
-          const filterList = this.runRecordArray.filter(item => {
-            return item.month == this.month && item.year == this.year
-          })
-          const xData = filterList.map(item => item.day)
-          const yData = filterList.map(item => {
-            return {value: item.distance, extra: item.extra}
-          })
-          this.initChart(xData, yData, `${this.year}年${this.month}月`)
+          this.handlerMonth()
         }
       }
     },
     month: {
-      handler(v) {
-        const filterList = this.runRecordArray.filter(item => {
-          return item.month == v && item.year == this.year
-        })
-        const xData = filterList.map(item => item.day)
-        const yData = filterList.map(item => {
-          return {value: item.distance, extra: item.extra}
-        })
-        this.initChart(xData, yData, `${this.year}年${v}月`)
+      handler() {
+        this.handlerMonth()
       }
     },
     dataType: {
-      handler(v) {
-        // 年
+      handler() {
         if (this.dataType == 1) {
-          const xData = Object.keys(this.runRecord[this.year]).map(item => `${item}月`)
-          const yData = Object.values(this.runRecord[this.year])
-          this.initChart(xData, yData, `${this.year}年`)
+          this.handlerYear()
         } else {
-          // 月
           const lastItem = this.runRecordArray[this.runRecordArray.length - 1]
           this.month = lastItem.month
           this.year = lastItem.year
-          const filterList = this.runRecordArray.filter(item => {
-            return item.month == this.month && item.year == this.year
-          })
-          const xData = filterList.map(item => item.day)
-          const yData = filterList.map(item => {
-            return {value: item.distance, extra: item.extra}
-          })
-          this.initChart(xData, yData, `${this.year}年${this.month}月`)
+          this.handlerMonth()
         }
       }
     }
@@ -124,12 +95,25 @@ export default {
     this.month = lastItem.month
     this.year = lastItem.year
 
-    const xData = Object.keys(this.runRecord[this.year]).map(item => `${item}月`)
-    const yData = Object.values(this.runRecord[this.year])
-    this.initChart(xData, yData, `${this.year}年`)
+    this.handlerYear()
     // initDayArray()
   },
   methods: {
+    handlerYear(){
+      const xData = Object.keys(this.runRecord[this.year]).map(item => `${item}月`)
+      const yData = Object.values(this.runRecord[this.year])
+      this.initChart(xData, yData, `${this.year}年`)
+    },
+    handlerMonth() {
+      const filterList = this.runRecordArray.filter(item => {
+        return item.month == this.month && item.year == this.year
+      })
+      const xData = filterList.map(item => item.day)
+      const yData = filterList.map(item => {
+        return { value: item.distance, extra: item.extra }
+      })
+      this.initChart(xData, yData, `${this.year}年${this.month}月`)
+    },
     initChart(xData, yData, title) {
       chart = echarts.init(this.$refs.chart);
       chart.setOption({
@@ -145,7 +129,7 @@ export default {
         tooltip: {
           show: true,
           trigger: 'axis',
-          axisPointer:{
+          axisPointer: {
             type: 'shadow'
           },
         },
@@ -161,7 +145,7 @@ export default {
             label: {
               show: true,
               position: 'top',
-              formatter:(params)=>{
+              formatter: (params) => {
                 return params.data.extra
               },
               color: '#f00'
