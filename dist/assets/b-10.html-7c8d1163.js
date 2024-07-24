@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,b as e,d as o}from"./app-20004636.js";const _="/assets/10-e3bb5df2.png",n={},r=e("p",null,[o("1:48:42 "),e("img",{src:_})],-1),a=[r];function l(d,i){return s(),c("div",null,a)}const m=t(n,[["render",l],["__file","b-10.html.vue"]]);export{m as default};

@@ -1,1 +1,0 @@
-import{_ as e,o as t,c,b as o}from"./app-23efdb74.js";const _={},s=o("p",null,"预算3000入手一辆公路车",-1),n=[s];function a(r,l){return t(),c("div",null,n)}const f=e(_,[["render",a],["__file","a-1.html.vue"]]);export{f as default};

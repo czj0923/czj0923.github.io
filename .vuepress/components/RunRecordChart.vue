@@ -146,7 +146,7 @@ export default {
               show: true,
               position: 'top',
               formatter: (params) => {
-                return params.data.extra
+                return params.data.extra || params.data.value
               },
               color: '#f00'
             },

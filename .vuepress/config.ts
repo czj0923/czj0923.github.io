@@ -102,12 +102,12 @@ export default defineUserConfig({
       ],
       '/hobby/run': [
         {
-          text: '攻略',
-          children: ['a-1', 'a-2']
+          text: '介绍',
+          children: ['a-1', 'a-2', 'a-3']
         },
         {
           text: '比赛记录',
-          children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12', 'b-13', 'b-14', 'b-15']
+          children: ['b-2','b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12', 'b-13', 'b-14', 'b-15', 'b-16', 'b-17']
         },
         {
           text: '笔记',
@@ -116,8 +116,8 @@ export default defineUserConfig({
       ],
       '/hobby/ride': [
         {
-          text: '攻略',
-          children: ['a-1']
+          text: '介绍',
+          children: ['a-1', 'a-2']
         },
         {
           text: '记录',
@@ -126,7 +126,7 @@ export default defineUserConfig({
       ],
       '/hobby/climbing': [
         {
-          text: '攻略',
+          text: '介绍',
           children: ['a-1', 'a-2']
         },
         {
@@ -136,12 +136,12 @@ export default defineUserConfig({
       ],
       '/hobby/cross': [
         {
-          text: '攻略',
-          children: ['a-1']
+          text: '介绍',
+          children: ['a-1', 'a-2']
         },
         {
-          text: '记录',
-          children: ['b-1']
+          text: '比赛记录',
+          children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5', 'b-6', 'b-7']
         }
       ],
       '/notes': [
@@ -170,7 +170,7 @@ export default defineUserConfig({
         { text: '在线工具', icon: 'ToolKit',
           children: [
             {text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass'},
-            {text: '地图', link: '/blogs/other/2', icon: 'Map'},
+            {text: '马拉松参赛地图', link: '/blogs/other/2', icon: 'Map'},
           ]
         },
         {
@@ -179,31 +179,31 @@ export default defineUserConfig({
               {
                 text: '跑步', children:
                   [
-                    { text: '攻略', link: '/hobby/run/a-1' },
+                    { text: '介绍', link: '/hobby/run/a-1' },
                     { text: '比赛记录', link: '/hobby/run/b-1' }
+                  ],icon: 'TaskView'
+              },
+              {
+                text: '越野', children:
+                  [
+                    { text: '介绍', link: '/hobby/cross/a-1' },
+                    { text: '比赛记录', link: '/hobby/cross/b-1' }
                   ],icon: 'TaskView'
               },
               {
                 text: '爬山', children:
                   [
-                    { text: '攻略', link: '/hobby/climbing/a-1' },
+                    { text: '介绍', link: '/hobby/climbing/a-1' },
                     { text: '记录', link: '/hobby/climbing/b-1' }
                   ],icon: 'TaskView'
               },
               {
                 text: '骑行', children:
                   [
-                    { text: '攻略', link: '/hobby/ride/a-1' },
+                    { text: '介绍', link: '/hobby/ride/a-1' },
                     { text: '记录', link: '/hobby/ride/b-1' }
                   ],icon: 'TaskView'
               },
-              {
-                text: '越野', children:
-                  [
-                    { text: '攻略', link: '/hobby/cross/a-1' },
-                    { text: '记录', link: '/hobby/cross/b-1' }
-                  ],icon: 'TaskView'
-              }
             ],
             icon: 'UserFavoriteAltFilled'
         },

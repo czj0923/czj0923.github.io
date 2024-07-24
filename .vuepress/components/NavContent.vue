@@ -37,6 +37,13 @@ export default {
           href: "/blogs/other/hobby-guide"
         },
         {
+          icon: "🐞",
+          title: "跑步",
+          desc: "记录跑步的种种",
+          seeText: "查看",
+          href: "/hobby/run/a-1"
+        },
+        {
           icon: "🧰",
           title: "提效工具",
           desc: "工欲善其事，必先利其器",
@@ -44,17 +51,11 @@ export default {
           href: "/tools/1"
         },
         {
-          icon: "🐞",
-          title: "代码笔记",
-          desc: "记录平时用到的种种",
-          seeText: "踩坑记录"
-        },
-        {
           icon: "💯",
-          title: "八股文",
-          desc: "一些前端八股文",
+          title: "导航",
+          desc: "常用前端导航",
           seeText: "立即查看",
-          href: "/interview/html"
+          href: "/tools/nav"
         },
         {
           icon: "📘",
