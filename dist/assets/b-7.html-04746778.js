@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,b as e,d as o}from"./app-f67704ec.js";const _="/assets/7-632915ef.jpg",n={},r=e("p",null,[o("高温，太热了 "),e("img",{src:_})],-1),a=[r];function l(d,i){return s(),c("div",null,a)}const m=t(n,[["render",l],["__file","b-7.html.vue"]]);export{m as default};

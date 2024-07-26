@@ -117,12 +117,12 @@ export default defineUserConfig({
       '/hobby/ride': [
         {
           text: '介绍',
-          children: ['a-1', 'a-2']
+          children: ['a-1']
         },
-        {
-          text: '记录',
-          children: ['b-1']
-        }
+        // {
+        //   text: '记录',
+        //   children: ['b-1']
+        // }
       ],
       '/hobby/climbing': [
         {
