@@ -1,0 +1,1 @@
+import{_ as t,o as s,c,b as e,d as o}from"./app-9f938ccf.js";const _="/assets/11-6a1f112e.jpg",a={},n=e("p",null,[o("第三名，站台！ "),e("img",{src:_})],-1),r=[n];function l(d,i){return s(),c("div",null,r)}const m=t(a,[["render",l],["__file","b-11.html.vue"]]);export{m as default};
