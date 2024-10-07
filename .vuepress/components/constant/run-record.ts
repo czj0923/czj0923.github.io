@@ -56,9 +56,9 @@ const runRecord = {
     4: 121.9,
     5: 94.82,
     6: 139.3,
-    7: 176.6,
-    8: 0,
-    9:0,
+    7: 219.2,
+    8: 329,
+    9: 300.7,
     10: 0,
     11: 0,
     12: 0
@@ -10297,6 +10297,69 @@ const runRecordArray = [
     "distance": 15.02,
     "extra": ""
 },
+{
+    "year": 2024,
+    "month": 7,
+    "day": 23,
+    "distance": 10.03,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 24,
+    "distance": 7.6,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 25,
+    "distance": 5.02,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 26,
+    "distance": 0,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 27,
+    "distance": 19.88,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 28,
+    "distance": 0,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 29,
+    "distance": 0,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 30,
+    "distance": 0,
+    "extra": ""
+},
+{
+    "year": 2024,
+    "month": 7,
+    "day": 31,
+    "distance": 0,
+    "extra": ""
+}
 ]
 
 export {

@@ -7,15 +7,18 @@ const record = {
       },
       {
           title: "2020年9月8日",
-          content: "PB 28:51"
+          content: "PB 28:51",
+          content2: "自测"
       },
       {
           title: "2020年9月20日",
-          content: "PB 28:22"
+          content: "PB 28:22",
+          content2: "自测"
       },
       {
           title: "2020年9月21日",
-          content: "PB 27:16"
+          content: "PB 27:16",
+          content2: "自测"
       },
       {
           title: "2020年10月1日",
@@ -46,7 +49,17 @@ const record = {
           title: "2023年12月31日",
           content: "PB 21:51",
           content2: "浙江路跑10公里大众达标系列赛(嘉兴站) 5公里分段"
-      }
+      },
+      {
+        title: "2024年9月29日",
+        content: "PB 20:50",
+        content2: "自测"
+    },
+    {
+        title: "2024年10月2日",
+        content: "PB 19:26",
+        content2: "自测"
+    },
   ],
   2: [
       {
@@ -94,6 +107,11 @@ const record = {
           content: "PB 43:45",
           content2: "浙江路跑10公里大众达标系列赛(嘉兴站)"
       },
+      {
+        title: "2024年10月6日",
+        content: "PB 43:05",
+        content2: "自测"
+    },
   ],
   3: [
       {

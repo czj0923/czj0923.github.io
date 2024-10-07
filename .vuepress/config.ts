@@ -134,14 +134,14 @@ export default defineUserConfig({
           children: ['b-1']
         }
       ],
-      '/hobby/cross': [
+      '/hobby/trail': [
         {
           text: '介绍',
           children: ['a-1', 'a-2']
         },
         {
           text: '比赛记录',
-          children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5', 'b-6', 'b-7']
+          children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12']
         }
       ],
       '/notes': [
@@ -180,14 +180,14 @@ export default defineUserConfig({
                 text: '跑步', children:
                   [
                     { text: '介绍', link: '/hobby/run/a-1' },
-                    { text: '比赛记录', link: '/hobby/run/b-1' }
+                    { text: '比赛记录', link: '/hobby/run/b-2' }
                   ],icon: 'TaskView'
               },
               {
                 text: '越野', children:
                   [
-                    { text: '介绍', link: '/hobby/cross/a-1' },
-                    { text: '比赛记录', link: '/hobby/cross/b-1' }
+                    { text: '介绍', link: '/hobby/trail/a-1' },
+                    { text: '比赛记录', link: '/hobby/trail/b-1' }
                   ],icon: 'TaskView'
               },
               {
