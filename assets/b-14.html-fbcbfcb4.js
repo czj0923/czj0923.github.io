@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as t,b as c}from"./app-9f938ccf.js";const o="/assets/14-9b9fdf52.jpg",_={},n=c("img",{src:o},null,-1),r=[n];function a(l,f){return s(),t("div",null,r)}const d=e(_,[["render",a],["__file","b-14.html.vue"]]);export{d as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t,b as c}from"./app-dfa786ce.js";const o="/assets/15-ee151e18.jpg",_={},n=c("img",{src:o},null,-1),r=[n];function a(l,i){return s(),t("div",null,r)}const d=e(_,[["render",a],["__file","b-15.html.vue"]]);export{d as default};
