@@ -1,19 +1,31 @@
 <template>
     <div>
         <div id="container"></div>
+        <Modal v-model:visible="visible" title="弹窗">
+      <p>111</p>
+    </Modal>
     </div>
 </template>
 <script>
 import { raceRecord } from "./constant/record"
+import { Modal } from "ant-design-vue"
 let map = null
 let labelMarkerList = []
 export default {
     name: 'RaceMap',
+    components:{
+        Modal
+    },
     mounted() {
         // 初始化地图
         this.initMap()
         // 添加标注点
         this.addMarker()
+    },
+    data(){
+        return{
+            visible: false
+        }
     },
     methods: {
         initMap() {
@@ -27,6 +39,7 @@ export default {
             var zoomCtrl = new BMapGL.ZoomControl();  // 添加缩放控件
             map.addControl(zoomCtrl);
             map.addEventListener('click', (e) => {
+                this.visible = true
                 let obj = {
                     lng: e.latlng.lng,
                     lat: e.latlng.lat
