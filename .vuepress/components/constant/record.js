@@ -111,7 +111,12 @@ const record = {
         title: "2024年10月6日",
         content: "PB 43:05",
         content2: "自测"
-    },
+      },
+      {
+        title: "2024年10月11日",
+        content: "PB 41:04",
+        content2: "自测"
+      },
   ],
   3: [
       {
