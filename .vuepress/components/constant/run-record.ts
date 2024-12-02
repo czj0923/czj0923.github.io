@@ -129,6 +129,20 @@ const pbRecord = [
     time: '1:35:09',
     addr: "苏州太湖数字半程马拉松"
   },
+  {
+    year: 2024,
+    month: 10,
+    day: 20,
+    time: '1:28:11',
+    addr: "2024泰州马拉松"
+  },
+  {
+    year: 2024,
+    month: 12,
+    day: 1,
+    time: '1:27:50',
+    addr: "2024乍浦半马"
+  },
 ]
 
 const runRecordArray = [
