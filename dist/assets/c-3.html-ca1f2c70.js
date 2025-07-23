@@ -1,1 +1,0 @@
-import{_ as t,r as c,o,c as n,a as r}from"./app-dfa786ce.js";const a={};function _(s,l){const e=c("PBChart");return o(),n("div",null,[r(e)])}const f=t(a,[["render",_],["__file","c-3.html.vue"]]);export{f as default};

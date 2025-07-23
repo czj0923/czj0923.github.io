@@ -1,1 +1,0 @@
-const a=JSON.parse('{"key":"v-24aa30e1","path":"/categories/daimabiji/1/","title":"","lang":"en-US","frontmatter":{"layout":"Categories"},"headers":[],"git":{},"filePathRelative":null}');export{a as data};
