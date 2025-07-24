@@ -42,17 +42,18 @@ export default defineUserConfig({
     logo: '/avatar.jpg',
     author: 'Cao Zhijie',
     authorAvatar: '/avatar.jpg',
-    docsRepo: 'https://github.com/czj0923/blog.git',
-    docsBranch: 'main',
-    docsDir: 'example',
+    repo: 'czj0923/czj0923.github.io',
+    //repo: 'https://gitlab.com/foo/bar',
+    // docsRepo: 'https://github.com/.git',
+    // docsBranch: 'main',
+    // docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
-    // autoSetBlogCategories: true, // 自动设置分类
+    autoSetBlogCategories: true, // 自动设置分类
     autoSetSeries: true, // 自动设置系列
-    // series 为原 sidebar
     series: {
-      '/docs': [],
-      '/component': [
+      '/docs/': [],
+      '/component/': [
         {
           text: '通用组件',
           children: ['button']
@@ -70,7 +71,7 @@ export default defineUserConfig({
           children: []
         }
       ],
-      '/frontend': [
+      '/frontend/': [
         {
           text: 'JavaScript基础知识',
           children: ['/frontend/js/types', '/frontend/js/clone', '/frontend/js/conversions', '/frontend/js/prototype', '/frontend/js/inherit']
@@ -96,7 +97,7 @@ export default defineUserConfig({
           children: ['/frontend/coding']
         },
       ],
-      '/hobby/run': [
+      '/hobby/run/': [
         {
           text: '介绍',
           children: ['a-1', 'a-2', 'a-3']
@@ -110,7 +111,7 @@ export default defineUserConfig({
           children: ['c-1', 'c-2', 'c-3']
         }
       ],
-      '/hobby/ride': [
+      '/hobby/ride/': [
         {
           text: '介绍',
           children: ['a-1']
@@ -120,7 +121,7 @@ export default defineUserConfig({
         //   children: ['b-1']
         // }
       ],
-      '/hobby/climbing': [
+      '/hobby/climbing/': [
         {
           text: '介绍',
           children: ['a-1', 'a-2']
@@ -130,7 +131,7 @@ export default defineUserConfig({
           children: ['b-1']
         }
       ],
-      '/hobby/trail': [
+      '/hobby/trail/': [
         {
           text: '介绍',
           children: ['a-1', 'a-2']
@@ -140,19 +141,19 @@ export default defineUserConfig({
           children: ['b-1', 'b-2', 'b-3', 'b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12']
         }
       ],
-      '/notes': [
+      '/notes/': [
         {
           text: '笔记',
           children: ['092101', '121501']
         },
       ],
-      '/interview': [
+      '/interview/': [
         {
           text: '前端八股文',
           children: ['html', 'css', 'javascript', 'vue', 'https', 'webpack', 'browser', 'write', 'performance']
         },
       ],
-      '/read': [
+      '/read/': [
         {
           text: '阅读',
           children: ['1', '2', '3', '4', '5']
@@ -229,6 +230,9 @@ export default defineUserConfig({
           ]
         },
         {
+          text: '时间轴', link: '/timeline', icon: 'TimeLine'
+        },
+        {
           text: '关于我', link: "/docs/introduce", icon: 'UserAvatar'
         },
         // {
@@ -244,60 +248,6 @@ export default defineUserConfig({
     //     hideComments: false, // 全局隐藏评论，默认 false
     //   },
     // },
-    bulletin: {
-      body: [
-        {
-          type: "text",
-          content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
-          style: "font-size: 12px;",
-        },
-        {
-          type: "hr",
-        },
-        {
-          type: "title",
-          content: "QQ 群",
-        },
-        {
-          type: "text",
-          content: `
-          <ul>
-            <li>QQ群1：1037296104</li>
-            <li>QQ群2：1061561395</li>
-            <li>QQ群3：962687802</li>
-          </ul>`,
-          style: "font-size: 12px;",
-        },
-        {
-          type: "hr",
-        },
-        {
-          type: "title",
-          content: "GitHub",
-        },
-        {
-          type: "text",
-          content: `
-          <ul>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/issues">Issues<a/></li>
-            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/discussions/1">Discussions<a/></li>
-          </ul>`,
-          style: "font-size: 12px;",
-        },
-        {
-          type: "hr",
-        },
-        {
-          type: "buttongroup",
-          children: [
-            {
-              text: "打赏",
-              link: "/docs/others/donate.html",
-            },
-          ],
-        },
-      ],
-    },
   }),
   // debug: true,
 });
