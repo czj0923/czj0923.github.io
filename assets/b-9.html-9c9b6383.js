@@ -1,1 +1,0 @@
-import{_ as t,o as s,c,b as e,d as o}from"./app-dfa786ce.js";const _="/assets/9-cf8f0f17.png",n={},r=e("p",null,[o("PB 1:40:38 "),e("img",{src:_})],-1),a=[r];function l(f,d){return s(),c("div",null,a)}const m=t(n,[["render",l],["__file","b-9.html.vue"]]);export{m as default};

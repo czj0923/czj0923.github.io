@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-0f6ce3bf","path":"/docs/home.html","title":"theme-reco","lang":"en-US","frontmatter":{"title":"theme-reco","date":"2020/05/29"},"headers":[],"git":{"createdTime":1664856804000,"updatedTime":1664870457000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":3}]},"filePathRelative":"docs/home.md"}');export{e as data};

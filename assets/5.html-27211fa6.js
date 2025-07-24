@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-92511878","path":"/read/5.html","title":"岳阳楼记","lang":"en-US","frontmatter":{"title":"岳阳楼记","date":"2023/05/28","categories":["阅读"]},"headers":[],"git":{"createdTime":1685367442000,"updatedTime":1685367442000,"contributors":[{"name":"Cao Zhijie","email":"1051029537@qq.com","commits":1}]},"filePathRelative":"read/5.md"}');export{e as data};
