@@ -1,11 +1,8 @@
-import { defineUserConfig } from 'vuepress'
-import type { DefaultThemeOptions } from 'vuepress'
-import recoTheme from 'vuepress-theme-reco'
-import {MyPlugin} from "./public/MyPlugin"
-
-// import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
-// import { getDirname, path } from '@vuepress/utils'
-// const __dirname = getDirname(import.meta.url)
+import { defineUserConfig } from "vuepress";
+import recoTheme from "vuepress-theme-reco";
+import { viteBundler } from '@vuepress/bundler-vite'
+// import { webpackBundler } from '@vuepress/bundler-webpack'
+import { MyPlugin } from "./public/MyPlugin"
 
 export default defineUserConfig({
   title: '橘子Orange',
@@ -22,13 +19,13 @@ export default defineUserConfig({
       'script', { type: 'text/javascript', src: '/js/index.js' }
     ],
     [
-      'script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744'}
+      'script', { type: 'text/javascript', src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744' }
     ],
     [
-      'link', {rel:'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'}
+      'link', { rel: 'stylesheet', href: 'https://api.map.baidu.com/res/webgl/10/bmap.css' }
     ],
     [
-      'link', {rel:'stylesheet', href: '/css/ant-design-vue.css'}
+      'link', { rel: 'stylesheet', href: '/css/ant-design-vue.css' }
     ],
     //[
     //   'link', {rel: 'stylesheet', href: '/css/heti.css'}
@@ -39,8 +36,8 @@ export default defineUserConfig({
       MyPlugin()
     ]
   ],
+  bundler: viteBundler(),
   theme: recoTheme({
-    style: '@vuepress-reco/style-default',
     primaryColor: '#d27e00', // 主题色
     logo: '/avatar.jpg',
     author: 'Cao Zhijie',
@@ -50,7 +47,6 @@ export default defineUserConfig({
     docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
-    componentsDir: ".vuepress/components", // 全局注册组件的路径
     // autoSetBlogCategories: true, // 自动设置分类
     autoSetSeries: true, // 自动设置系列
     // series 为原 sidebar
@@ -77,7 +73,7 @@ export default defineUserConfig({
       '/frontend': [
         {
           text: 'JavaScript基础知识',
-          children: ['/frontend/js/types','/frontend/js/clone','/frontend/js/conversions','/frontend/js/prototype','/frontend/js/inherit']
+          children: ['/frontend/js/types', '/frontend/js/clone', '/frontend/js/conversions', '/frontend/js/prototype', '/frontend/js/inherit']
         },
         {
           text: 'ES6常用知识点',
@@ -85,7 +81,7 @@ export default defineUserConfig({
         },
         {
           text: 'HTML/CSS',
-          children: ['/frontend/html','/frontend/css']
+          children: ['/frontend/html', '/frontend/css']
         },
         {
           text: 'webpack',
@@ -93,7 +89,7 @@ export default defineUserConfig({
         },
         {
           text: '浏览器与网络',
-          children: ['/frontend/browser','/frontend/network/tcp','/frontend/network/http']
+          children: ['/frontend/browser', '/frontend/network/tcp', '/frontend/network/http']
         },
         {
           text: '编程题',
@@ -107,7 +103,7 @@ export default defineUserConfig({
         },
         {
           text: '比赛记录',
-          children: ['b-2','b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12', 'b-13', 'b-14', 'b-15', 'b-16', 'b-17']
+          children: ['b-2', 'b-4', 'b-5', 'b-6', 'b-7', 'b-8', 'b-9', 'b-10', 'b-11', 'b-12', 'b-13', 'b-14', 'b-15', 'b-16', 'b-17']
         },
         {
           text: '笔记',
@@ -166,11 +162,12 @@ export default defineUserConfig({
     navbar:
       [
         { text: '首页', link: '/' },
-        { text: '导航', link: '/tools/nav', icon: 'Compass'},
-        { text: '在线工具', icon: 'ToolKit',
+        { text: '导航', link: '/tools/nav', icon: 'Compass' },
+        {
+          text: '在线工具', icon: 'ToolKit',
           children: [
-            {text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass'},
-            {text: '马拉松参赛地图', link: '/blogs/other/2', icon: 'Map'},
+            { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass' },
+            { text: '马拉松参赛地图', link: '/blogs/other/2', icon: 'Map' },
           ]
         },
         {
@@ -181,31 +178,31 @@ export default defineUserConfig({
                   [
                     { text: '介绍', link: '/hobby/run/a-1' },
                     { text: '比赛记录', link: '/hobby/run/b-2' }
-                  ],icon: 'TaskView'
+                  ], icon: 'TaskView'
               },
               {
                 text: '越野', children:
                   [
                     { text: '介绍', link: '/hobby/trail/a-1' },
                     { text: '比赛记录', link: '/hobby/trail/b-1' }
-                  ],icon: 'TaskView'
+                  ], icon: 'TaskView'
               },
               {
                 text: '爬山', children:
                   [
                     { text: '介绍', link: '/hobby/climbing/a-1' },
                     { text: '记录', link: '/hobby/climbing/b-1' }
-                  ],icon: 'TaskView'
+                  ], icon: 'TaskView'
               },
               {
                 text: '骑行', children:
                   [
                     { text: '介绍', link: '/hobby/ride/a-1' },
                     { text: '记录', link: '/hobby/ride/b-1' }
-                  ],icon: 'TaskView'
+                  ], icon: 'TaskView'
               },
             ],
-            icon: 'UserFavoriteAltFilled'
+          icon: 'UserFavoriteAltFilled'
         },
         {
           text: '编程',
@@ -239,24 +236,68 @@ export default defineUserConfig({
         // },
       ],
     // 评论
-    commentConfig: {
-      type: 'valine',
-      options: {
-        appId: 'AUPGDMXPseZm27D9DPjPh6J4-gzGzoHsz', // your appId
-        appKey: 'lmW3jzNlvzuxVgOvvBltkoHM', // your appKey
-        hideComments: false, // 全局隐藏评论，默认 false
-      },
-    },
-    // 公告 暂时不需要
-    // bulletin: {
-    //   body: [
-    //     {
-    //       type: 'text',
-    //       content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
-    //       style: 'font-size: 12px;'
-    //     }
-    //   ],
+    // commentConfig: {
+    //   type: 'valine',
+    //   options: {
+    //     appId: 'AUPGDMXPseZm27D9DPjPh6J4-gzGzoHsz', // your appId
+    //     appKey: 'lmW3jzNlvzuxVgOvvBltkoHM', // your appKey
+    //     hideComments: false, // 全局隐藏评论，默认 false
+    //   },
     // },
+    bulletin: {
+      body: [
+        {
+          type: "text",
+          content: `🎉🎉🎉 reco 主题 2.x 已经接近 Beta 版本，在发布 Latest 版本之前不会再有大的更新，大家可以尽情尝鲜了，并且希望大家在 QQ 群和 GitHub 踊跃反馈使用体验，我会在第一时间响应。`,
+          style: "font-size: 12px;",
+        },
+        {
+          type: "hr",
+        },
+        {
+          type: "title",
+          content: "QQ 群",
+        },
+        {
+          type: "text",
+          content: `
+          <ul>
+            <li>QQ群1：1037296104</li>
+            <li>QQ群2：1061561395</li>
+            <li>QQ群3：962687802</li>
+          </ul>`,
+          style: "font-size: 12px;",
+        },
+        {
+          type: "hr",
+        },
+        {
+          type: "title",
+          content: "GitHub",
+        },
+        {
+          type: "text",
+          content: `
+          <ul>
+            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/issues">Issues<a/></li>
+            <li><a href="https://github.com/vuepress-reco/vuepress-theme-reco-next/discussions/1">Discussions<a/></li>
+          </ul>`,
+          style: "font-size: 12px;",
+        },
+        {
+          type: "hr",
+        },
+        {
+          type: "buttongroup",
+          children: [
+            {
+              text: "打赏",
+              link: "/docs/others/donate.html",
+            },
+          ],
+        },
+      ],
+    },
   }),
   // debug: true,
-})
+});
