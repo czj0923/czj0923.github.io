@@ -42,8 +42,7 @@ export default defineUserConfig({
     logo: '/avatar.jpg',
     author: 'Cao Zhijie',
     authorAvatar: '/avatar.jpg',
-    repo: 'czj0923/czj0923.github.io',
-    //repo: 'https://gitlab.com/foo/bar',
+    repo: 'czj0923',
     // docsRepo: 'https://github.com/.git',
     // docsBranch: 'main',
     // docsDir: 'example',
@@ -162,7 +161,7 @@ export default defineUserConfig({
     },
     navbar:
       [
-        { text: '首页', link: '/' },
+        { text: '首页', link: '/',icon: 'icon-home' },
         { text: '导航', link: '/tools/nav', icon: 'Compass' },
         {
           text: '在线工具', icon: 'ToolKit',
@@ -179,28 +178,28 @@ export default defineUserConfig({
                   [
                     { text: '介绍', link: '/hobby/run/a-1' },
                     { text: '比赛记录', link: '/hobby/run/b-2' }
-                  ], icon: 'TaskView'
+                  ], icon: 'icon-task'
               },
               {
                 text: '越野', children:
                   [
                     { text: '介绍', link: '/hobby/trail/a-1' },
                     { text: '比赛记录', link: '/hobby/trail/b-1' }
-                  ], icon: 'TaskView'
+                  ], icon: 'icon-task'
               },
               {
                 text: '爬山', children:
                   [
                     { text: '介绍', link: '/hobby/climbing/a-1' },
                     { text: '记录', link: '/hobby/climbing/b-1' }
-                  ], icon: 'TaskView'
+                  ], icon: 'icon-task'
               },
               {
                 text: '骑行', children:
                   [
                     { text: '介绍', link: '/hobby/ride/a-1' },
                     { text: '记录', link: '/hobby/ride/b-1' }
-                  ], icon: 'TaskView'
+                  ], icon: 'icon-task'
               },
             ],
           icon: 'UserFavoriteAltFilled'
@@ -230,10 +229,10 @@ export default defineUserConfig({
           ]
         },
         {
-          text: '时间轴', link: '/timeline', icon: 'TimeLine'
+          text: '时间轴', link: '/timeline', icon: 'icon-timeline'
         },
         {
-          text: '关于我', link: "/docs/introduce", icon: 'UserAvatar'
+          text: '关于我', link: "/docs/introduce", icon: 'icon-user'
         },
         // {
         //   text: '我的组件库', link: "/component/home"

@@ -1,7 +1,3 @@
-import {
-  withBase
-} from '@vuepress/client'
-
 // 常用工具
 const navList1 = [{
   img: "https://caniuse.com/img/favicon-128.png",
@@ -28,7 +24,7 @@ const navList1 = [{
   url: "https://tool.lu"
 },
 {
-  img: withBase('/img/nav/nav1-5.ico'),
+  img: '/img/nav/nav1-5.ico',
   title: "Json 中文网",
   desc: "JSON 在线解析及格式化验证",
   url: "https://www.json.cn"
@@ -42,13 +38,13 @@ const navList1 = [{
 ]
 // AI导航
 const navList2 = [{
-  img: withBase('/img/nav/nav2-1.png'),
+  img: '/img/nav/nav2-1.png',
   title: "ChatGPT（最强）",
   desc: "",
   url: "https://chat.openai.com/chat"
 },
 {
-  img: withBase('/img/nav/nav2-1.png'),
+  img: '/img/nav/nav2-1.png',
   title: "ChatGPT 镜像站点列表）",
   desc: "",
   url: "https://github.com/xx025/carrot"
@@ -219,7 +215,7 @@ const navList5 = [
     url: "https://svelte.dev"
   },
   {
-    img: withBase('/img/nav/nav5-2.svg'),
+    img: '/img/nav/nav5-2.svg',
     title: "jQuery API 中文文档",
     desc: "一个兼容多浏览器的 JavaScript 框架",
     url: "https://jquery.cuishifeng.cn"
@@ -261,7 +257,7 @@ const navList7 = [
     url: "https://developers.weixin.qq.com/miniprogram/dev/framework/"
   },
   {
-    img: withBase('/img/nav/nav7-2.svg'),
+    img: '/img/nav/nav7-2.svg',
     title: "Taro",
     desc: "多端统一开发解决方案",
     url: "https://taro.jd.com/"
@@ -282,7 +278,7 @@ const navList7 = [
 // Node 相关
 const navList8 = [
   {
-    img: withBase('/img/nav/nav8-1.svg'),
+    img: '/img/nav/nav8-1.svg',
     title: "Node.js",
     desc: "Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境",
     url: "https://nodejs.org/zh-cn"
@@ -294,7 +290,7 @@ const navList8 = [
     url: "https://expressjs.com/"
   },
   {
-    img: withBase('/img/nav/nav8-3.svg'),
+    img: '/img/nav/nav8-3.svg',
     title: "Koa",
     desc: "基于 Node.js 平台的下一代 web 开发框架",
     url: "https://koajs.com/"
@@ -450,7 +446,7 @@ const navList12 = [
     url: "https://www.runoob.com/"
   },
   {
-    img: withBase('/img/nav/nav12-3.ico'),
+    img: '/img/nav/nav12-3.ico',
     title: "ES6 入门教程",
     desc: "阮一峰的网络日志",
     url: "http://es6.ruanyifeng.com/"
@@ -459,7 +455,7 @@ const navList12 = [
 // 社区
 const navList13 = [
   {
-    img: withBase('/img/nav/nav13-1.svg'),
+    img: '/img/nav/nav13-1.svg',
     title: "Github",
     desc: "一个面向开源及私有软件项目的托管平台",
     url: "https://github.com/"
@@ -489,7 +485,7 @@ const navList13 = [
     url: "https://segmentfault.com/"
   },
   {
-    img: withBase('/img/nav/nav13-6.svg'),
+    img: '/img/nav/nav13-6.svg',
     title: "博客园",
     desc: "博客园是一个面向开发者的知识分享社区",
     url: "https://www.cnblogs.com/"
@@ -504,13 +500,13 @@ const navList13 = [
 // 高质量周刊与博客
 const navList14 = [
   {
-    img: withBase('/img/nav/nav14-1.png'),
+    img: '/img/nav/nav14-1.png',
     title: "Frontend Weekly",
     desc: "前端周刊",
     url: "https://frontender-ua.medium.com/"
   },
   {
-    img: withBase('/img/nav/nav14-2.jpeg'),
+    img: '/img/nav/nav14-2.jpeg',
     title: "科技爱好者周刊",
     desc: "阮一峰的科技爱好者周刊",
     url: "https://www.ruanyifeng.com/blog/archives.html"
@@ -552,13 +548,13 @@ const navList14 = [
     url: "https://www.zhangxinxu.com/wordpress"
   },
   {
-    img: withBase('/img/nav/nav14-9.png'),
+    img: '/img/nav/nav14-9.png',
     title: "前端精读周刊",
     desc: "帮你理解最前沿、实用的技术",
     url: "https://github.com/ascoders/weekly"
   },
   {
-    img: withBase('/img/nav/nav14-10.jpeg'),
+    img: '/img/nav/nav14-10.jpeg',
     title: "冴羽博客",
     desc: "四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列",
     url: "https://github.com/mqyqingfeng/Blog"
@@ -591,13 +587,13 @@ const navList15 = [
     url: "https://www.youtube.com/"
   },
   {
-    img: withBase('/img/nav/nav15-5.svg'),
+    img: '/img/nav/nav15-5.svg',
     title: "Twitter",
     desc: "",
     url: "https://twitter.com/"
   },
   {
-    img: withBase('/img/nav/nav15-6.png'),
+    img: '/img/nav/nav15-6.png',
     title: "Pixiv",
     desc: "",
     url: "https://www.pixiv.net/"
