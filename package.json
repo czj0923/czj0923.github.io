@@ -8,7 +8,11 @@
   "scripts": {
     "dev": "vuepress dev .",
     "start": "vuepress dev .",
-    "build": "vuepress build ."
+    "build": "vuepress build .",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue,css,less,scss,json,md}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0"
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",

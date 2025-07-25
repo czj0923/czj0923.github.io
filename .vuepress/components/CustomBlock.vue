@@ -1,34 +1,30 @@
 <template>
-    <div class="custom-block">
-      <div class="title">{{ title }}</div>
-      <div class="content" v-html="content"></div>
-    </div>
+  <div class="custom-block">
+    <div class="title">{{ title }}</div>
+    <div class="content" v-html="content"></div>
+  </div>
 </template>
 <script>
-export default{
-  props:{
-    title:{
+export default {
+  props: {
+    title: {
       type: String,
-      default: "标题"
+      default: '标题'
     },
-    content:{
+    content: {
       type: String,
-      default: ""
+      default: ''
     }
   },
-    data(){
-        return{
-            
-        }
-    },
-    methods:{
-
-    },
-}
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
 
 <style lang="scss" scoped>
-.custom-block{
+.custom-block {
   margin: 16px 0;
   border-radius: 8px;
   padding: 16px 16px 8px;
@@ -36,33 +32,33 @@ export default{
   border: 1px solid var(--czj-primary-color);
   color: var(--czj-primary-color);
   font-size: 14px;
-  .title{
+  .title {
     font-weight: 600;
     color: inherit;
     font-size: 16px;
   }
-  :deep(.content){
+  :deep(.content) {
     font-weight: 400;
     line-height: 24px;
     color: inherit;
-    code{
+    code {
       font-weight: 700;
       color: inherit;
       background-color: #f6f6f7;
       padding: 3px 6px;
       font-size: 13px;
     }
-    a{
+    a {
       color: inherit;
       font-weight: 600;
-      &:hover{
+      &:hover {
         text-decoration: underline;
       }
     }
-    ul{
+    ul {
       margin: 1rem 0;
-      li>ul{
-        margin: 8px 0  0;
+      li > ul {
+        margin: 8px 0 0;
       }
     }
   }

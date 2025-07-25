@@ -1,10 +1,15 @@
 <template>
   <div class="nav-group m-nav-links">
-    <a :href="item.url" target="_blank" v-for="(item, index) in curNav" :key="index">
+    <a
+      :href="item.url"
+      target="_blank"
+      v-for="(item, index) in curNav"
+      :key="index"
+    >
       <div class="box">
         <div class="box-header">
           <div class="img" v-if="item.img">
-            <img :src="item.img">
+            <img :src="item.img" />
           </div>
           <div class="title">{{ item.title }}</div>
         </div>
@@ -17,7 +22,23 @@
 </template>
 
 <script>
-import { navList1, navList2, navList3, navList4, navList5, navList6, navList7, navList8, navList9, navList10, navList11, navList12, navList13, navList14, navList15 } from "../enum/nav"
+import {
+  navList1,
+  navList2,
+  navList3,
+  navList4,
+  navList5,
+  navList6,
+  navList7,
+  navList8,
+  navList9,
+  navList10,
+  navList11,
+  navList12,
+  navList13,
+  navList14,
+  navList15
+} from '../enum/nav';
 
 export default {
   props: {
@@ -28,12 +49,12 @@ export default {
   },
   computed: {
     curNav() {
-      return this[`navList${this.type}`] ? this[`navList${this.type}`] : this.navList1
+      return this[`navList${this.type}`]
+        ? this[`navList${this.type}`]
+        : this.navList1;
     }
   },
-  methods: {
-
-  },
+  methods: {},
   data() {
     return {
       navList1,
@@ -51,9 +72,9 @@ export default {
       navList13,
       navList14,
       navList15
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -61,7 +82,7 @@ export default {
   a {
     display: block;
     border: 1px solid #f6f6f7;
-    transition: all .25s;
+    transition: all 0.25s;
     border-radius: 8px;
     background-color: #f6f6f7;
     padding: 12px;
@@ -69,7 +90,9 @@ export default {
     &:hover {
       border-color: #00a98e;
       background-color: #f9f9fa;
-      box-shadow: 0 3px 12px rgba(0, 0, 0, .07), 0 1px 4px rgba(0, 0, 0, .07);
+      box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.07),
+        0 1px 4px rgba(0, 0, 0, 0.07);
     }
   }
 
@@ -114,7 +137,7 @@ export default {
     .desc {
       font-size: 12px;
       line-height: 1.5;
-      color: rgba(60, 60, 67, .75);
+      color: rgba(60, 60, 67, 0.75);
       text-overflow: ellipsis;
       -webkit-line-clamp: 2;
       display: -webkit-box;
@@ -157,4 +180,5 @@ export default {
     --m-nav-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
-}</style>
+}
+</style>

@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@vuepress-reco/vuepress-plugin-comments':
-        specifier: ^1.6.13
-        version: 1.6.13
       '@vuepress/bundler-vite':
         specifier: 2.0.0-rc.19
         version: 2.0.0-rc.19(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0)
@@ -32,6 +29,10 @@ importers:
       vuepress-theme-reco:
         specifier: 2.0.0-rc.26
         version: 2.0.0-rc.26(@algolia/client-search@5.34.1)(@types/node@24.1.0)(@vueuse/core@11.3.0(vue@3.5.18))(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(search-insights@2.17.3)(terser@5.43.1)(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(@vuepress/bundler-webpack@2.0.0-rc.19)(vue@3.5.18))(yaml@2.8.0)
+    devDependencies:
+      prettier:
+        specifier: ^3.1.0
+        version: 3.6.2
 
 packages:
 
@@ -1005,32 +1006,11 @@ packages:
       vite: ^5.0.0 || ^6.0.0
       vue: ^3.2.25
 
-  '@vssue/api-bitbucket-v2@1.4.7':
-    resolution: {integrity: sha512-qdCIUKr3WewqnSiKUWRw1LsBP3WusHUQob6WG388I/1CS0MYgxjkYiCEQENDVyLdodMrIcZkPuBAO4Khf/53Jg==}
-
-  '@vssue/api-gitee-v5@1.4.7':
-    resolution: {integrity: sha512-R2O3sbrMOcIl13+PyNqWBY49u3rX4fZ545kMCvdmuIPzkd5zZp7U0bnOvtkCdk9SSGg2nFu5Tg16PpdtwWj91A==}
-
-  '@vssue/api-github-v3@1.4.7':
-    resolution: {integrity: sha512-ukhOnzGQarmj606ZiYN9iCMyr3EJS3YEPdZXX+zBLVsuzjTL5ffLbbpXsEtPBh2XNt3Ig3XdzCvA9bVXhwy4mQ==}
-
-  '@vssue/api-github-v4@1.4.7':
-    resolution: {integrity: sha512-Tk4ZYyX03RwoVy29RW1+ZdqESzX/gLsN9010Eaq0WT/2pNV+8quyT9TMypIZp6rZCGNYTSdxB8ET4IiF7SLKXQ==}
-
-  '@vssue/api-gitlab-v4@1.4.7':
-    resolution: {integrity: sha512-tsdYpB8U5oHZU+m/jSaWbvRqzt6iZ8DeGMBmwxMOMo0tZpffThjtaaA3/1Q2j5bSvDonDeqvhFXcuP19/mIKgg==}
-
-  '@vssue/utils@1.4.7':
-    resolution: {integrity: sha512-e94karP4szmSNT2L4bgIT+VGToBSY3bdlgmGcomcD2qCXTWDK4krSOYm8ES+BhHTcmCvzQYU/xenHR4tzrythA==}
-
   '@vue/compiler-core@3.5.18':
     resolution: {integrity: sha512-3slwjQrrV1TO8MoXgy3aynDQ7lslj5UqDxuHnrzHtpON5CBinhWjJETciPngpin/T3OuW3tXUf86tEurusnztw==}
 
   '@vue/compiler-dom@3.5.18':
     resolution: {integrity: sha512-RMbU6NTU70++B1JyVJbNbeFkK+A+Q7y9XKE2EM4NLGm2WFR8x9MbAtWxPPLdm0wUkuZv9trpwfSlL6tjdIa1+A==}
-
-  '@vue/compiler-sfc@2.7.16':
-    resolution: {integrity: sha512-KWhJ9k5nXuNtygPU7+t1rX6baZeqOYLEforUPjgNDBnLicfHCoi48H87Q8XyLZOrNNsmhuwKqtpDQWjEFe6Ekg==}
 
   '@vue/compiler-sfc@3.5.18':
     resolution: {integrity: sha512-5aBjvGqsWs+MoxswZPoTB9nSDb3dhd1x30xrrltKujlCxo48j8HGDNj3QPhF4VIS0VQDUrA1xUfp2hEa+FNyXA==}
@@ -1084,9 +1064,6 @@ packages:
     resolution: {integrity: sha512-jAUwOJ7fOV3q+ZL2NH5i+E+9JPylVXk/nhHDpVaeDRa1Qm/AEtlLp24Pzb6w/kJJzPzH30ARahBN/zy3OPtIhw==}
     peerDependencies:
       vuepress: 2.0.0-rc.19
-
-  '@vuepress-reco/vuepress-plugin-comments@1.6.13':
-    resolution: {integrity: sha512-KunbkxcMxYxelpVyN3FBcnVPXPifqlpctQHUllZk4As9q/PJALCvuJWZ0MWsM5CIdrUL9DBrGmSUW4amfOiUAw==}
 
   '@vuepress-reco/vuepress-plugin-comments@2.0.0-rc.26':
     resolution: {integrity: sha512-IhUr0kE3Yeydu1WKHtjSaZ0PB42k4ts7ih57xqMQ2wlCkn9RnLK2qqXDxCiqnkjPRL4I9gW2Gu0haMs2fDkccQ==}
@@ -1440,9 +1417,6 @@ packages:
 
   autosize@6.0.1:
     resolution: {integrity: sha512-f86EjiUKE6Xvczc4ioP1JBlWG7FKrE13qe/DxBCpe8GCipCq2nFw73aO8QEBKHfSbYGDN5eB9jXWKen7tspDqQ==}
-
-  axios@0.21.4:
-    resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
 
   balajs@1.0.10:
     resolution: {integrity: sha512-dcpjzNfZ9W+RzCz4YpESesw77Qx+U2dZiP+hwSlobcHRrnbEBHFWuxipXGZsMDJbD6SG1hC2S0OHHVkU+JY+iw==}
@@ -1811,9 +1785,6 @@ packages:
 
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
-
-  date-fns@1.30.1:
-    resolution: {integrity: sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==}
 
   dayjs@1.11.13:
     resolution: {integrity: sha512-oaMBel6gjolK862uaPQOVTA7q3TZhuSvuMQAAglQDOWYO9A91IrAOUJEyKVlqJlHE0vq5p5UXxzdPfMH/x6xNg==}
@@ -2236,10 +2207,6 @@ packages:
 
   giscus@1.6.0:
     resolution: {integrity: sha512-Zrsi8r4t1LVW950keaWcsURuZUQwUaMKjvJgTCY125vkW6OiEBkatE7ScJDbpqKHdZwb///7FVC21SE3iFK3PQ==}
-
-  github-markdown-css@3.0.1:
-    resolution: {integrity: sha512-9G5CIPsHoyk5ObDsb/H4KTi23J8KE1oDd4KYU51qwqeM+lKWAiO7abpSgCkyWswgmSKBiuE7/4f8xUz7f2qAiQ==}
-    engines: {node: '>=0.10.0'}
 
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
@@ -3337,9 +3304,9 @@ packages:
   preact@10.26.9:
     resolution: {integrity: sha512-SSjF9vcnF27mJK1XyFMNJzFd5u3pQiATFqoaDy03XuN00u4ziveVVEGt5RKJrDR8MHE/wJo9Nnad56RLzS2RMA==}
 
-  prettier@2.8.8:
-    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
-    engines: {node: '>=10.13.0'}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
     hasBin: true
 
   pretty-error@4.0.0:
@@ -3932,14 +3899,6 @@ packages:
       yaml:
         optional: true
 
-  vssue@1.4.8:
-    resolution: {integrity: sha512-Stp0CxF65Uv658qgYUgYKEDiWM8wskUfKCOT9ISJwz/Qn58N050vYnFYClnUXG060ZQi1YQxkTCuJAw8ee3YlQ==}
-
-  vue-class-component@7.2.6:
-    resolution: {integrity: sha512-+eaQXVrAm/LldalI272PpDe3+i4mPis0ORiMYxF6Ae4hyuCh15W8Idet7wPUEs4N4YptgFHGys4UrgNQOMyO6w==}
-    peerDependencies:
-      vue: ^2.0.0
-
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
     engines: {node: '>=12'}
@@ -3950,12 +3909,6 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
-
-  vue-i18n@8.28.2:
-    resolution: {integrity: sha512-C5GZjs1tYlAqjwymaaCPDjCyGo10ajUphiwA922jKt9n7KPpqR7oM1PCwYzhB/E7+nT3wfdG3oRre5raIT1rKA==}
-    deprecated: Vue I18n v8.x has reached EOL and is no longer actively maintained. About maintenance status, see https://vue-i18n.intlify.dev/guide/maintenance.html
-    peerDependencies:
-      vue: ^2
 
   vue-loader@17.4.2:
     resolution: {integrity: sha512-yTKOA4R/VN4jqjw4y5HrynFL8AK0Z3/Jt7eOJXEitsm0GMRHDBjCfCiuTiLP7OESvsZYo2pATCWhDqxC5ZrM6w==}
@@ -3969,11 +3922,6 @@ packages:
       vue:
         optional: true
 
-  vue-property-decorator@8.5.1:
-    resolution: {integrity: sha512-O6OUN2OMsYTGPvgFtXeBU3jPnX5ffQ9V4I1WfxFQ6dqz6cOUbR3Usou7kgFpfiXDvV7dJQSFcJ5yUPgOtPPm1Q==}
-    peerDependencies:
-      vue: '*'
-
   vue-router@4.5.1:
     resolution: {integrity: sha512-ogAF3P97NPm8fJsE4by9dwSYtDwXIY1nFY9T6DyQnGHd1E2Da94w9JIolpe42LJGIl0DwOHBi8TcRPlPGwbTtw==}
     peerDependencies:
@@ -3984,10 +3932,6 @@ packages:
     engines: {node: '>=10.15.0'}
     peerDependencies:
       vue: ^3.0.0
-
-  vue@2.7.16:
-    resolution: {integrity: sha512-4gCtFXaAA3zYZdTp5s4Hl2sozuySsgz4jy1EnpBHNfpMa9dK1ZCG7viqBPCwXtmgc8nHqUsAu3G4gtmXkkY3Sw==}
-    deprecated: Vue 2 has reached EOL and is no longer actively maintained. See https://v2.vuejs.org/eol/ for more details.
 
   vue@3.5.18:
     resolution: {integrity: sha512-7W4Y4ZbMiQ3SEo+m9lnoNpV9xG7QVMLa+/0RFwwiAVkeYoyGXqWE85jabU4pllJNUzqfLShJ5YLptewhCWUgNA==}
@@ -5056,46 +5000,6 @@ snapshots:
       vite: 6.0.15(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0)
       vue: 3.5.18
 
-  '@vssue/api-bitbucket-v2@1.4.7':
-    dependencies:
-      '@vssue/utils': 1.4.7
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-
-  '@vssue/api-gitee-v5@1.4.7':
-    dependencies:
-      '@vssue/utils': 1.4.7
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-
-  '@vssue/api-github-v3@1.4.7':
-    dependencies:
-      '@vssue/utils': 1.4.7
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-
-  '@vssue/api-github-v4@1.4.7':
-    dependencies:
-      '@vssue/utils': 1.4.7
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-
-  '@vssue/api-gitlab-v4@1.4.7':
-    dependencies:
-      '@vssue/utils': 1.4.7
-      axios: 0.21.4
-    transitivePeerDependencies:
-      - debug
-
-  '@vssue/utils@1.4.7':
-    dependencies:
-      date-fns: 1.30.1
-      qs: 6.14.0
-
   '@vue/compiler-core@3.5.18':
     dependencies:
       '@babel/parser': 7.28.0
@@ -5108,14 +5012,6 @@ snapshots:
     dependencies:
       '@vue/compiler-core': 3.5.18
       '@vue/shared': 3.5.18
-
-  '@vue/compiler-sfc@2.7.16':
-    dependencies:
-      '@babel/parser': 7.28.0
-      postcss: 8.5.6
-      source-map: 0.6.1
-    optionalDependencies:
-      prettier: 2.8.8
 
   '@vue/compiler-sfc@3.5.18':
     dependencies:
@@ -5200,21 +5096,6 @@ snapshots:
   '@vuepress-reco/vuepress-plugin-code-copy@2.0.0-rc.26(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(@vuepress/bundler-webpack@2.0.0-rc.19)(vue@3.5.18))':
     dependencies:
       vuepress: 2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(@vuepress/bundler-webpack@2.0.0-rc.19)(vue@3.5.18)
-
-  '@vuepress-reco/vuepress-plugin-comments@1.6.13':
-    dependencies:
-      '@vssue/api-bitbucket-v2': 1.4.7
-      '@vssue/api-gitee-v5': 1.4.7
-      '@vssue/api-github-v3': 1.4.7
-      '@vssue/api-github-v4': 1.4.7
-      '@vssue/api-gitlab-v4': 1.4.7
-      valine: 1.5.1
-      vssue: 1.4.8
-    transitivePeerDependencies:
-      - bufferutil
-      - debug
-      - supports-color
-      - utf-8-validate
 
   '@vuepress-reco/vuepress-plugin-comments@2.0.0-rc.26(vuepress@2.0.0-rc.19(@vuepress/bundler-vite@2.0.0-rc.19(@types/node@24.1.0)(jiti@1.21.7)(lightningcss@1.30.1)(sass@1.89.2)(terser@5.43.1)(yaml@2.8.0))(@vuepress/bundler-webpack@2.0.0-rc.19)(vue@3.5.18))':
     dependencies:
@@ -5989,12 +5870,6 @@ snapshots:
 
   autosize@6.0.1: {}
 
-  axios@0.21.4:
-    dependencies:
-      follow-redirects: 1.15.9
-    transitivePeerDependencies:
-      - debug
-
   balajs@1.0.10: {}
 
   balalaika@1.0.1: {}
@@ -6384,8 +6259,6 @@ snapshots:
       css-tree: 2.2.1
 
   csstype@3.1.3: {}
-
-  date-fns@1.30.1: {}
 
   dayjs@1.11.13: {}
 
@@ -6855,8 +6728,6 @@ snapshots:
   giscus@1.6.0:
     dependencies:
       lit: 3.3.1
-
-  github-markdown-css@3.0.1: {}
 
   glob-parent@5.1.2:
     dependencies:
@@ -7871,8 +7742,7 @@ snapshots:
 
   preact@10.26.9: {}
 
-  prettier@2.8.8:
-    optional: true
+  prettier@3.6.2: {}
 
   pretty-error@4.0.0:
     dependencies:
@@ -8510,25 +8380,9 @@ snapshots:
       terser: 5.43.1
       yaml: 2.8.0
 
-  vssue@1.4.8:
-    dependencies:
-      '@vssue/utils': 1.4.7
-      github-markdown-css: 3.0.1
-      vue: 2.7.16
-      vue-i18n: 8.28.2(vue@2.7.16)
-      vue-property-decorator: 8.5.1(vue@2.7.16)
-
-  vue-class-component@7.2.6(vue@2.7.16):
-    dependencies:
-      vue: 2.7.16
-
   vue-demi@0.14.10(vue@3.5.18):
     dependencies:
       vue: 3.5.18
-
-  vue-i18n@8.28.2(vue@2.7.16):
-    dependencies:
-      vue: 2.7.16
 
   vue-loader@17.4.2(vue@3.5.18)(webpack@5.100.2):
     dependencies:
@@ -8539,11 +8393,6 @@ snapshots:
     optionalDependencies:
       vue: 3.5.18
 
-  vue-property-decorator@8.5.1(vue@2.7.16):
-    dependencies:
-      vue: 2.7.16
-      vue-class-component: 7.2.6(vue@2.7.16)
-
   vue-router@4.5.1(vue@3.5.18):
     dependencies:
       '@vue/devtools-api': 6.6.4
@@ -8553,11 +8402,6 @@ snapshots:
     dependencies:
       is-plain-object: 3.0.1
       vue: 3.5.18
-
-  vue@2.7.16:
-    dependencies:
-      '@vue/compiler-sfc': 2.7.16
-      csstype: 3.1.3
 
   vue@3.5.18:
     dependencies:

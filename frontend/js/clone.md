@@ -2,107 +2,122 @@
 title: 引用类型的拷贝
 date: 2023/05/21
 tags:
- - 前端
+  - 前端
 categories:
- - 前端物语
+  - 前端物语
 ---
 
 <CustomBlock title="回顾一下引用类型的特点" content="<ul><li>因为 <code>JavaScript</code> 不允许直接访问内存位置（即不能直接操作引用类型所在的内存空间），所以引用类型在 <strong>栈内存</strong> 中存储的是地址（即内存指针），而引用类型中的数据（方法或属性）是存储在 <strong>堆内存</strong> 中</li><li>保存引用类型的变量是 <strong>按引用 (by reference) 访问</strong> ，当我们访问和操作一个对象时，实际上操作的是对该对象的引用而非实际的对象本身</li><li>复制引用类型时只会复制内存指针</li></ul>"></CustomBlock>
 因此我们在开发过程中对引用类型进行拷贝并修改时，便需要根据场景需求注意对原本数据的影响。
 
 ## 浅拷贝
+
 浅拷贝是创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝：基本类型拷贝的是值，引用类型拷贝的就是内存地址；所以当我们**操作新对象中的引用类型时会影响源对象**
 ![](../img/clone-1.webp)
+
 ### Object.assign()
-``` javascript
+
+```javascript
 const obj1 = {
   name: 'maomao',
   props: { a: 1 }
-}
+};
 
-const obj2 = Object.assign({}, obj1)
-obj2.name = '茂茂'
-obj2.props.a++
+const obj2 = Object.assign({}, obj1);
+obj2.name = '茂茂';
+obj2.props.a++;
 
-obj1 // { name: 'maomao', props: { a: 2 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj1; // { name: 'maomao', props: { a: 2 } }
+obj2; // { name: '茂茂', props: { a: 2 } }
 ```
+
 ### `Array.prototype.concat()`
-``` javascript
-const arr1 = [1, 2, 3, [4, 5]]
 
-const arr2 = arr1.concat()
-arr2[0] = 'arr2'
-arr2[3][0] = 'arr2'
+```javascript
+const arr1 = [1, 2, 3, [4, 5]];
 
-arr1 // [1, 2, 3, ['arr2', 5]];
-arr2 // ['arr2', 2, 3, ['arr2', 5]];
+const arr2 = arr1.concat();
+arr2[0] = 'arr2';
+arr2[3][0] = 'arr2';
+
+arr1; // [1, 2, 3, ['arr2', 5]];
+arr2; // ['arr2', 2, 3, ['arr2', 5]];
 ```
+
 ### `Array.prototype.slice()`
-``` javascript
-const arr1 = [1, 2, 3, [4, 5]]
 
-const arr2 = arr1.slice()
-arr2[0] = 'arr2'
-arr2[3][0] = 'arr2'
+```javascript
+const arr1 = [1, 2, 3, [4, 5]];
 
-arr1 // [1, 2, 3, ['arr2', 5]];
-arr2 // ['arr2', 2, 3, ['arr2', 5]];
+const arr2 = arr1.slice();
+arr2[0] = 'arr2';
+arr2[3][0] = 'arr2';
+
+arr1; // [1, 2, 3, ['arr2', 5]];
+arr2; // ['arr2', 2, 3, ['arr2', 5]];
 ```
+
 ### `ES6` 扩展运算符
-``` javascript
+
+```javascript
 /* 对象 */
 const obj1 = {
   name: 'maomao',
   props: { a: 1 }
-}
+};
 
-const obj2 = { ...obj1 }
-obj2.name = '茂茂'
-obj2.props.a++
+const obj2 = { ...obj1 };
+obj2.name = '茂茂';
+obj2.props.a++;
 
-obj1 // { name: 'maomao', props: { a: 2 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj1; // { name: 'maomao', props: { a: 2 } }
+obj2; // { name: '茂茂', props: { a: 2 } }
 
 /* 数组 */
-const arr1 = [1, 2, 3, [4, 5]]
+const arr1 = [1, 2, 3, [4, 5]];
 
-const arr2 = [...arr1]
-arr2[0] = 'arr2'
-arr2[3][0] = 'arr2'
+const arr2 = [...arr1];
+arr2[0] = 'arr2';
+arr2[3][0] = 'arr2';
 
-arr1 // [1, 2, 3, ['arr2', 5]];
-arr2 // ['arr2', 2, 3, ['arr2', 5]];
+arr1; // [1, 2, 3, ['arr2', 5]];
+arr2; // ['arr2', 2, 3, ['arr2', 5]];
 ```
 
 ## 深拷贝
+
 ![](../img/clone-2.webp)
 深拷贝是将一个对象从内存中完整的拷贝一份出来，即从堆内存中开辟一个新的区域存放新对象，所以**修改新对象不会影响原对象**
+
 ### `JSON.parse(JSON.stringify())`
-``` javascript
+
+```javascript
 const obj1 = {
   name: 'maomao',
   props: { a: 1 }
-}
+};
 
-const obj2 = JSON.parse(JSON.stringify(obj1))
-obj2.name = '茂茂'
-obj2.props.a++
+const obj2 = JSON.parse(JSON.stringify(obj1));
+obj2.name = '茂茂';
+obj2.props.a++;
 
-obj1 // { name: 'maomao', props: { a: 1 } }
-obj2 // { name: '茂茂', props: { a: 2 } }
+obj1; // { name: 'maomao', props: { a: 1 } }
+obj2; // { name: '茂茂', props: { a: 2 } }
 ```
+
 `JSON.parse(JSON.stringify())` 存在明显的弊端：
 
 只能序列化对象的可枚举的自有属性
-* `undefined`、`Symbol`、任意函数将被忽略
-* `NaN`、`Infinity` 、`-Infinity` 将被当成 `null` 处理
-* `RegExp`、`Error`、`Set`、`Map` 等特殊对象，仅会序列化可枚举的属性（一般情况下即为空对象）
-* `Date` 类型，转换后会调用 `toJSON` 转为字符串类型
-* 循环引用的对象将报错
-``` javascript
-const map = new Map()
-map.set(1, 2) // Map: 0: {1 => 2}
+
+- `undefined`、`Symbol`、任意函数将被忽略
+- `NaN`、`Infinity` 、`-Infinity` 将被当成 `null` 处理
+- `RegExp`、`Error`、`Set`、`Map` 等特殊对象，仅会序列化可枚举的属性（一般情况下即为空对象）
+- `Date` 类型，转换后会调用 `toJSON` 转为字符串类型
+- 循环引用的对象将报错
+
+```javascript
+const map = new Map();
+map.set(1, 2); // Map: 0: {1 => 2}
 const obj1 = {
   a: undefined,
   b: null,
@@ -113,12 +128,12 @@ const obj1 = {
   g: map,
   h: new Date(),
   i: () => {}
-}
+};
 Object.defineProperty(obj1, 'j', {
   value: 'string'
-})
+});
 
-const obj2 = JSON.parse(JSON.stringify(obj1))
+const obj2 = JSON.parse(JSON.stringify(obj1));
 
 /** 源对象 obj1
 {
@@ -147,51 +162,61 @@ const obj2 = JSON.parse(JSON.stringify(obj1))
 }
 **/
 ```
+
 ### `structuredClone`
+
 `HTML` 规范标准的 [Web API](https://developer.mozilla.org/zh-CN/docs/Web/API/structuredClone)
-``` javascript
-const original = { name: 'MDN' }
-original.itself = original
 
-const clone = structuredClone(original)
+```javascript
+const original = { name: 'MDN' };
+original.itself = original;
 
-console.assert(clone !== original) // the objects are not the same (not same identity)
-console.assert(clone.name === 'MDN') // they do have the same values
-console.assert(clone.itself === clone) // and the circular reference is preserved
+const clone = structuredClone(original);
+
+console.assert(clone !== original); // the objects are not the same (not same identity)
+console.assert(clone.name === 'MDN'); // they do have the same values
+console.assert(clone.itself === clone); // and the circular reference is preserved
 ```
+
 `HTML` 规范的标准提案，使用结构化克隆算法将给定的值进行深拷贝，支持循环引用。还可以使用 `structuredClone(value, { transfer })` 调用方式使可转移对象仅被传递，不被克隆（直接移动源数据）
 <CustomBlock title="注意点" content="<div>尽管作为规范标准实现的 <code>Web API</code>，但目前兼容性还是个巨大的问题，同时仍有其他不足：</div><ul><li>无法拷贝对象的原型链</li><li>无法拷贝函数</li><li>不支持 <code>Error</code> 数据类型</li></ul>"></CustomBlock>
 
 ### `MessageChannel`
+
 `vue.nextTick` 源码曾使用的 `Web API`，在了解这个 `API` 时发现可以用于深拷贝
-``` javascript
+
+```javascript
 function cloneUsingChannel(obj) {
   return new Promise((resolve) => {
-    const channel = new MessageChannel()
-    channel.port1.onmessage = (e) => resolve(e.data)
-    channel.port2.postMessage(obj)
-  })
+    const channel = new MessageChannel();
+    channel.port1.onmessage = (e) => resolve(e.data);
+    channel.port2.postMessage(obj);
+  });
 }
 ```
+
 但该方法存在一个缺陷，当拷贝对象带有函数属性时，将抛出错误：
-``` javascript
+
+```javascript
 const obj1 = {
   fn: function () {}
-}
-const obj2 = cloneUsingChannel(obj1)
+};
+const obj2 = cloneUsingChannel(obj1);
 // Uncaught (in promise) DOMException: Failed to execute 'postMessage' on 'MessagePort': function () {} could not be cloned.
 ```
 
 ### `JQuery.extend()`
-``` javascript
-import $ from 'jquery'
 
-const obj2 = $.extend(true, {}, obj1)
+```javascript
+import $ from 'jquery';
+
+const obj2 = $.extend(true, {}, obj1);
 ```
 
 ### `lodash.cloneDeep`
-``` javascript
-import { cloneDeep } from 'lodash-es'
 
-const obj2 = cloneDeep(obj1)
+```javascript
+import { cloneDeep } from 'lodash-es';
+
+const obj2 = cloneDeep(obj1);
 ```

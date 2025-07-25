@@ -4,6 +4,7 @@ date: 2022/07/07
 ---
 
 ## 防抖debounce
+
 ```
 function debounce(fn,delay){
     let timer = null
@@ -19,6 +20,7 @@ function debounce(fn,delay){
 ```
 
 ## 节流throttle
+
 ```
 function throttle(fn,delay){
     let timer = null
@@ -34,6 +36,7 @@ function throttle(fn,delay){
 }
 
 ```
+
 ## new的过程
 
 ```
@@ -46,6 +49,7 @@ function _new(fn,...args){
 ```
 
 ## 深拷贝deepClone
+
 ```
 function deepClone(target,cache=new WeakMap()){
     if(!(target instanceof Object)) return target
@@ -63,10 +67,10 @@ function deepClone(target,cache=new WeakMap()){
     if(target instanceof RegExp){
         return new RegExp(target)
     }
-    
+
     let result = Array.isArray(target) ? [] : {}
     cache.set(target,result)
-    
+
     for(let key in target){
         if(target.hasOwnProperty(key)){
             result[key] = deepClone(target[key],cache)
@@ -136,6 +140,7 @@ Promise.myRace = function(promiseList){
     })
 }
 ```
+
 ## call
 
 ```
@@ -145,10 +150,11 @@ Function.prototype.mycall=function(ctx,...args){
     _ctx.fn = this
     let result = _ctx.fn(...args)
     delete _ctx.fn
-    
+
     return result
 }
 ```
+
 ## apply
 
 ```
@@ -158,9 +164,7 @@ Function.prototype.myapply=function(ctx,arr){
     _ctx.fn = this
     let result = _ctx.fn(...arr)
     delete _ctx.fn
-    
+
     return result
 }
 ```
-
-

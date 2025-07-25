@@ -8,46 +8,67 @@ function clickEffect() {
   let origin;
   let normal;
   let ctx;
-  const colours = ["#F73859", "#14FFEC", "#00E0FF", "#FF99FE", "#FAF15D"];
-  const canvas = document.createElement("canvas");
+  const colours = ['#F73859', '#14FFEC', '#00E0FF', '#FF99FE', '#FAF15D'];
+  const canvas = document.createElement('canvas');
   document.body.appendChild(canvas);
-  canvas.setAttribute("style", "width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;");
-  const pointer = document.createElement("span");
-  pointer.classList.add("pointer");
+  canvas.setAttribute(
+    'style',
+    'width: 100%; height: 100%; top: 0; left: 0; z-index: 99999; position: fixed; pointer-events: none;'
+  );
+  const pointer = document.createElement('span');
+  pointer.classList.add('pointer');
   document.body.appendChild(pointer);
 
   if (canvas.getContext && window.addEventListener) {
-    ctx = canvas.getContext("2d");
+    ctx = canvas.getContext('2d');
     updateSize();
     window.addEventListener('resize', updateSize, false);
     loop();
-    window.addEventListener("mousedown", function(e) {
-      pushBalls(randBetween(10, 20), e.clientX, e.clientY);
-      document.body.classList.add("is-pressed");
-      longPress = setTimeout(function() {
-        document.body.classList.add("is-longpress");
-        longPressed = true;
-      }, 500);
-    }, false);
-    window.addEventListener("mouseup", function(e) {
-      clearInterval(longPress);
-      if (longPressed == true) {
-        document.body.classList.remove("is-longpress");
-        pushBalls(randBetween(50 + Math.ceil(multiplier), 100 + Math.ceil(multiplier)), e.clientX, e.clientY);
-        longPressed = false;
-      }
-      document.body.classList.remove("is-pressed");
-    }, false);
-    window.addEventListener("mousemove", function(e) {
-      let x = e.clientX;
-      let y = e.clientY;
-      pointer.style.top = y + "px";
-      pointer.style.left = x + "px";
-    }, false);
+    window.addEventListener(
+      'mousedown',
+      function (e) {
+        pushBalls(randBetween(10, 20), e.clientX, e.clientY);
+        document.body.classList.add('is-pressed');
+        longPress = setTimeout(function () {
+          document.body.classList.add('is-longpress');
+          longPressed = true;
+        }, 500);
+      },
+      false
+    );
+    window.addEventListener(
+      'mouseup',
+      function (e) {
+        clearInterval(longPress);
+        if (longPressed == true) {
+          document.body.classList.remove('is-longpress');
+          pushBalls(
+            randBetween(
+              50 + Math.ceil(multiplier),
+              100 + Math.ceil(multiplier)
+            ),
+            e.clientX,
+            e.clientY
+          );
+          longPressed = false;
+        }
+        document.body.classList.remove('is-pressed');
+      },
+      false
+    );
+    window.addEventListener(
+      'mousemove',
+      function (e) {
+        let x = e.clientX;
+        let y = e.clientY;
+        pointer.style.top = y + 'px';
+        pointer.style.left = x + 'px';
+      },
+      false
+    );
   } else {
-    console.log("canvas or addEventListener is unsupported!");
+    console.log('canvas or addEventListener is unsupported!');
   }
-
 
   function updateSize() {
     canvas.width = window.innerWidth * 2;
@@ -55,8 +76,8 @@ function clickEffect() {
     canvas.style.width = window.innerWidth + 'px';
     canvas.style.height = window.innerHeight + 'px';
     ctx.scale(2, 2);
-    width = (canvas.width = window.innerWidth);
-    height = (canvas.height = window.innerHeight);
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
     origin = {
       x: width / 2,
       y: height / 2
@@ -84,8 +105,8 @@ function clickEffect() {
     update() {
       this.x += this.vx - normal.x;
       this.y += this.vy - normal.y;
-      normal.x = -2 / window.innerWidth * Math.sin(this.angle);
-      normal.y = -2 / window.innerHeight * Math.cos(this.angle);
+      normal.x = (-2 / window.innerWidth) * Math.sin(this.angle);
+      normal.y = (-2 / window.innerHeight) * Math.cos(this.angle);
       this.r -= 0.1;
       this.vx *= 0.9;
       this.vy *= 0.9;
@@ -103,7 +124,7 @@ function clickEffect() {
   }
 
   function loop() {
-    ctx.fillStyle = "rgba(255, 255, 255, 0)";
+    ctx.fillStyle = 'rgba(255, 255, 255, 0)';
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     for (let i = 0; i < balls.length; i++) {
       let b = balls[i];
@@ -126,7 +147,13 @@ function clickEffect() {
   function removeBall() {
     for (let i = 0; i < balls.length; i++) {
       let b = balls[i];
-      if (b.x + b.r < 0 || b.x - b.r > width || b.y + b.r < 0 || b.y - b.r > height || b.r < 0) {
+      if (
+        b.x + b.r < 0 ||
+        b.x - b.r > width ||
+        b.y + b.r < 0 ||
+        b.y - b.r > height ||
+        b.r < 0
+      ) {
         balls.splice(i, 1);
       }
     }
@@ -134,6 +161,6 @@ function clickEffect() {
 }
 
 /* 防止重复初始化 */
-if(document.querySelectorAll('body>canvas').length === 0){
-  clickEffect()
+if (document.querySelectorAll('body>canvas').length === 0) {
+  clickEffect();
 }

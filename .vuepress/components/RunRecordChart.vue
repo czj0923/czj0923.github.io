@@ -5,7 +5,7 @@
       <a-tab-pane :key="2" tab="月"></a-tab-pane>
     </a-tabs>
     <div class="select-wrap row">
-      <div class="row" style="margin-right: 20px;">
+      <div class="row" style="margin-right: 20px">
         <span>年：</span>
         <Select v-model:value="year" :options="yearOptions"></Select>
       </div>
@@ -20,13 +20,13 @@
 
 <script>
 import * as echarts from 'echarts';
-import { runRecord, runRecordArray } from "./enum/run-record.ts"
-import { initDayArray } from "../utils/index"
-import { Select, Tabs, TabPane } from "ant-design-vue"
-let chart = null
+import { runRecord, runRecordArray } from './enum/run-record.ts';
+import { initDayArray } from '../utils/index';
+import { Select, Tabs, TabPane } from 'ant-design-vue';
+let chart = null;
 
 export default {
-  name: "RunRecordChart",
+  name: 'RunRecordChart',
   components: {
     Select,
     ATabs: Tabs,
@@ -44,7 +44,7 @@ export default {
         { label: 2023, value: 2023 },
         { label: 2022, value: 2022 },
         { label: 2021, value: 2021 },
-        { label: 2020, value: 2020 },
+        { label: 2020, value: 2020 }
       ],
       monthOptions: [
         { label: 1, value: 1 },
@@ -58,61 +58,63 @@ export default {
         { label: 9, value: 9 },
         { label: 10, value: 10 },
         { label: 11, value: 11 },
-        { label: 12, value: 12 },
+        { label: 12, value: 12 }
       ]
-    }
+    };
   },
   watch: {
     year: {
       handler() {
         if (this.dataType == 1) {
-          this.handlerYear()
+          this.handlerYear();
         } else {
-          this.handlerMonth()
+          this.handlerMonth();
         }
       }
     },
     month: {
       handler() {
-        this.handlerMonth()
+        this.handlerMonth();
       }
     },
     dataType: {
       handler() {
         if (this.dataType == 1) {
-          this.handlerYear()
+          this.handlerYear();
         } else {
-          const lastItem = this.runRecordArray[this.runRecordArray.length - 1]
-          this.month = lastItem.month
-          this.year = lastItem.year
-          this.handlerMonth()
+          const lastItem = this.runRecordArray[this.runRecordArray.length - 1];
+          this.month = lastItem.month;
+          this.year = lastItem.year;
+          this.handlerMonth();
         }
       }
     }
   },
   mounted() {
-    const lastItem = this.runRecordArray[this.runRecordArray.length - 1]
-    this.month = lastItem.month
-    this.year = lastItem.year
+    const lastItem = this.runRecordArray[this.runRecordArray.length - 1];
+    this.month = lastItem.month;
+    this.year = lastItem.year;
 
-    this.handlerYear()
+    this.handlerYear();
     // initDayArray()
   },
   methods: {
-    handlerYear(){
-      const xData = Object.keys(this.runRecord[this.year]).map(item => `${item}月`)
-      const yData = Object.values(this.runRecord[this.year])
-      this.initChart(xData, yData, `${this.year}年`)
+    handlerYear() {
+      const xData = Object.keys(this.runRecord[this.year]).map(
+        (item) => `${item}月`
+      );
+      const yData = Object.values(this.runRecord[this.year]);
+      this.initChart(xData, yData, `${this.year}年`);
     },
     handlerMonth() {
-      const filterList = this.runRecordArray.filter(item => {
-        return item.month == this.month && item.year == this.year
-      })
-      const xData = filterList.map(item => item.day)
-      const yData = filterList.map(item => {
-        return { value: item.distance, extra: item.extra }
-      })
-      this.initChart(xData, yData, `${this.year}年${this.month}月`)
+      const filterList = this.runRecordArray.filter((item) => {
+        return item.month == this.month && item.year == this.year;
+      });
+      const xData = filterList.map((item) => item.day);
+      const yData = filterList.map((item) => {
+        return { value: item.distance, extra: item.extra };
+      });
+      this.initChart(xData, yData, `${this.year}年${this.month}月`);
     },
     initChart(xData, yData, title) {
       chart = echarts.init(this.$refs.chart);
@@ -131,7 +133,7 @@ export default {
           trigger: 'axis',
           axisPointer: {
             type: 'shadow'
-          },
+          }
         },
         xAxis: {
           data: xData
@@ -146,7 +148,7 @@ export default {
               show: true,
               position: 'top',
               formatter: (params) => {
-                return params.data.extra || params.data.value
+                return params.data.extra || params.data.value;
               },
               color: '#f00'
             },
@@ -156,10 +158,11 @@ export default {
             },
             markLine: {
               silent: true,
-              data: [{
-                name: '平均线',
-                type: 'average'
-              },
+              data: [
+                {
+                  name: '平均线',
+                  type: 'average'
+                }
               ]
             }
           }
@@ -167,7 +170,7 @@ export default {
       });
     }
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
@@ -186,7 +189,8 @@ export default {
     top: 0;
     z-index: 9;
 
-    .ant-select {}
+    .ant-select {
+    }
   }
 
   .chart {

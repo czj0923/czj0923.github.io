@@ -2,9 +2,9 @@
 title: HTTP
 date: 2023/06/12
 tags:
- - 前端
+  - 前端
 categories:
- - 前端物语
+  - 前端物语
 ---
 
 [HTTP](https://developer.mozilla.org/zh-CN/docs/Web/HTTP) 全称为 HyperText Transfer Protocol，即超文本传输协议，是一个用于传输超媒体文档(例如 HTML)的应用层协议
