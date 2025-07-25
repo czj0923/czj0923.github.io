@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { navList1, navList2, navList3, navList4, navList5, navList6, navList7, navList8, navList9, navList10, navList11, navList12, navList13, navList14, navList15 } from "./constant/nav"
+import { navList1, navList2, navList3, navList4, navList5, navList6, navList7, navList8, navList9, navList10, navList11, navList12, navList13, navList14, navList15 } from "../enum/nav"
 
 export default {
   props: {
