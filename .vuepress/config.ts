@@ -2,7 +2,7 @@ import { defineUserConfig } from "vuepress";
 import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
-import { MyPlugin } from "./public/MyPlugin"
+import { MyPlugin } from "./plugins/MyPlugin"
 
 export default defineUserConfig({
   title: '橘子Orange',
@@ -32,9 +32,8 @@ export default defineUserConfig({
     // ]
   ],
   plugins: [
-    [
-      MyPlugin()
-    ]
+    MyPlugin(),
+    
   ],
   bundler: viteBundler(),
   theme: recoTheme({
