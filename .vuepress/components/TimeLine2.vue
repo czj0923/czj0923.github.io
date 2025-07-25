@@ -14,7 +14,7 @@
     </div>
 </template>
 <script>
-import {record} from "./constant/record"
+import {record} from "./enum/record"
 
 export default {
     data() {

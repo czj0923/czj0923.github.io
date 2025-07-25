@@ -24,7 +24,7 @@
     //import { nextTick, getCurrentInstance } from 'vue';
     //import Tooltip from '../tooltip/tooltip.vue';
 
-    import { oneOf, getStyle } from './utils/assist';
+    import { oneOf, getStyle } from '../../utils/assist';
 
     const getStrFullLength = (str = '') =>
         str.split('').reduce((pre, cur) => {

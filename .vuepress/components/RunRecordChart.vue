@@ -20,7 +20,7 @@
 
 <script>
 import * as echarts from 'echarts';
-import { runRecord, runRecordArray } from "./constant/run-record.ts"
+import { runRecord, runRecordArray } from "./enum/run-record.ts"
 import { initDayArray } from "../utils/index"
 import { Select, Tabs, TabPane } from "ant-design-vue"
 let chart = null

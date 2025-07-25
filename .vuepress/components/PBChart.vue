@@ -4,7 +4,7 @@
 
 <script>
 import * as echarts from 'echarts';
-import { pbRecord } from "./constant/run-record"
+import { pbRecord } from "./enum/run-record"
 
 let chart = null
 export default {

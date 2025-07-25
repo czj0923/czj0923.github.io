@@ -7,7 +7,7 @@
     </div>
 </template>
 <script>
-import { raceRecord } from "./constant/record"
+import { raceRecord } from "./enum/record"
 import { Modal } from "ant-design-vue"
 let map = null
 let labelMarkerList = []
