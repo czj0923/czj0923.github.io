@@ -3,7 +3,7 @@ export const MyPlugin = (options) => {
       return {
         name: 'my-plugin',
         onInitialized: function(){
-            console.log(111);
+            //console.log(111);
         },
       }
     }
