@@ -19,7 +19,7 @@ bannerBrand:
   tagline: 知识是进步的阶梯，争取每天都进步一点点。
   buttons:
     - { text: 关于我, link: '/docs/introduce' }
-    - { text: 爱好, link: '/blogs/other/hobby-guide', type: 'plain' }
+    - { text: 爱好, link: '/docs/hobby-guide', type: 'plain' }
     - { text: 常用导航, link: '/tools/nav', type: 'plain' }
   socialLinks:
     - { icon: 'icon-home', link: 'https://github.com/czj0923' }

@@ -10,9 +10,6 @@ export default defineClientConfig({
       const componentName = path.split('/').pop()?.replace(/\.\w+$/, '') || ''
       app.component(componentName, component)
     })
-    
-    console.log('Available components:', modules)
-    
   },
   setup() {
   },

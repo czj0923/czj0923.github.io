@@ -34,7 +34,7 @@ export default {
           title: "爱好 Hobby",
           desc: "我的爱好",
           seeText: "立即查看",
-          href: "/blogs/other/hobby-guide"
+          href: "/docs/hobby-guide"
         },
         {
           icon: "🐞",

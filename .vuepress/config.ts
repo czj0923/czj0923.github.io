@@ -166,8 +166,8 @@ export default defineUserConfig({
         {
           text: '在线工具', icon: 'ToolKit',
           children: [
-            { text: '时钟罗盘', link: '/blogs/other/clock', icon: 'Compass' },
-            { text: '马拉松参赛地图', link: '/blogs/other/2', icon: 'Map' },
+            { text: '时钟罗盘', link: '/docs/clock', icon: 'Compass' },
+            { text: '马拉松参赛地图', link: '/docs/map', icon: 'Map' },
           ]
         },
         {

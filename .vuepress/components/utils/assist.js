@@ -1,4 +1,4 @@
-import { isClient } from './index';
+import { isClient } from '../../utils/index';
 
 // 判断参数是否是其中之一
 export function oneOf (value, validList) {

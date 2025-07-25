@@ -35,7 +35,7 @@ export default {
             timer: null,
         }
     },
-    created() {
+    mounted() {
         this.generateTimeList()
         this.getDate()
         this.initNeedle()
