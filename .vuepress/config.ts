@@ -48,7 +48,7 @@ export default defineUserConfig({
     // docsDir: 'example',
     catalogTitle: '目录',
     lastUpdatedText: '上次更新',
-    autoSetBlogCategories: true, // 自动设置分类
+    // autoSetBlogCategories: true, // 自动设置分类
     autoSetSeries: true, // 自动设置系列
     series: {
       '/docs/': [],
@@ -99,7 +99,7 @@ export default defineUserConfig({
       '/hobby/run/': [
         {
           text: '介绍',
-          children: ['a-1', 'a-2', 'a-3']
+          children: ['a-1', 'a-2/', 'a-3/']
         },
         {
           text: '比赛记录',
@@ -117,17 +117,17 @@ export default defineUserConfig({
         },
         // {
         //   text: '记录',
-        //   children: ['b-1']
+        //   children: ['b-1/']
         // }
       ],
       '/hobby/climbing/': [
         {
           text: '介绍',
-          children: ['a-1', 'a-2']
+          children: ['a-1', 'a-2/']
         },
         {
           text: '记录',
-          children: ['b-1']
+          children: ['b-1/']
         }
       ],
       '/hobby/trail/': [
