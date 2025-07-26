@@ -3,7 +3,7 @@
 //     var arrRandNumber = [
 //         getRandomNumber(0,255),
 //         getRandomNumber(0,255),
-//         getRandomNumber(0,255)   
+//         getRandomNumber(0,255)
 //       ];
 //       document.documentElement.style.setProperty('--czj-primary-color', 'rgb('+arrRandNumber[0]+','+arrRandNumber[1]+','+arrRandNumber[2]+')')
 //       function getRandomNumber(rMin,rMax){
