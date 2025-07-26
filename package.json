@@ -1,6 +1,7 @@
 {
   "name": "vuepress-theme-reco-demo",
   "version": "2.0.0",
+  "type": "module",
   "description": "Demo for vuepress-theme-reco@2.x.",
   "repository": "git@github.com:recoluan/vuepress-theme-reco-demo.git",
   "author": "reco_luan <recoluan@outlook.com>",
@@ -9,10 +10,20 @@
     "dev": "vuepress dev .",
     "start": "vuepress dev .",
     "build": "vuepress build .",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue,css,less,scss,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,vue,css,less,scss,json,md}\"",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "eslint --ext .js,.ts,.vue . --fix"
   },
   "devDependencies": {
-    "prettier": "^3.1.0"
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.32.0",
+    "eslint": "^9.32.0",
+    "eslint-plugin-vue": "^10.3.0",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.19",

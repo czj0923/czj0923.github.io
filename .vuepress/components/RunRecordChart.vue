@@ -7,11 +7,11 @@
     <div class="select-wrap row">
       <div class="row" style="margin-right: 20px">
         <span>年：</span>
-        <Select v-model:value="year" :options="yearOptions"></Select>
+        <a-select v-model:value="year" :options="yearOptions"></a-select>
       </div>
       <div class="row" v-if="dataType == 2">
         <span>月：</span>
-        <Select v-model:value="month" :options="monthOptions"></Select>
+        <a-select v-model:value="month" :options="monthOptions"></a-select>
       </div>
     </div>
     <div ref="chart" class="chart"></div>
@@ -21,14 +21,14 @@
 <script>
 import * as echarts from 'echarts';
 import { runRecord, runRecordArray } from './enum/run-record.ts';
-import { initDayArray } from '../utils/index';
+// import { initDayArray } from '../utils/index';
 import { Select, Tabs, TabPane } from 'ant-design-vue';
 let chart = null;
 
 export default {
   name: 'RunRecordChart',
   components: {
-    Select,
+    ASelect: Select,
     ATabs: Tabs,
     ATabPane: TabPane
   },
@@ -189,8 +189,7 @@ export default {
     top: 0;
     z-index: 9;
 
-    .ant-select {
-    }
+    .ant-select {}
   }
 
   .chart {

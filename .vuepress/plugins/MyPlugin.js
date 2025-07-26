@@ -1,5 +1,5 @@
-export const MyPlugin = (options) => {
-  return (app) => {
+export const MyPlugin = () => {
+  return () => {
     return {
       name: 'my-plugin',
       onInitialized: function () {

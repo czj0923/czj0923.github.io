@@ -1,11 +1,7 @@
 <template>
   <div id="uni_timeline">
-    <div
-      :style="_space"
-      v-for="(item, index) in list"
-      :key="index"
-      :class="[list.length == index + 1 ? last : notlast, listbox]"
-    >
+    <div :style="_space" v-for="(item, index) in list" :key="index"
+      :class="[list.length == index + 1 ? last : notlast, listbox]">
       <p>
         <img :src="uni_icon" class="icon" />
         <span class="title">{{ item.title }}</span>
@@ -40,7 +36,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: 1
+      default: '1'
     },
     space: {
       type: String,
@@ -81,7 +77,7 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  /* transform: translateY(-50%); */
+  /*transform:translateY(-50%);*/
   margin-left: -9px;
   margin-top: -18px;
   vertical-align: middle;

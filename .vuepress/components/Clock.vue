@@ -3,39 +3,18 @@
     <ul class="clock" id="helang-clock">
       <hr class="active" style="width: 49%" />
       <li class="date">{{ timeStr }}</li>
-      <li
-        class="hour on-hour"
-        :style="{ transform: `rotate(${hourRotate}deg)` }"
-      >
-        <div
-          :style="{ transform: `rotate(${item.rotate}deg)` }"
-          v-for="(item, index) in hoursList"
-          :key="index"
-        >
+      <li class="hour on-hour" :style="{ transform: `rotate(${hourRotate}deg)` }">
+        <div :style="{ transform: `rotate(${item.rotate}deg)` }" v-for="(item, index) in hoursList" :key="index">
           <div>{{ item.text }}</div>
         </div>
       </li>
-      <li
-        class="hour minute on-minute"
-        :style="{ transform: `rotate(${minuteRotate}deg)` }"
-      >
-        <div
-          :style="{ transform: `rotate(${item.rotate}deg)` }"
-          v-for="(item, index) in minutesList"
-          :key="index"
-        >
+      <li class="hour minute on-minute" :style="{ transform: `rotate(${minuteRotate}deg)` }">
+        <div :style="{ transform: `rotate(${item.rotate}deg)` }" v-for="(item, index) in minutesList" :key="index">
           <div>{{ item.text }}</div>
         </div>
       </li>
-      <li
-        class="hour sec on-sec"
-        :style="{ transform: `rotate(${secondRotate}deg)` }"
-      >
-        <div
-          :style="{ transform: `rotate(${item.rotate}deg)` }"
-          v-for="(item, index) in secondsList"
-          :key="index"
-        >
+      <li class="hour sec on-sec" :style="{ transform: `rotate(${secondRotate}deg)` }">
+        <div :style="{ transform: `rotate(${item.rotate}deg)` }" v-for="(item, index) in secondsList" :key="index">
           <div>{{ item.text }}</div>
         </div>
       </li>
@@ -64,7 +43,7 @@ export default {
       this.setNeedle();
     }, 1000);
   },
-  destroyed() {
+  unmounted() {
     clearInterval(this.timer);
   },
   computed: {
@@ -210,7 +189,7 @@ export default {
     transform: rotate(0deg);
   }
 
-  .hour > div {
+  .hour>div {
     position: absolute;
     width: 100%;
     right: 0;
@@ -219,7 +198,7 @@ export default {
     transform: rotate(0deg);
   }
 
-  .hour > div > div {
+  .hour>div>div {
     float: right;
     width: 60px;
     text-align: right;
@@ -244,7 +223,7 @@ export default {
     left: 10px;
   }
 
-  & > hr {
+  &>hr {
     height: 0;
     width: 0%;
     position: absolute;

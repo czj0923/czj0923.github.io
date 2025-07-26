@@ -1,20 +1,15 @@
 <template>
-  <button
-    class="c-button"
-    :class="[
-      type ? `c-button--${type}` : '',
-      size ? `c-button--${size}` : '',
-      {
-        'is-disabled': disabled,
-        'is-round': round,
-        'is-circle': circle,
-        'is-loading': loading,
-        'is-plain': plain
-      }
-    ]"
-    :disabled="disabled"
-    @click="handleClick"
-  >
+  <button class="c-button" :class="[
+    type ? `c-button--${type}` : '',
+    size ? `c-button--${size}` : '',
+    {
+      'is-disabled': disabled,
+      'is-round': round,
+      'is-circle': circle,
+      'is-loading': loading,
+      'is-plain': plain
+    }
+  ]" :disabled="disabled" @click="handleClick">
     <i :class="icon" v-if="icon"></i>
     <span v-if="$slots.default">
       <slot></slot>
@@ -91,6 +86,7 @@ export default {
 
   &.c-button {
     &--default {
+
       //background-color: grey;
       &:hover {
         color: #409eff;
@@ -230,7 +226,8 @@ export default {
       border-radius: 3px;
     }
   }
-  & + .c-button {
+
+  &+.c-button {
     margin-left: 12px;
   }
 }

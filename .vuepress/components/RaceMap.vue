@@ -46,7 +46,7 @@ export default {
         };
         console.log(obj, 'obj');
       });
-      map.addEventListener('zoomend', (e) => {
+      map.addEventListener('zoomend', () => {
         console.log(map.getZoom());
         if (map.getZoom() <= 8.5) {
           labelMarkerList.forEach((marker) => {
@@ -60,14 +60,14 @@ export default {
       });
     },
     addMarker() {
-      function createDom() {
-        const p = document.createElement('div');
-        p.style.height = '4px';
-        p.style.width = '4px';
-        p.style.backgroundColor = '#f00';
-        p.style.borderRadius = '50%';
-        return p;
-      }
+      // function createDom() {
+      //   const p = document.createElement('div');
+      //   p.style.height = '4px';
+      //   p.style.width = '4px';
+      //   p.style.backgroundColor = '#f00';
+      //   p.style.borderRadius = '50%';
+      //   return p;
+      // }
       raceRecord.forEach((item) => {
         var point = new BMapGL.Point(item.lng, item.lat);
 

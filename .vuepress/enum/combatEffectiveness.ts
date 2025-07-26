@@ -64,3 +64,5 @@ const combatEffectiveness = [
   { date: '3月24日', value: 1916.9 },
   { date: '3月25日', value: 1916.9 }
 ];
+
+export { combatEffectiveness };
