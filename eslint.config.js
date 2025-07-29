@@ -2,7 +2,6 @@ import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
-import css from '@eslint/css';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
@@ -35,11 +34,5 @@ export default defineConfig([
     rules: {
       'vue/multi-word-component-names': 'off'
     }
-  },
-  {
-    files: ['**/*.css'],
-    plugins: { css },
-    language: 'css/css',
-    extends: ['css/recommended']
   }
 ]);
