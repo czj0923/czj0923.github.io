@@ -3,6 +3,8 @@ title: vscode常用插件推荐
 date: 2023/04/09
 categories:
   - vscode
+tags:
+  - vscode
 ---
 
 这里列举的是我使用vscode所用到的插件

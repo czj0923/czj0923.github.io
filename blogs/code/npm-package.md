@@ -5,7 +5,7 @@ tags:
   - npm
   - JavaScript
 categories:
-  - code
+  - 代码笔记
 ---
 
 ## 包名冲突的解决方案

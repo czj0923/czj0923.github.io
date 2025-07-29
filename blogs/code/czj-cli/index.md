@@ -1,6 +1,7 @@
 ---
 title: 构建自己的脚手架cli工具并发布到npm
 date: 2025/7/28
+sticky: 1
 tags:
   - 代码笔记
 categories:
@@ -9,7 +10,10 @@ categories:
 
 ## cli工具
 ### 项目代码地址
-[czj-cli](https://github.com/czj0923/czj-cli)
+项目代码地址  
+[czj-cli](https://github.com/czj0923/czj-cli)  
+npm包地址  
+[czj-cli](https://www.npmjs.com/package/@caozhijie/czj-cli)
 
 ### cli需要用到的工具库
 | 名称       | 简介                                 | 备注       |
