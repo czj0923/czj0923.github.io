@@ -14,7 +14,8 @@ categories:
 ![](img/1.png)
 
 ::: info 提示
-GitHub Pages 免费托管要求仓库公开
+GitHub Pages 免费托管要求仓库公开。  
+若使用了vue-router，请切换到hash路由，github page不支持history路由模式。
 :::
 
 ## Deploy from a branch（从分支部署）
@@ -172,3 +173,5 @@ jobs:
 2. 项目会多一个`gh-pages`分支，不方便管理。
 
 最终选择使用 `Github Action` 直接部署 Github Pages， 完美又优雅
+
+[参考](https://juejin.cn/post/7352797634556395535)

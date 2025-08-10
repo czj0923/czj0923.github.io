@@ -80,7 +80,7 @@ const aroundPos = [
 
 ## 在线demo
 
-扫雷 [点击试玩](https://czj0923.github.io/mine-sweeper/dist).
+扫雷 [点击试玩](https://czj0923.github.io/mine-sweeper/).
 
 ## 开发
 
@@ -99,23 +99,17 @@ cd mine-sweeper
 ### 安装依赖
 
 ```
-npm install
-```
-
-### 使用淘宝镜像
-
-```
-npm install --registry=https://registry.npm.taobao.org
+pnpm install
 ```
 
 ### 启动服务
 
 ```
-npm run serve
+pnpm run serve
 ```
 
 ### 打包
 
 ```
-npm run build
+pnpm run build
 ```
