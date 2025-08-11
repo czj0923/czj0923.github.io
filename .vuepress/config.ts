@@ -3,6 +3,10 @@ import recoTheme from 'vuepress-theme-reco';
 import { viteBundler } from '@vuepress/bundler-vite';
 // import { webpackBundler } from '@vuepress/bundler-webpack'
 import { MyPlugin } from './plugins/MyPlugin';
+import { getDirname, path } from 'vuepress/utils';
+
+const __dirname = getDirname(import.meta.url);
+console.log(__dirname);
 
 export default defineUserConfig({
   title: '橘子Orange',
@@ -177,12 +181,6 @@ export default defineUserConfig({
           ]
         }
       ],
-      '/notes/': [
-        {
-          text: '笔记',
-          children: ['092101', '121501']
-        }
-      ],
       '/interview/': [
         {
           text: '前端八股文',
@@ -208,13 +206,14 @@ export default defineUserConfig({
     },
     navbar: [
       { text: '首页', link: '/', icon: 'icon-home' },
-      { text: '导航', link: '/tools/nav', icon: 'Compass' },
       {
-        text: '在线工具',
+        text: '工具',
         icon: 'ToolKit',
         children: [
           { text: '时钟罗盘', link: '/docs/clock', icon: 'Compass' },
-          { text: '马拉松参赛地图', link: '/docs/map', icon: 'Map' }
+          { text: '马拉松参赛地图', link: '/docs/map', icon: 'Map' },
+          { text: '前端网站导航', link: '/docs/web-nav', icon: 'Map' },
+          { text: '常用网站导航', link: '/docs/nav', icon: 'Map' }
         ]
       },
       {
@@ -302,6 +301,12 @@ export default defineUserConfig({
     //     hideComments: false, // 全局隐藏评论，默认 false
     //   },
     // },
-  })
+  }),
+  markdown: {
+    importCode: {
+      handleImportPath: (str) =>
+        str.replace(/^@src/, path.resolve(__dirname, 'path/to/src'))
+    }
+  }
   // debug: true,
 });

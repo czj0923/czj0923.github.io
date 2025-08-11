@@ -33,7 +33,8 @@
     ".vuepress/**/*.ts",
     ".vuepress/**/*.d.ts",
     ".vuepress/**/*.tsx",
-    ".vuepress/**/*.vue"
+    ".vuepress/**/*.vue",
+    "blogs/Clock.vue"
   ],
   "exclude": [
     ".vuepress/utils/*.ts"
