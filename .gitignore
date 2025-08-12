@@ -1,5 +1,5 @@
-.vuepress/.cache
-.vuepress/.temp
 node_modules
 dist
-.vscode
+cache
+.temp
+.DS_Store
