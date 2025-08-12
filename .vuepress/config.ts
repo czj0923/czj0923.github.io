@@ -181,7 +181,7 @@ export default defineUserConfig({
           ]
         }
       ],
-      '/interview/': [
+      '/docs/interview/': [
         {
           text: '前端八股文',
           children: [
@@ -197,7 +197,7 @@ export default defineUserConfig({
           ]
         }
       ],
-      '/read/': [
+      '/docs/read/': [
         {
           text: '阅读',
           children: ['1', '2', '3', '4', '5']
@@ -266,14 +266,14 @@ export default defineUserConfig({
               { text: 'HTML/CSS', link: '/frontend/html' },
               { text: '浏览器相关', link: '/frontend/browser' },
               { text: '编程题', link: '/frontend/coding' },
-              { text: '八股文', link: '/interview/html' }
+              { text: '八股文', link: '/docs/interview/html' }
             ]
           },
           {
             text: '后端',
             children: [
-              { text: 'php基础知识', link: '/php/foundation' },
-              { text: '数据库', link: '/php/sql' }
+              { text: 'php基础知识', link: '/docs/php/foundation' },
+              { text: '数据库', link: '/docs/php/sql' }
             ]
           }
         ]

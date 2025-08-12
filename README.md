@@ -5,7 +5,6 @@ modules:
   - MdContent
   - Blog
   - Footer
-  - Test
 banner:
   heroText: 橘子Orange
   tagline: 见证者，为见证而来 | 铭记者，因铭记而生

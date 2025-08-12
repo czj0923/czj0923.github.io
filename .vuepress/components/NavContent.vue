@@ -57,21 +57,21 @@ export default {
           title: '提效工具',
           desc: '工欲善其事，必先利其器',
           seeText: '立即使用',
-          href: '/tools/1'
+          href: '/docs/nav'
         },
         {
           icon: '💯',
           title: '导航',
           desc: '常用前端导航',
           seeText: '立即查看',
-          href: '/tools/nav'
+          href: '/docs/web-nav'
         },
         {
           icon: '📘',
           title: '阅读',
           desc: '阅读',
           seeText: '前往',
-          href: '/read/1'
+          href: '/docs/read/1'
         }
       ]
     };
@@ -94,6 +94,21 @@ export default {
       transition:
         border-color 0.25s,
         background-color 0.25s;
+      &:is(.dark *) {
+        background-color: rgb(32 32 34);
+        .title,
+        .desc {
+          color: rgb(226 232 240);
+        }
+
+        &:hover {
+          background-color: rgba(32,32,34,.8);
+          .title,
+          .desc {
+            color: rgba(226,232,240,.8);
+          }
+        }
+      }
 
       &:hover {
         border-color: #ff64b9;
