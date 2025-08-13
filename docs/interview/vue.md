@@ -3,6 +3,8 @@ title: vue
 date: 2022/07/07
 ---
 
+# vue
+
 ## vue2生命周期
 
 - beforeCreate

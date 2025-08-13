@@ -7,6 +7,8 @@ categories:
   - 前端物语
 ---
 
+# CSS 理论知识点
+
 ## 介绍一下盒模型
 
 <custom-block title="什么是盒模型？" content="<div>当对一个文档进行布局时，浏览器的渲染引擎会根据标准之一的 <strong><code>CSS</code> 基础框盒模型</strong>（CSS basic box model），将所有元素表示为一个个矩形的盒子；<code>CSS</code> 决定这些盒子的大小、位置以及属性（如颜色、背景、边框尺寸等）</div><div>每个盒子（即盒模型）从外到内由这四个部分组成</div><ul><li><code>margin</code> 外边距（不计入盒子的实际大小）</li><li><code>border</code> 边框</li><li><code>padding</code> 内边距</li><li><code>content</code> 内容</li></ul><div><a href='https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model' target='_blank'>CSS 基础框盒模型介绍 - CSS：层叠样式表 | MDN</a></div>"></custom-block>

@@ -7,6 +7,7 @@ categories:
   - 代码笔记
 ---
 
+# 用vuepress-theme-reco2搭建博客时遇到的一些坑
 ## 1
 
 之前github自动部署失败了，一直没管，最近想起来修改，查看git actions报错日志，发现执行到pnpm run build成功之后就没有退出，导致无法执行下一步。

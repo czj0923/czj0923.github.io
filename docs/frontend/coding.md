@@ -7,6 +7,8 @@ categories:
   - 前端物语
 ---
 
+# 编程题
+
 ## new 运算符
 
 <custom-block title="new 运算符原理" content="<ol><li>创建一个全新的对象</li><li>为新创建的对象添加 <strong><code>__proto__</code></strong> 属性并指向构造函数的原型对象</li><li>将新创建的对象作为函数调用的 this</li><li>如果构造函数没有返回对象类型，则返回新创建的对象</li></ol>"></custom-block>

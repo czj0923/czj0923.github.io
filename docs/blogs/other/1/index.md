@@ -7,6 +7,8 @@ tags:
   - vscode
 ---
 
+# vscode常用插件推荐
+
 这里列举的是我使用vscode所用到的插件
 
 ## 1.Chinese (Simplified) (简体中文)

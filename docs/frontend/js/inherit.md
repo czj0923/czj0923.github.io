@@ -7,6 +7,8 @@ categories:
   - 前端物语
 ---
 
+# 继承
+
 <custom-block title="温馨提示" content="<div>阅读<a href='https://www.ituring.com.cn/book/2472' target='_blank'>《JavaScript 高级程序设计（第 4 版）》</a>和各个大佬的文章所归纳的总结，<strong>如有异议按你的理解为主</strong></div>"></custom-block>
 继承是面向对象编程中的一个最为人津津乐道的概念，其描述了类与类之间的父子关系，主要作用是提升代码复用性让代码更为简洁。\
 很多面向对象语言都支持两种继承：

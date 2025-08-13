@@ -3,6 +3,8 @@ title: javascript
 date: 2022/07/07
 ---
 
+# javascript
+
 ## js数据类型有哪些
 
 string,number,boolea,null,undefined,symbol,bigint,object

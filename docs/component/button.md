@@ -3,6 +3,8 @@ title: 按钮 Button
 date: 2022/09/26
 ---
 
+# 按钮 Button
+
 <c-button>Default</c-button>
 <c-button type="primary">Primary</c-button>
 <c-button type="info">Info</c-button>

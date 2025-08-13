@@ -3,25 +3,27 @@ title: https
 date: 2022/07/07
 ---
 
-## 常见http状态码有哪些
+# https
 
-### 1xx消息状态码
+## 常见 http 状态码有哪些
+
+### 1xx 消息状态码
 
 - 100 Continue 继续
 
-### 2xx成功状态码
+### 2xx 成功状态码
 
 - 200 OK 请求成功
 - 204 No Content 没有内容
 - 206 Partial Content 部分内容
 
-### 3xx重定向状态码
+### 3xx 重定向状态码
 
 - 301 Moved Permanently 永久重定向
 - 302 Found 临时重定向
 - 304 Not Modified 资源未修改
 
-### 4xx客户端错误状态码
+### 4xx 客户端错误状态码
 
 - 400 Bad Request 错误请求
 - 401 Unauthorized 未授权
@@ -31,28 +33,28 @@ date: 2022/07/07
 - 408 Request Time-out 请求超时
 - 409 Conflict 冲突
 
-### 5xx服务端错误状态码
+### 5xx 服务端错误状态码
 
 - 500 Internal Server Error 服务器内部错误
 - 502 错误网关
 - 504 网关超时
 
-## http和https有什么区别
+## http 和 https 有什么区别
 
-- http是明文传输，https是ssl加密传输更加安全
-- https需要申请ca证书，一般要花钱
-- http默认端口是80，https默认端口是443
+- http 是明文传输，https 是 ssl 加密传输更加安全
+- https 需要申请 ca 证书，一般要花钱
+- http 默认端口是 80，https 默认端口是 443
 
-## get和post区别
+## get 和 post 区别
 
-- get用于获取数据，post用于提交数据
-- get传的参数有长度限制，post没有限制
-- get在浏览器回退时无害，post会重新提交请求
-- get能被缓存，post不能缓存
-- get数据会显示在url中，post不会显示
-- get的参数只能是ASCII类型，post没有限制
+- get 用于获取数据，post 用于提交数据
+- get 传的参数有长度限制，post 没有限制
+- get 在浏览器回退时无害，post 会重新提交请求
+- get 能被缓存，post 不能缓存
+- get 数据会显示在 url 中，post 不会显示
+- get 的参数只能是 ASCII 类型，post 没有限制
 
-## TCP和UDP的区别
+## TCP 和 UDP 的区别
 
 |              | TCP        | UDP                            |
 | ------------ | ---------- | ------------------------------ |
