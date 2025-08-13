@@ -10,7 +10,7 @@ categories:
 ## HTML 语义化
 
 `HTML` 语义化是指根据内容的结构化（内容语义化）来选择合适的标签（代码语义化），即用正确的标签做正确的事情
-<CustomBlock title="语义化的优点" content="<div><code>HTML</code> 语义化增强文档的可识别性</div><ul><li>可以使页面在没有 <code>CSS</code> 样式表的情况下也能呈现出很好的内容结构</li><li>有利于 <code>SEO</code> 优化（爬虫依赖 <code>HTML</code> 的标签来确定渲染关键字的权重）</li><li>方便其他设备解析（屏幕阅读器、盲人阅读器）提升了用户体验</li><li>增强了代码的可读性和可维护性</li></ul>"></CustomBlock>
+<custom-block title="语义化的优点" content="<div><code>HTML</code> 语义化增强文档的可识别性</div><ul><li>可以使页面在没有 <code>CSS</code> 样式表的情况下也能呈现出很好的内容结构</li><li>有利于 <code>SEO</code> 优化（爬虫依赖 <code>HTML</code> 的标签来确定渲染关键字的权重）</li><li>方便其他设备解析（屏幕阅读器、盲人阅读器）提升了用户体验</li><li>增强了代码的可读性和可维护性</li></ul>"></custom-block>
 
 ### 常用的语义化标签
 

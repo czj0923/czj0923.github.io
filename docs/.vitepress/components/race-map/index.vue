@@ -7,12 +7,12 @@
   </div>
 </template>
 <script>
-import { raceRecord } from './enum/record';
+import { raceRecord } from './record';
 import { Modal } from 'ant-design-vue';
 let map = null;
 let labelMarkerList = [];
 export default {
-  name: 'RaceMap',
+  name: 'race-map',
   components: {
     Modal
   },

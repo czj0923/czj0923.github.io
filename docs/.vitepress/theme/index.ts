@@ -11,14 +11,22 @@ export default {
   ...BlogTheme,
   enhanceApp(ctx) {
     BlogTheme.enhanceApp?.(ctx)
+    
     const { app } = ctx;
+    const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;
     // 批量注册components文件夹下的组件
     for (const path in modules) {
       modules[path]().then((mod) => {
-        const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;
         const matches = path.match(reg);
         if (matches) {
-          app.component(matches[1].replaceAll('/', '-'), mod.default);
+          const sourceName = matches[1]
+          const segArr = sourceName.split('/')
+          // 如果是index文件，则组件名为文件夹名
+          if(segArr[segArr.length - 1] == 'index'){
+            segArr.pop()
+          }
+          
+          app.component(segArr.join('-'), mod.default);
         }
       });
     }

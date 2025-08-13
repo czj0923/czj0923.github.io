@@ -7,7 +7,7 @@ categories:
   - 前端物语
 ---
 
-<CustomBlock title="温馨提示" content="<div>阅读<a href='https://www.ituring.com.cn/book/2472' target='_blank'>《JavaScript 高级程序设计（第 4 版）》</a>和各个大佬的文章所归纳的总结，<strong>如有异议按你的理解为主</strong></div>"></CustomBlock>
+<custom-block title="温馨提示" content="<div>阅读<a href='https://www.ituring.com.cn/book/2472' target='_blank'>《JavaScript 高级程序设计（第 4 版）》</a>和各个大佬的文章所归纳的总结，<strong>如有异议按你的理解为主</strong></div>"></custom-block>
 继承是面向对象编程中的一个最为人津津乐道的概念，其描述了类与类之间的父子关系，主要作用是提升代码复用性让代码更为简洁。\
 很多面向对象语言都支持两种继承：
 
@@ -18,7 +18,7 @@ categories:
 ## 原型链继承
 
 构造函数、原型和实例的关系：每个构造函数都有一个原型对象，原型有一个属性指回构造函数，而实例有一个内部指针指向原型。如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针指向另一个原型，相应地另一个原型也有一个指针指向另一个构造函数。这样就在实例和原型之间构造了一条原型链。这就是原型链的基本构想
-<CustomBlock title="原型链继承" content="<div>原型链继承是通过重写子类的原型<strong>将父类的实例作为子类的原型</strong></div><div>缺点</div><ul><li>父类上的引用类型属性会被所有实例共享，其中一个实例进行修改时会影响其他实例</li><li>创建子类实例时不能向父类构造函数传参</li></ul>"></CustomBlock>
+<custom-block title="原型链继承" content="<div>原型链继承是通过重写子类的原型<strong>将父类的实例作为子类的原型</strong></div><div>缺点</div><ul><li>父类上的引用类型属性会被所有实例共享，其中一个实例进行修改时会影响其他实例</li><li>创建子类实例时不能向父类构造函数传参</li></ul>"></custom-block>
 
 ```javascript
 function SuperType() {

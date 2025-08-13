@@ -9,7 +9,7 @@ categories:
 
 ## new 运算符
 
-<CustomBlock title="new 运算符原理" content="<ol><li>创建一个全新的对象</li><li>为新创建的对象添加 <strong><code>__proto__</code></strong> 属性并指向构造函数的原型对象</li><li>将新创建的对象作为函数调用的 this</li><li>如果构造函数没有返回对象类型，则返回新创建的对象</li></ol>"></CustomBlock>
+<custom-block title="new 运算符原理" content="<ol><li>创建一个全新的对象</li><li>为新创建的对象添加 <strong><code>__proto__</code></strong> 属性并指向构造函数的原型对象</li><li>将新创建的对象作为函数调用的 this</li><li>如果构造函数没有返回对象类型，则返回新创建的对象</li></ol>"></custom-block>
 
 ```javascript
 function myNew() {
@@ -33,7 +33,7 @@ function myNew() {
 
 ## instanceof 运算符
 
-<CustomBlock title="instanceof 运算符原理" content="<div><code>instanceof</code> 运算符用于检测构造函数的 <code>prototype</code> 属性是否出现在某个实例对象的原型链上</div>"></CustomBlock>
+<custom-block title="instanceof 运算符原理" content="<div><code>instanceof</code> 运算符用于检测构造函数的 <code>prototype</code> 属性是否出现在某个实例对象的原型链上</div>"></custom-block>
 
 ```javascript
 function myInstanceof(left, right) {
@@ -62,7 +62,7 @@ function myInstanceof(left, right) {
 
 ## Object.create()
 
-<CustomBlock title="Object.create()" content="<div><code>Object.create()</code> 方法创建一个新对象，使用现有的对象来提供新创建的对象的 <code>__proto__</code></div>"></CustomBlock>
+<custom-block title="Object.create()" content="<div><code>Object.create()</code> 方法创建一个新对象，使用现有的对象来提供新创建的对象的 <code>__proto__</code></div>"></custom-block>
 
 ```javascript
 function create(proto, properties) {
@@ -345,7 +345,7 @@ Function.prototype.myBind = function (context) {
 
 ## debounce 函数防抖
 
-<CustomBlock title="函数防抖" content="<div><strong>作用</strong>: 一个函数在一段时间内多次触发都<strong>只执行最后一次</strong> <br><strong>原理</strong>: 利用定时器，在函数第一次执行时设定一个定时器，再次调用时如果已经设定过定时器就清空之前的定时器并设定一个新的定时器，当定时器结束后执行传入的回调函数 <br><strong>应用</strong>: 搜索输入框获取用户输入的联想结果</div>"></CustomBlock>
+<custom-block title="函数防抖" content="<div><strong>作用</strong>: 一个函数在一段时间内多次触发都<strong>只执行最后一次</strong> <br><strong>原理</strong>: 利用定时器，在函数第一次执行时设定一个定时器，再次调用时如果已经设定过定时器就清空之前的定时器并设定一个新的定时器，当定时器结束后执行传入的回调函数 <br><strong>应用</strong>: 搜索输入框获取用户输入的联想结果</div>"></custom-block>
 
 ```javascript
 function debounce(fn, wait) {
@@ -367,7 +367,7 @@ function debounce(fn, wait) {
 
 ## throttle 函数节流
 
-<CustomBlock title="函数节流" content="<div><strong>作用</strong>: 函数节流指指的是在一段时间内只允许函数执行一次 (例如 <code>3</code> 秒执行一次那么在函数第一次调用后的 <code>3</code> 秒内后面的函数调用将被忽略) <br><strong>原理</strong>: 利用时间戳来判断，记录上次执行的时间戳，在每次触发事件时判断当前时间是否大于上次执行的时间 + 设置的间隔 ，如果是则执行回调并更新上次执行的时间戳<br><strong>应用</strong>: 降低 <code>scroll resize</code> 事件的触发频率</div>"></CustomBlock>
+<custom-block title="函数节流" content="<div><strong>作用</strong>: 函数节流指指的是在一段时间内只允许函数执行一次 (例如 <code>3</code> 秒执行一次那么在函数第一次调用后的 <code>3</code> 秒内后面的函数调用将被忽略) <br><strong>原理</strong>: 利用时间戳来判断，记录上次执行的时间戳，在每次触发事件时判断当前时间是否大于上次执行的时间 + 设置的间隔 ，如果是则执行回调并更新上次执行的时间戳<br><strong>应用</strong>: 降低 <code>scroll resize</code> 事件的触发频率</div>"></custom-block>
 
 ```javascript
 function throttle(fn, wait) {

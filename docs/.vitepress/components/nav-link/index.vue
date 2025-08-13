@@ -38,7 +38,7 @@ import {
   navList13,
   navList14,
   navList15
-} from '../enum/nav';
+} from './nav';
 
 export default {
   props: {

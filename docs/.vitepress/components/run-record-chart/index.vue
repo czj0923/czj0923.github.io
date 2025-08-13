@@ -20,13 +20,13 @@
 
 <script>
 import * as echarts from 'echarts';
-import { runRecord, runRecordArray } from './enum/run-record.ts';
+import { runRecord, runRecordArray } from './data.ts';
 // import { initDayArray } from '../utils/index';
 import { Select, Tabs, TabPane } from 'ant-design-vue';
 let chart = null;
 
 export default {
-  name: 'RunRecordChart',
+  name: 'run-record-chart',
   components: {
     ASelect: Select,
     ATabs: Tabs,

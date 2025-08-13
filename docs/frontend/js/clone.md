@@ -7,7 +7,7 @@ categories:
   - 前端物语
 ---
 
-<CustomBlock title="回顾一下引用类型的特点" content="<ul><li>因为 <code>JavaScript</code> 不允许直接访问内存位置（即不能直接操作引用类型所在的内存空间），所以引用类型在 <strong>栈内存</strong> 中存储的是地址（即内存指针），而引用类型中的数据（方法或属性）是存储在 <strong>堆内存</strong> 中</li><li>保存引用类型的变量是 <strong>按引用 (by reference) 访问</strong> ，当我们访问和操作一个对象时，实际上操作的是对该对象的引用而非实际的对象本身</li><li>复制引用类型时只会复制内存指针</li></ul>"></CustomBlock>
+<custom-block title="回顾一下引用类型的特点" content="<ul><li>因为 <code>JavaScript</code> 不允许直接访问内存位置（即不能直接操作引用类型所在的内存空间），所以引用类型在 <strong>栈内存</strong> 中存储的是地址（即内存指针），而引用类型中的数据（方法或属性）是存储在 <strong>堆内存</strong> 中</li><li>保存引用类型的变量是 <strong>按引用 (by reference) 访问</strong> ，当我们访问和操作一个对象时，实际上操作的是对该对象的引用而非实际的对象本身</li><li>复制引用类型时只会复制内存指针</li></ul>"></custom-block>
 因此我们在开发过程中对引用类型进行拷贝并修改时，便需要根据场景需求注意对原本数据的影响。
 
 ## 浅拷贝
@@ -179,7 +179,7 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 ```
 
 `HTML` 规范的标准提案，使用结构化克隆算法将给定的值进行深拷贝，支持循环引用。还可以使用 `structuredClone(value, { transfer })` 调用方式使可转移对象仅被传递，不被克隆（直接移动源数据）
-<CustomBlock title="注意点" content="<div>尽管作为规范标准实现的 <code>Web API</code>，但目前兼容性还是个巨大的问题，同时仍有其他不足：</div><ul><li>无法拷贝对象的原型链</li><li>无法拷贝函数</li><li>不支持 <code>Error</code> 数据类型</li></ul>"></CustomBlock>
+<custom-block title="注意点" content="<div>尽管作为规范标准实现的 <code>Web API</code>，但目前兼容性还是个巨大的问题，同时仍有其他不足：</div><ul><li>无法拷贝对象的原型链</li><li>无法拷贝函数</li><li>不支持 <code>Error</code> 数据类型</li></ul>"></custom-block>
 
 ### `MessageChannel`
 

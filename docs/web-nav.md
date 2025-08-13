@@ -5,60 +5,60 @@ date: 2023/04/28
 
 ## 常用工具
 
-<NavLink type=1></NavLink>
+<nav-link type=1></nav-link>
 
 ## AI导航
 
-<NavLink type=2></NavLink>
+<nav-link type=2></nav-link>
 
 ## Vue生态
 
-<NavLink type=3></NavLink>
+<nav-link type=3></nav-link>
 
 ## React生态
 
-<NavLink type=4></NavLink>
+<nav-link type=4></nav-link>
 
 ## JavaScript 框架类库
 
-<NavLink type=5></NavLink>
+<nav-link type=5></nav-link>
 
 ## CSS 相关
 
-<NavLink type=6></NavLink>
+<nav-link type=6></nav-link>
 
 ## 小程序相关
 
-<NavLink type=7></NavLink>
+<nav-link type=7></nav-link>
 
 ## Node 相关
 
-<NavLink type=8></NavLink>
+<nav-link type=8></nav-link>
 
 ## 可视化
 
-<NavLink type=9></NavLink>
+<nav-link type=9></nav-link>
 
 ## 编译&构建&打包
 
-<NavLink type=10></NavLink>
+<nav-link type=10></nav-link>
 
 ## 图标库
 
-<NavLink type=11></NavLink>
+<nav-link type=11></nav-link>
 
 ## 前端学习资料
 
-<NavLink type=12></NavLink>
+<nav-link type=12></nav-link>
 
 ## 社区
 
-<NavLink type=13></NavLink>
+<nav-link type=13></nav-link>
 
 ## 高质量周刊与博客
 
-<NavLink type=14></NavLink>
+<nav-link type=14></nav-link>
 
 ## 摸鱼专用
 
-<NavLink type=15></NavLink>
+<nav-link type=15></nav-link>

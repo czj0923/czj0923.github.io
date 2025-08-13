@@ -4,11 +4,11 @@
 
 <script>
 import * as echarts from 'echarts';
-import { pbRecord } from './enum/run-record';
+import { pbRecord } from './data';
 
 let chart = null;
 export default {
-  name: 'PBChart',
+  name: 'pb-chart',
   data() {
     return {
       pbRecord
