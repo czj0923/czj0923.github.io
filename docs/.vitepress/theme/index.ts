@@ -1,5 +1,5 @@
 import BlogTheme from '@sugarat/theme';
-const modules = import.meta.glob('./components/**/*.vue');
+const modules = import.meta.glob('../components/**/*.vue');
 
 // 自定义样式重载
 //import './style.scss'
@@ -9,14 +9,16 @@ const modules = import.meta.glob('./components/**/*.vue');
 
 export default {
   ...BlogTheme,
-  enhanceApp({ app }) {
+  enhanceApp(ctx) {
+    BlogTheme.enhanceApp?.(ctx)
+    const { app } = ctx;
     // 批量注册components文件夹下的组件
     for (const path in modules) {
       modules[path]().then((mod) => {
-        const reg = /^\.\/components\/([a-zA-Z-]+)\.vue$/;
+        const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;
         const matches = path.match(reg);
         if (matches) {
-          app.component(matches[1], mod.default);
+          app.component(matches[1].replaceAll('/', '-'), mod.default);
         }
       });
     }

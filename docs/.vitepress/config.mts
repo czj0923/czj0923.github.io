@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-
 // 导入主题的配置
 import { blogTheme } from './blog-theme'
 
@@ -24,7 +23,21 @@ export default defineConfig({
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
-    ['link', { rel: 'icon', href: '/avatar.jpg' }]
+    ['link', { rel: 'icon', href: '/avatar.jpg' }],
+    [
+      'script',
+      {
+        type: 'text/javascript',
+        src: 'https://api.map.baidu.com/getscript?type=webgl&v=1.0&ak=RXIXcbIFD3HP7RBmzmGwoPoIGqLI0sCN&services=&t=20230613170744'
+      }
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'
+      }
+    ],
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
@@ -46,6 +59,12 @@ export default defineConfig({
     // },
     nav: [
       { text: '首页', link: '/' },
+      { text: '工具', items: [
+        { text: '时钟罗盘', link: '/clock' },
+        { text: '参赛地图', link: '/map' },
+        { text: '在线工具', link: '/nav' },
+        { text: '常用导航', link: '/web-nav' },
+      ] },
       { text: '关于作者', link: '/introduce' }
     ],
     socialLinks: [
