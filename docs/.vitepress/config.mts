@@ -1,6 +1,4 @@
 import { defineConfig } from 'vitepress'
-// 导入主题的配置
-import { blogTheme } from './blog-theme'
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -12,8 +10,6 @@ import { blogTheme } from './blog-theme'
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // 继承博客主题(@sugarat/theme)
-  extends: blogTheme,
   // base,
   lang: 'zh-cn',
   title: '橘子Orangeのblog',
@@ -52,11 +48,6 @@ export default defineConfig({
 
     // 设置logo
     logo: '/avatar.jpg',
-    // editLink: {
-    //   pattern:
-    //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
-    //   text: '去 GitHub 上编辑内容'
-    // },
     nav: [
       { text: '首页', link: '/' },
       { text: '工具', items: [
@@ -65,13 +56,77 @@ export default defineConfig({
         { text: '在线工具', link: '/nav' },
         { text: '常用导航', link: '/web-nav' },
       ] },
-      { text: '关于作者', link: '/introduce' }
+      {
+        text: '爱好',
+        items: [
+          {
+            text: '跑步',
+            items: [
+              { text: '介绍', link: '/hobby/run/a-1' },
+              { text: '比赛记录', link: '/hobby/run/b-2' }
+            ],
+          },
+          {
+            text: '越野',
+            items: [
+              { text: '介绍', link: '/hobby/trail/a-1' },
+              { text: '比赛记录', link: '/hobby/trail/b-1' }
+            ],
+          },
+          {
+            text: '爬山',
+            items: [
+              { text: '介绍', link: '/hobby/climbing/a-1' },
+              { text: '记录', link: '/hobby/climbing/b-1' }
+            ],
+          },
+          {
+            text: '骑行',
+            items: [
+              { text: '介绍', link: '/hobby/ride/a-1' },
+              { text: '记录', link: '/hobby/ride/b-1' }
+            ],
+          }
+        ],
+      },
+      {
+        text: '编程',
+        items: [
+          {
+            text: '前端',
+            items: [
+              { text: 'JavaScript基础知识', link: '/frontend/js/types' },
+              { text: 'ES6常用知识点', link: '/frontend/es6/1' },
+              { text: 'HTML/CSS', link: '/frontend/html' },
+              { text: '浏览器相关', link: '/frontend/browser' },
+              { text: '编程题', link: '/frontend/coding' },
+              { text: '八股文', link: '/docs/interview/html' }
+            ]
+          },
+          {
+            text: '后端',
+            items: [
+              { text: 'php基础知识', link: '/docs/php/foundation' },
+              { text: '数据库', link: '/docs/php/sql' }
+            ]
+          }
+        ]
+      },
+      { text: '关于我', link: '/introduce' }
     ],
     socialLinks: [
       {
         icon: 'github',
         link: 'https://github.com/czj0923'
+      },
+      {
+        icon: 'npm',
+        link: 'https://www.npmjs.com/~caozhijie'
       }
-    ]
-  }
+    ],
+    footer: {
+      message: '橘子Orangeのblog',
+      copyright: 'Copyright © 2021-present Cao Zhijie'
+    }
+  },
 })

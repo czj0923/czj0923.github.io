@@ -87,20 +87,20 @@ for (let i = numbers.length - 1; i > 0; i--) {
 
 ## 在线demo
 
-连连看小游戏 [点击试玩](https://czj0923.github.io/link-game).
+连连看小游戏 [点击试玩](https://czj0923.github.io/game-box/#/link-game).
 
 ## 开发
 
 ### 克隆代码
 
 ```bash
-git clone https://github.com/czj0923/link-game.git
+git clone https://github.com/czj0923/game-box.git
 ```
 
 ### 进入项目目录
 
 ```bash
-cd link-game
+cd game-box
 ```
 
 ### 安装依赖

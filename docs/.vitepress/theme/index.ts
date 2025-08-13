@@ -1,17 +1,14 @@
-import BlogTheme from '@sugarat/theme';
 const modules = import.meta.glob('../components/**/*.vue');
-
+import DefaultTheme from 'vitepress/theme'
 // 自定义样式重载
-//import './style.scss'
+import './style.scss'
 
 // 自定义主题色
-//import './user-theme.css'
+// import './user-theme.css'
 
 export default {
-  ...BlogTheme,
+  extends: DefaultTheme,
   enhanceApp(ctx) {
-    BlogTheme.enhanceApp?.(ctx)
-    
     const { app } = ctx;
     const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;
     // 批量注册components文件夹下的组件
