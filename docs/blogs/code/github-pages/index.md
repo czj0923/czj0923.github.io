@@ -5,6 +5,8 @@ categories:
   - 代码笔记
 ---
 
+# 配置项目自动部署到github pages
+
 ## 启用 GitHub Pages
 
 1. 进入刚创建的仓库，点击 "Settings"。

@@ -8,6 +8,8 @@ categories:
   - 代码笔记
 ---
 
+# 如何发布一个npm包
+
 ## 包名冲突的解决方案
 
 ### 1. 使用 Scoped Package（推荐）

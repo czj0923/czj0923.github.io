@@ -7,6 +7,8 @@ categories:
   - 代码笔记
 ---
 
+# VuePress + vuepress-theme-reco搭建个人博客
+
 ## 使用技术
 
 VuePress + vuepress-theme-reco

@@ -5,6 +5,8 @@ date: 2022/09/26
 
 # 按钮 Button
 
+## 基本用法
+
 <c-button>Default</c-button>
 <c-button type="primary">Primary</c-button>
 <c-button type="info">Info</c-button>

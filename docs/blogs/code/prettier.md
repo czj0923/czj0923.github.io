@@ -7,6 +7,8 @@ categories:
   - 代码笔记
 ---
 
+# Prettier 配置笔记
+
 [prettier中文网](https://prettier.nodejs.cn/docs/configuration/)  
 根目录下创建 `.prettierrc` 配置  
 根目录下创建 `.prettierignore` 忽略不想格式化的文件  

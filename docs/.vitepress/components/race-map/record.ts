@@ -214,7 +214,8 @@ const raceRecord = [
     lat: 30.673282628828318,
     name: '2024桐乡半马',
     date: '2024-12-8'
-  }
+  },
+  
 ];
 
 export { raceRecord };

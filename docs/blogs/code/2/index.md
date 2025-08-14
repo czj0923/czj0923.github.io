@@ -7,6 +7,8 @@ categories:
   - 代码笔记
 ---
 
+# win10 突然打不开Sourcetree
+
 今天sourcetree突然打不不开了，一开始还以为开机时间长了的原因，重启电脑发现还是打不开
 首先找到sourcetree文件夹
 ![](./img/2-1.png)

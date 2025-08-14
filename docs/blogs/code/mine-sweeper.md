@@ -7,6 +7,8 @@ categories:
   - 代码笔记
 ---
 
+# 扫雷小游戏 mine-sweeper
+
 ## 介绍
 
 mine-sweeper是使用[vue3](https://v3.cn.vuejs.org/)开发的一个扫雷小游戏，实现了基本的扫雷游戏功能。\
