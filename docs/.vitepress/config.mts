@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 import  {sidebar} from "./sidebar"
-import autoSidebar from './plugins/auto-sidebar';
+import autoSidebar from './plugins/vite-plugin-auto-sidebar';
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -39,10 +39,21 @@ export default defineConfig({
   ],
   vite: {
     plugins: [
-      // autoSidebar({
-      //   dir: '/docs',
-      //   ingoreDirList: ['/public']
-      // })
+      autoSidebar({
+        dir: 'docs',
+        ingoreDirList: ['public','blogs', 'other'],
+        navTextMap: {
+          'coding': '编程题',
+          'es6': 'ES6常用知识点',
+          'html': 'HTML/CSS',
+          'js': 'JavaScript基础知识',
+          'network': '浏览器与网络',
+          'webpack': 'webpack',
+          'note': '笔记',
+          'race': '比赛记录',
+          'read': '阅读',
+        }
+      })
     ],
     css: {
       preprocessorOptions: {
@@ -78,10 +89,10 @@ export default defineConfig({
       {
         text: '工具',
         items: [
-          { text: '时钟罗盘', link: '/clock' },
-          { text: '参赛地图', link: '/map' },
-          { text: '在线工具', link: '/nav' },
-          { text: '常用导航', link: '/web-nav' }
+          { text: '时钟罗盘', link: '/other/clock' },
+          { text: '参赛地图', link: '/other/map' },
+          { text: '在线工具', link: '/other/nav' },
+          { text: '常用导航', link: '/other/web-nav' }
         ]
       },
       {
@@ -90,29 +101,27 @@ export default defineConfig({
           {
             text: '跑步',
             items: [
-              { text: '介绍', link: '/hobby/run/a-1' },
-              { text: '比赛记录', link: '/hobby/run/b-2' }
+              { text: '笔记', link: '/run/note/a-1' },
+              { text: '比赛记录', link: '/run/race/01' }
             ]
           },
           {
             text: '越野',
             items: [
-              { text: '介绍', link: '/hobby/trail/a-1' },
-              { text: '比赛记录', link: '/hobby/trail/b-1' }
+              { text: '笔记', link: '/trail/note/a-1' },
+              { text: '比赛记录', link: '/trail/race/b-1' }
             ]
           },
           {
             text: '爬山',
             items: [
-              { text: '介绍', link: '/hobby/climbing/a-1' },
-              { text: '记录', link: '/hobby/climbing/b-1' }
+              { text: '笔记', link: '/climbing/a-1' }
             ]
           },
           {
             text: '骑行',
             items: [
-              { text: '介绍', link: '/hobby/ride/a-1' }
-              // { text: "记录", link: "/hobby/ride/b-1" },
+              { text: '笔记', link: '/ride/a-1' }
             ]
           }
         ]
@@ -124,10 +133,10 @@ export default defineConfig({
             text: '前端',
             items: [
               { text: 'JavaScript基础知识', link: '/frontend/js/types' },
-              { text: 'ES6常用知识点', link: '/frontend/es6/1' },
-              { text: 'HTML/CSS', link: '/frontend/html' },
-              { text: '浏览器相关', link: '/frontend/browser' },
-              { text: '编程题', link: '/frontend/coding' },
+              { text: 'ES6常用知识点', link: '/frontend/es6/es6' },
+              { text: 'HTML/CSS', link: '/frontend/html/html' },
+              { text: '浏览器相关', link: '/frontend/network/browser' },
+              { text: '编程题', link: '/frontend/coding/code' },
               { text: '八股文', link: '/interview/html' }
             ]
           },
@@ -140,7 +149,7 @@ export default defineConfig({
           }
         ]
       },
-      { text: '关于我', link: '/introduce' }
+      { text: '关于我', link: '/other/introduce' }
     ],
     sidebar,
     socialLinks: [

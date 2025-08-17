@@ -17,6 +17,8 @@
   "devDependencies": {
     "@types/node": "^24.2.1",
     "chalk": "^5.5.0",
+    "fast-glob": "^3.3.3",
+    "gray-matter": "^4.0.3",
     "sass-embedded": "^1.90.0",
     "vitepress": "^1.6.4"
   }

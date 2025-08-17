@@ -43,28 +43,28 @@ export default {
           title: '爱好 Hobby',
           desc: '我的爱好',
           seeText: '立即查看',
-          href: '/hobby-guide'
+          href: '/other/hobby-guide'
         },
         {
           icon: '🐞',
           title: '跑步',
           desc: '记录跑步的种种',
           seeText: '查看',
-          href: '/hobby/run/a-1'
+          href: '/run/a-1'
         },
         {
           icon: '🧰',
           title: '提效工具',
           desc: '工欲善其事，必先利其器',
           seeText: '立即使用',
-          href: '/nav'
+          href: '/other/nav'
         },
         {
           icon: '💯',
           title: '导航',
           desc: '常用前端导航',
           seeText: '立即查看',
-          href: '/web-nav'
+          href: '/other/web-nav'
         },
         {
           icon: '📘',

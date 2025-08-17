@@ -24,22 +24,22 @@ features:
   - icon: 🎨
     title: 爱好 Hobby
     details: 我的爱好
-    link: '/hobby-guide'
+    link: '/other/hobby-guide'
     linkText: 立即查看
   - icon: 🏃‍♂️
     title: 跑步
     details: 记录跑步的种种
-    link: '/hobby/run/a-1'
+    link: '/run/note/a-1'
     linkText: 查看
   - icon: 🧰
     title: 提效工具
     details: 工欲善其事，必先利其器
-    link: '/nav'
+    link: '/other/nav'
     linkText: 立即使用
   - icon: 🗺️
     title: 导航
     details: 常用前端导航
-    link: '/web-nav'
+    link: '/other/web-nav'
     linkText: 立即查看
   - icon: 📘
     title: 阅读
