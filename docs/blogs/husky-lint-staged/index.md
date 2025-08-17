@@ -1,6 +1,6 @@
 ---
 title: 使用 husky 和 lint-staged 提升项目代码质量
-date: 2025-07-29
+date: 2025/07/29
 tags:
   - 前端工程化
   - Git

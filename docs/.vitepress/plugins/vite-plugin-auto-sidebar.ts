@@ -20,12 +20,6 @@ interface SidebarItemInterface {
 const defaultIngoreList = ['node_modules', 'dist', '.vitepress'];
 const workRoot = process.cwd();
 
-const data = fs.readFileSync(
-  'D:\\czj\\git-repository\\blog\\docs\\run\\note\\a-1.md',
-  'utf-8'
-);
-console.log(matter(data));
-
 function generateSidebar(config) {
   const { dir, ingoreDirList, navTextMap } = config;
   const siderbar = {};

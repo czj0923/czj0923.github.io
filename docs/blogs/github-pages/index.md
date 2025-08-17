@@ -15,7 +15,7 @@ categories:
 
 ![](img/1.png)
 
-::: info 提示
+::: tip 提示
 GitHub Pages 免费托管要求仓库公开。  
 若使用了vue-router，请切换到hash路由，github page不支持history路由模式。
 :::

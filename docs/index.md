@@ -22,13 +22,13 @@ features:
     link: '/frontend/js/types'
     linkText: 前端常用知识
   - icon: 🎨
-    title: 爱好 Hobby
-    details: 我的爱好
-    link: '/other/hobby-guide'
-    linkText: 立即查看
+    title: 越野
+    details: 踏破山川见真我，越野征途铸非凡
+    link: '/trail/note/a-1'
+    linkText: 查看
   - icon: 🏃‍♂️
-    title: 跑步
-    details: 记录跑步的种种
+    title: 马拉松
+    details: 四十二里燃心火，每步皆成涅槃诗
     link: '/run/note/a-1'
     linkText: 查看
   - icon: 🧰
@@ -42,8 +42,11 @@ features:
     link: '/other/web-nav'
     linkText: 立即查看
   - icon: 📘
-    title: 阅读
-    details: 阅读
-    link: '/read/1'
+    title: 比赛日历
+    details: 马拉松，越野赛比赛日历
+    link: '/calendar/2023-a'
     linkText: 前往
 ---
+
+<h2 style="text-align:center;">今天码了没</h2>
+<img style="width: 100%;" src="https://ghchart.rshah.org/czj0923" alt="czj0923's Github chart" />

@@ -252,7 +252,7 @@ export const sidebar = {
           link: '/climbing/a-3/'
         }
       ]
-    },
+    }
   ],
   '/trail/': [
     {

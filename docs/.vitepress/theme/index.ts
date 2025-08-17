@@ -6,8 +6,12 @@ import './style.scss'
 // 自定义主题色
 // import './user-theme.css'
 
+//import MyLayout from './layout/index.vue'
+
 export default {
   extends: DefaultTheme,
+  // 使用注入插槽的包装组件覆盖 Layout
+  //Layout: MyLayout,
   enhanceApp(ctx) {
     const { app } = ctx;
     const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;

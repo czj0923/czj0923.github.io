@@ -39,7 +39,6 @@ export default {
       var zoomCtrl = new BMapGL.ZoomControl(); // 添加缩放控件
       map.addControl(zoomCtrl);
       map.addEventListener('click', (e) => {
-        return
         this.visible = true;
         let obj = {
           lng: e.latlng.lng,

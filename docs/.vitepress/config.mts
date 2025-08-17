@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress';
-import  {sidebar} from "./sidebar"
+//import { sidebar } from './sidebar';
 import autoSidebar from './plugins/vite-plugin-auto-sidebar';
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
@@ -41,17 +41,18 @@ export default defineConfig({
     plugins: [
       autoSidebar({
         dir: 'docs',
-        ingoreDirList: ['public','blogs', 'other'],
+        ingoreDirList: ['public', 'blogs', 'other'],
         navTextMap: {
-          'coding': '编程题',
-          'es6': 'ES6常用知识点',
-          'html': 'HTML/CSS',
-          'js': 'JavaScript基础知识',
-          'network': '浏览器与网络',
-          'webpack': 'webpack',
-          'note': '笔记',
-          'race': '比赛记录',
-          'read': '阅读',
+          coding: '编程题',
+          es6: 'ES6常用知识点',
+          html: 'HTML/CSS',
+          js: 'JavaScript基础知识',
+          network: '浏览器与网络',
+          webpack: 'webpack',
+          note: '笔记',
+          race: '比赛记录',
+          read: '阅读',
+          calendar: '比赛日历'
         }
       })
     ],
@@ -67,7 +68,7 @@ export default defineConfig({
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
-      label: '目录'
+      label: '本页内容'
     },
     // 默认文案修改
     returnToTopLabel: '回到顶部',
@@ -84,7 +85,7 @@ export default defineConfig({
       { text: '首页', link: '/' },
       {
         text: '博客文章',
-        link: '/blogs'
+        link: '/blogs/'
       },
       {
         text: '工具',
@@ -101,28 +102,24 @@ export default defineConfig({
           {
             text: '跑步',
             items: [
-              { text: '笔记', link: '/run/note/a-1' },
+              { text: '笔记', link: '/run/note/01' },
               { text: '比赛记录', link: '/run/race/01' }
             ]
           },
           {
             text: '越野',
             items: [
-              { text: '笔记', link: '/trail/note/a-1' },
-              { text: '比赛记录', link: '/trail/race/b-1' }
+              { text: '笔记', link: '/trail/note/01' },
+              { text: '比赛记录', link: '/trail/race/01' }
             ]
           },
           {
             text: '爬山',
-            items: [
-              { text: '笔记', link: '/climbing/a-1' }
-            ]
+            items: [{ text: '笔记', link: '/climbing/01' }]
           },
           {
             text: '骑行',
-            items: [
-              { text: '笔记', link: '/ride/a-1' }
-            ]
+            items: [{ text: '笔记', link: '/ride/01' }]
           }
         ]
       },
@@ -151,7 +148,7 @@ export default defineConfig({
       },
       { text: '关于我', link: '/other/introduce' }
     ],
-    sidebar,
+    sidebar:{}, // 插件生成
     socialLinks: [
       {
         icon: 'github',

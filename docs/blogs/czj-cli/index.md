@@ -30,7 +30,7 @@ npm包地址
 | download-git-repo | 下载远程模板                    | 只有cjs版本                          |
 | fs-extra          | 文件系统操作                    |                                      |
 
-::: info
+::: tip
 esm相对于cjs有诸多优势，现在越来越多的包都在使用esm，所以优先使用esm版本，以下示例使用的是cjs，后续可能会更新成esm版本。
 :::
 
