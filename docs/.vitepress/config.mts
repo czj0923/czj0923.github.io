@@ -163,5 +163,5 @@ export default defineConfig({
       message: '橘子Orangeのblog',
       copyright: 'Copyright © 2021-present Cao Zhijie'
     }
-  }
+  },
 });

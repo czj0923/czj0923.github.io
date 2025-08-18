@@ -130,7 +130,6 @@ export default function VitePluginAutoSidebar(optConfig: ConfigInterface) {
           }
         }
       });
-      //console.log(siderbar);
 
       config.vitepress.site.themeConfig.sidebar = siderbar;
       console.log(chalk.blue('[sidebar]'), chalk.green('生成侧边栏数据成功'));
