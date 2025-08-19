@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
 //import { sidebar } from './sidebar';
 import autoSidebar from './plugins/vite-plugin-auto-sidebar';
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -39,6 +41,9 @@ export default defineConfig({
   ],
   vite: {
     plugins: [
+      // Components({
+      //   resolvers: [AntDesignVueResolver()]
+      // }),
       autoSidebar({
         dir: 'docs',
         ingoreDirList: ['public', 'blogs', 'other'],
@@ -148,7 +153,7 @@ export default defineConfig({
       },
       { text: '关于我', link: '/other/introduce' }
     ],
-    sidebar:{}, // 插件生成
+    sidebar: {}, // 插件生成
     socialLinks: [
       {
         icon: 'github',
@@ -163,5 +168,5 @@ export default defineConfig({
       message: '橘子Orangeのblog',
       copyright: 'Copyright © 2021-present Cao Zhijie'
     }
-  },
+  }
 });

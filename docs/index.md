@@ -24,12 +24,12 @@ features:
   - icon: 🎨
     title: 越野
     details: 踏破山川见真我，越野征途铸非凡
-    link: '/trail/note/a-1'
+    link: '/trail/note/01'
     linkText: 查看
   - icon: 🏃‍♂️
     title: 马拉松
     details: 四十二里燃心火，每步皆成涅槃诗
-    link: '/run/note/a-1'
+    link: '/run/note/01'
     linkText: 查看
   - icon: 🧰
     title: 提效工具
