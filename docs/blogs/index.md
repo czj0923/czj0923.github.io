@@ -1,3 +1,6 @@
+---
+aside: false
+---
   <div class="blog-list">
     <a :href="item.url" class="blog-item" @click="goPage(item.url)" v-for="item in blogsList" :key="item.title">
       <div class="blog-item-title">

@@ -1,6 +1,7 @@
 ---
 title: 个人介绍
 date: 2023/04/27
+aside: false
 ---
 
 # 个人介绍

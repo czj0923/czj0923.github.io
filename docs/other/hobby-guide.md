@@ -1,6 +1,7 @@
 ---
 title: hobby导航
 date: 2023/06/09
+aside: false
 ---
 
 # hobby导航

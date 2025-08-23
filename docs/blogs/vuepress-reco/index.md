@@ -43,3 +43,9 @@ file: D:/czj/project/blog/node_modules/.pnpm/@vuepress+plugin-search@2.0_a7b013f
 ```
 
 删掉`.vuepress/.temp`重新运行`pnpm run build`即可解决。
+
+## 7
+
+页面在开发环境中报错`Maximum call stack size exceeded`，排查发现是因为md文件名为`clock`，和页面中引用的组件名字`clock`冲突了
+  
+解决办法是改名或者修改组件名。
