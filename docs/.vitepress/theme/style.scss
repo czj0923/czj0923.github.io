@@ -1,8 +1,23 @@
-html{
+/* 浅色模式使用的变量 */
+html[theme] {
+  
+}
+
+/* 深色模式使用的变量 */
+html[theme].dark {
+  
+}
+
+/* 覆盖默认变量 */
+:root{
+  --vp-c-indigo-1: rgb(255 146 0);
+}
+/*------------------------------------------------------------*/
+html {
   --czj-primary-color: #d27e00;
 }
 .VPHome {
-  .VPImage{
+  .VPImage {
     border-radius: 50%;
   }
 }

@@ -37,7 +37,14 @@ export default defineConfig({
         rel: 'stylesheet',
         href: 'https://api.map.baidu.com/res/webgl/10/bmap.css'
       }
-    ]
+    ],
+    [
+      'script',
+      {
+        type: 'text/javascript',
+        src: '/my.js'
+      }
+    ],
   ],
   vite: {
     plugins: [

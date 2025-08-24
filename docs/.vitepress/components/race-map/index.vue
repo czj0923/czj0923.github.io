@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="container"></div>
-    <Modal v-model:open="visible" title="比赛详情">
+    <Modal :cancel-button-props="{ style: { display: 'none' } }" @ok="visible = false" v-model:open="visible" title="比赛详情">
       <div class="item">
         <div class="item-label">比赛名称：</div>
         <div class="item-value">{{ raceInfo.name }}</div>
@@ -81,7 +81,7 @@ const addMarker = () => {
 
     var marker = new BMapGL.Marker(point);
     marker.addEventListener('click', function () {
-      raceInfo.value = {...item, typeText: raceTypeMap[item.type] }
+      raceInfo.value = { ...item, typeText: raceTypeMap[item.type] }
       visible.value = true;
     });
     var label = new BMapGL.Label(item.name, {

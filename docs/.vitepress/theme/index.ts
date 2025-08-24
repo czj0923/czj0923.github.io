@@ -1,18 +1,14 @@
 import DefaultTheme from 'vitepress/theme';
-const modules = import.meta.glob('../components/**/*.vue');
-
 import { ref } from 'vue';
-// 自定义样式重载
+// 自定义样式
 import './style.scss';
+import MyLayout from './layout/index.vue'
 
-// 自定义主题色
-// import './user-theme.css'
-//import MyLayout from './layout/index.vue'
-
+const modules = import.meta.glob('../components/**/*.vue');
 export default {
   extends: DefaultTheme,
   // 使用注入插槽的包装组件覆盖 Layout
-  //Layout: MyLayout,
+  Layout: MyLayout,
   enhanceApp(ctx) {
     const { app } = ctx;
 

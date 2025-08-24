@@ -10,7 +10,7 @@ hero:
   actions:
     - theme: brand
       text: 前端物语
-      link: /markdown-examples
+      link: /frontend/js/types
     - theme: alt
       text: 小游戏
       link: https://czj0923.github.io/game-box

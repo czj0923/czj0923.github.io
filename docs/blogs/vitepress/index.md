@@ -45,3 +45,8 @@ vitepress 是基于 vite 的，所以可以写一个 vite 插件来自动生成�
 先获取所有博客文章，然后给页面返回一个博客列表的数据结构渲染  
 
 <<< @/.vitepress/utils/blogs.data.ts
+
+### 4.在vitepress中设置ant-design-vue组件为中文
+由于`vitepress`根组件并不是像传统 `Vue` 应用那样显式定义在一个特定的文件中，所以需要自定义布局，使用`ConfigProvider`包裹在布局组件外层，如下：
+
+<<< @/.vitepress/theme/layout/index.vue

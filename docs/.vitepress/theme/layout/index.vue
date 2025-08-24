@@ -1,24 +1,29 @@
 <template>
-   <Layout>
-    <template #doc-top>
-      My custom sidebar top content
-    </template>
-  </Layout>
+  <ConfigProvider :locale="zhCN" :theme="{
+      token: {
+        colorPrimary: 'rgb(255 146 0)',
+      },
+    }">
+    <Layout>
+    </Layout>
+  </ConfigProvider>
 </template>
 
 <script setup>
+import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import { useData } from 'vitepress'
 import { ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
+import { ConfigProvider } from 'ant-design-vue'
 
 const { Layout } = DefaultTheme
 
 const { page } = useData()
 const isBlog = ref(false)
 const filePath = page.value.filePath;
-if(filePath.split('/')[0] === 'blogs'){
- // 博客文章
- isBlog.value = true
+if (filePath.split('/')[0] === 'blogs') {
+  // 博客文章
+  isBlog.value = true
 }
 
 </script>
