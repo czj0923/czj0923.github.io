@@ -28,9 +28,10 @@
     "docs/**/*.ts",
     "docs/**/*.d.ts",
     "docs/**/*.tsx",
-    "docs/**/*.vue", "docs/public/my.js",
+    "docs/**/*.vue",
   ],
   "exclude": [
-    "docs/.vitepress/utils/*.ts"
+    "docs/.vitepress/utils/*.ts",
+    "docs/analysis/vueuse/code/*.ts",
   ]
 }
