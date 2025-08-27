@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { isClient } from '@vueuse/shared'
 
 export interface ConfigurableWindow {

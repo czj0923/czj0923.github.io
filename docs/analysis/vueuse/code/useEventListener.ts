@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Arrayable, Fn } from '@vueuse/shared'
 import type { MaybeRef, MaybeRefOrGetter } from 'vue'
 import { isObject, toArray, tryOnScopeDispose, watchImmediate } from '@vueuse/shared'

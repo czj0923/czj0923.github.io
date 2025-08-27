@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import DefaultTheme from 'vitepress/theme';
 import { ref } from 'vue';
 // 自定义样式
@@ -19,7 +20,7 @@ export default {
     const reg = /^\.\.\/components\/([a-zA-Z-/]+)\.vue$/;
     // 批量注册components文件夹下的组件
     for (const path in modules) {
-      modules[path]().then((mod) => {
+      modules[path]().then((mod:any) => {
         const matches = path.match(reg);
         if (matches) {
           const sourceName = matches[1];

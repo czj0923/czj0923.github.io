@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { Pausable } from '@vueuse/shared'
 import type { MaybeRefOrGetter, ShallowRef } from 'vue'
 import { useIntervalFn } from '@vueuse/shared'
