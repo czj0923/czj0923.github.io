@@ -46,7 +46,7 @@ function getBlogsList(pathList) {
 
   // 按日期排序
   list.sort((a, b) => {
-    return dayjs(b.date) - dayjs(a.date);
+    return dayjs(b.date).valueOf() - dayjs(a.date).valueOf();
   });
 
   const stickyList = list.filter((item) => item.sticky);

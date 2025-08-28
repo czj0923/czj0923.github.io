@@ -1,4 +1,3 @@
-/// <reference types="vite/client" />
 import DefaultTheme from 'vitepress/theme';
 import { ref } from 'vue';
 // 自定义样式

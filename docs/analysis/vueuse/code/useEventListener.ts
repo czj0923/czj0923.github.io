@@ -1,4 +1,3 @@
-// @ts-nocheck
 import type { Arrayable, Fn } from '@vueuse/shared'
 import type { MaybeRef, MaybeRefOrGetter } from 'vue'
 import { isObject, toArray, tryOnScopeDispose, watchImmediate } from '@vueuse/shared'
@@ -124,11 +123,23 @@ export function useEventListener<EventType = Event>(
 
 export function useEventListener(...args: Parameters<typeof useEventListener>) {
   const cleanups: Function[] = []
+/**
+* 清理函数，执行所有注册过的清理函数，并清空清理函数列表
+*/
   const cleanup = () => {
     cleanups.forEach(fn => fn())
     cleanups.length = 0
   }
 
+/**
+* 注册事件监听器，并返回一个用于移除该监听器的函数。
+*
+* @param el 事件目标元素，通常是一个 DOM 元素。
+* @param event 要监听的事件名称，例如 'click'。
+* @param listener 当事件触发时执行的回调函数。
+* @param options 可选参数，用于指定事件监听器的选项。可以是布尔值、AddEventListenerOptions 对象或 undefined。
+* @returns 一个函数，调用该函数可以移除之前注册的事件监听器。
+*/
   const register = (
     el: EventTarget,
     event: string,
@@ -139,6 +150,8 @@ export function useEventListener(...args: Parameters<typeof useEventListener>) {
     return () => el.removeEventListener(event, listener, options)
   }
 
+  // 获取排除了null和undefined的事件目标元素的数组
+  // 如果传一个元素比如document，会返回[document]
   const firstParamTargets = computed(() => {
     const test = toArray(toValue(args[0])).filter(e => e != null)
     return test.every(e => typeof e !== 'string') ? test : undefined
