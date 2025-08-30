@@ -4,8 +4,8 @@ https://github.com/logaretm/vue-use-web by Abdelrahman Awad */
 import type { ConfigurableNavigator } from '../_configurable';
 import { shallowRef } from 'vue';
 import { defaultNavigator } from '../_configurable';
-import { useEventListener } from '../useEventListener';
-import { useSupported } from '../useSupported';
+import { useEventListener } from './useEventListener';
+import { useSupported } from './useSupported';
 
 export interface BatteryManager extends EventTarget {
   charging: boolean;
@@ -27,6 +27,7 @@ type NavigatorWithBattery = Navigator & {
  */
 export function useBattery(options: ConfigurableNavigator = {}) {
   const { navigator = defaultNavigator } = options;
+  // [!code ++] 
   // 定义一个包含电池状态变化相关事件的数组。
   const events = [
     'chargingchange',
@@ -34,6 +35,7 @@ export function useBattery(options: ConfigurableNavigator = {}) {
     'dischargingtimechange',
     'levelchange'
   ];
+  // [!code ++] 
   // 检测当前浏览器是否支持 navigator.getBattery 方法。
   const isSupported = useSupported(
     () =>
@@ -49,6 +51,7 @@ export function useBattery(options: ConfigurableNavigator = {}) {
 
   let battery: BatteryManager | null;
 
+  // [!code ++] 
   // 更新电池信息函数
   function updateBatteryInfo(this: BatteryManager) {
     charging.value = this.charging;
@@ -57,6 +60,7 @@ export function useBattery(options: ConfigurableNavigator = {}) {
     level.value = this.level;
   }
 
+  // [!code ++] 
   // 如果支持 navigator.getBattery 方法，则获取电池信息并更新状态。
   if (isSupported.value) {
     (navigator as NavigatorWithBattery).getBattery().then((_battery) => {

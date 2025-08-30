@@ -5,10 +5,14 @@
     "module": "ESNext",
     "strict": false,
     "moduleResolution": "Bundler",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable", "WebWorker"],
     "types": [
       "vite/client"
-    ]
+    ],
+    "baseUrl": "./docs",
+    "paths": {
+      "@vueuse/*": ["./analysis/vueuse/code/*"]
+    }
   },
   "include": [
     "docs/**/*.ts",

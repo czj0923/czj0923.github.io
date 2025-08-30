@@ -1,22 +1,27 @@
-import type { Arrayable, Fn } from '@vueuse/shared'
-import type { MaybeRef, MaybeRefOrGetter } from 'vue'
-import { isObject, toArray, tryOnScopeDispose, watchImmediate } from '@vueuse/shared'
+import type { Arrayable, Fn } from '@vueuse/shared';
+import type { MaybeRef, MaybeRefOrGetter } from 'vue';
+import {
+  isObject,
+  toArray,
+  tryOnScopeDispose,
+  watchImmediate
+} from '@vueuse/shared';
 // eslint-disable-next-line no-restricted-imports -- We specifically need to use unref here to distinguish between callbacks
-import { computed, toValue, unref } from 'vue'
-import { defaultWindow } from '../_configurable'
-import { unrefElement } from '../unrefElement'
+import { computed, toValue, unref } from 'vue';
+import { defaultWindow } from '../_configurable';
+import { unrefElement } from './unrefElement';
 
 interface InferEventTarget<Events> {
-  addEventListener: (event: Events, fn?: any, options?: any) => any
-  removeEventListener: (event: Events, fn?: any, options?: any) => any
+  addEventListener: (event: Events, fn?: any, options?: any) => any;
+  removeEventListener: (event: Events, fn?: any, options?: any) => any;
 }
 
-export type WindowEventName = keyof WindowEventMap
-export type DocumentEventName = keyof DocumentEventMap
-export type ShadowRootEventName = keyof ShadowRootEventMap
+export type WindowEventName = keyof WindowEventMap;
+export type DocumentEventName = keyof DocumentEventMap;
+export type ShadowRootEventName = keyof ShadowRootEventMap;
 
 export interface GeneralEventListener<E = Event> {
-  (evt: E): void
+  (evt: E): void;
 }
 
 /**
@@ -31,7 +36,7 @@ export function useEventListener<E extends keyof WindowEventMap>(
   event: MaybeRefOrGetter<Arrayable<E>>,
   listener: MaybeRef<Arrayable<(this: Window, ev: WindowEventMap[E]) => any>>,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -49,7 +54,7 @@ export function useEventListener<E extends keyof WindowEventMap>(
   event: MaybeRefOrGetter<Arrayable<E>>,
   listener: MaybeRef<Arrayable<(this: Window, ev: WindowEventMap[E]) => any>>,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -61,9 +66,11 @@ export function useEventListener<E extends keyof WindowEventMap>(
 export function useEventListener<E extends keyof DocumentEventMap>(
   target: Document,
   event: MaybeRefOrGetter<Arrayable<E>>,
-  listener: MaybeRef<Arrayable<(this: Document, ev: DocumentEventMap[E]) => any>>,
+  listener: MaybeRef<
+    Arrayable<(this: Document, ev: DocumentEventMap[E]) => any>
+  >,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -75,9 +82,11 @@ export function useEventListener<E extends keyof DocumentEventMap>(
 export function useEventListener<E extends keyof ShadowRootEventMap>(
   target: MaybeRefOrGetter<Arrayable<ShadowRoot> | null | undefined>,
   event: MaybeRefOrGetter<Arrayable<E>>,
-  listener: MaybeRef<Arrayable<(this: ShadowRoot, ev: ShadowRootEventMap[E]) => any>>,
+  listener: MaybeRef<
+    Arrayable<(this: ShadowRoot, ev: ShadowRootEventMap[E]) => any>
+  >,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -91,7 +100,7 @@ export function useEventListener<E extends keyof HTMLElementEventMap>(
   event: MaybeRefOrGetter<Arrayable<E>>,
   listener: MaybeRef<(this: HTMLElement, ev: HTMLElementEventMap[E]) => any>,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -101,11 +110,13 @@ export function useEventListener<E extends keyof HTMLElementEventMap>(
  * @see https://vueuse.org/useEventListener
  */
 export function useEventListener<Names extends string, EventType = Event>(
-  target: MaybeRefOrGetter<Arrayable<InferEventTarget<Names>> | null | undefined>,
+  target: MaybeRefOrGetter<
+    Arrayable<InferEventTarget<Names>> | null | undefined
+  >,
   event: MaybeRefOrGetter<Arrayable<Names>>,
   listener: MaybeRef<Arrayable<GeneralEventListener<EventType>>>,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -119,77 +130,85 @@ export function useEventListener<EventType = Event>(
   event: MaybeRefOrGetter<Arrayable<string>>,
   listener: MaybeRef<Arrayable<GeneralEventListener<EventType>>>,
   options?: MaybeRefOrGetter<boolean | AddEventListenerOptions>
-): Fn
+): Fn;
 
 export function useEventListener(...args: Parameters<typeof useEventListener>) {
-  const cleanups: Function[] = []
-/**
-* 清理函数，执行所有注册过的清理函数，并清空清理函数列表
-*/
+  const cleanups: Function[] = [];
+  //[!code ++]
+  /**
+   * 清理函数，执行所有注册过的清理函数，并清空清理函数列表 //[!code ++]
+   */ //[!code ++]
   const cleanup = () => {
-    cleanups.forEach(fn => fn())
-    cleanups.length = 0
-  }
+    cleanups.forEach((fn) => fn());
+    cleanups.length = 0;
+  };
 
-/**
-* 注册事件监听器，并返回一个用于移除该监听器的函数。
-*
-* @param el 事件目标元素，通常是一个 DOM 元素。
-* @param event 要监听的事件名称，例如 'click'。
-* @param listener 当事件触发时执行的回调函数。
-* @param options 可选参数，用于指定事件监听器的选项。可以是布尔值、AddEventListenerOptions 对象或 undefined。
-* @returns 一个函数，调用该函数可以移除之前注册的事件监听器。
-*/
+  // [!code ++]
+  // 注册事件监听器，并返回一个用于移除该监听器的函数。
   const register = (
     el: EventTarget,
     event: string,
     listener: any,
-    options: boolean | AddEventListenerOptions | undefined,
+    options: boolean | AddEventListenerOptions | undefined
   ) => {
-    el.addEventListener(event, listener, options)
-    return () => el.removeEventListener(event, listener, options)
-  }
-
+    el.addEventListener(event, listener, options);
+    return () => el.removeEventListener(event, listener, options);
+  };
+  // [!code ++]
   // 获取排除了null和undefined的事件目标元素的数组
+  // [!code ++]
   // 如果传一个元素比如document，会返回[document]
   const firstParamTargets = computed(() => {
-    const test = toArray(toValue(args[0])).filter(e => e != null)
-    return test.every(e => typeof e !== 'string') ? test : undefined
-  })
+    const test = toArray(toValue(args[0])).filter((e) => e != null);
+    return test.every((e) => typeof e !== 'string') ? test : undefined;
+  });
 
   const stopWatch = watchImmediate(
-    () => [
-      firstParamTargets.value?.map(e => unrefElement(e as never)) ?? [defaultWindow].filter(e => e != null),
-      toArray(toValue(firstParamTargets.value ? args[1] : args[0]) as string[]),
-      toArray(unref(firstParamTargets.value ? args[2] : args[1]) as Function[]),
-      // @ts-expect-error - TypeScript gets the correct types, but somehow still complains
-      toValue(firstParamTargets.value ? args[3] : args[2]) as boolean | AddEventListenerOptions | undefined,
-    ] as const,
+    () =>
+      [
+        firstParamTargets.value?.map((e) => unrefElement(e as never)) ??
+          [defaultWindow].filter((e) => e != null),
+        toArray(
+          toValue(firstParamTargets.value ? args[1] : args[0]) as string[]
+        ),
+        toArray(
+          unref(firstParamTargets.value ? args[2] : args[1]) as Function[]
+        ),
+        // @ts-expect-error - TypeScript gets the correct types, but somehow still complains
+        toValue(firstParamTargets.value ? args[3] : args[2]) as
+          | boolean
+          | AddEventListenerOptions
+          | undefined
+      ] as const,
     ([raw_targets, raw_events, raw_listeners, raw_options]) => {
-      cleanup()
+      cleanup();
 
       if (!raw_targets?.length || !raw_events?.length || !raw_listeners?.length)
-        return
+        return;
 
       // create a clone of options, to avoid it being changed reactively on removal
-      const optionsClone = isObject(raw_options) ? { ...raw_options } : raw_options
+      const optionsClone = isObject(raw_options)
+        ? { ...raw_options }
+        : raw_options;
       cleanups.push(
-        ...raw_targets.flatMap(el =>
-          raw_events.flatMap(event =>
-            raw_listeners.map(listener => register(el, event, listener, optionsClone)),
-          ),
-        ),
-      )
+        ...raw_targets.flatMap((el) =>
+          raw_events.flatMap((event) =>
+            raw_listeners.map((listener) =>
+              register(el, event, listener, optionsClone)
+            )
+          )
+        )
+      );
     },
-    { flush: 'post' },
-  )
+    { flush: 'post' }
+  );
 
   const stop = () => {
-    stopWatch()
-    cleanup()
-  }
+    stopWatch();
+    cleanup();
+  };
 
-  tryOnScopeDispose(cleanup)
+  tryOnScopeDispose(cleanup);
 
-  return stop
+  return stop;
 }

@@ -175,5 +175,19 @@ export default defineConfig({
       message: '橘子Orangeのblog',
       copyright: 'Copyright © 2021-present Cao Zhijie'
     }
+  },
+  markdown:{
+    lineNumbers: true,
+    image: {
+      // 图片懒加载
+      lazyLoading: true
+    },
+    container: {
+      tipLabel: '提示',
+      warningLabel: '警告',
+      dangerLabel: '危险',
+      infoLabel: '信息',
+      detailsLabel: '详细信息'
+    }
   }
 });

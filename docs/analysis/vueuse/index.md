@@ -7,7 +7,7 @@ categories:
 
 # 常用 vueuse 函数源码解析
 
-::: tip 提示
+::: tip
 vueuse 的版本为 13.6.0
 :::
 
@@ -21,22 +21,28 @@ vueuse 的版本为 13.6.0
 一些引用：[defaultNavigator](#configurable-ts)
 :::
 
-<<< ./code/useBattery.ts
+::: details 详细代码
+<<< @analysis/vueuse/code/core/useBattery.ts
+:::
 
 ## 核心函数-时间
 
 ### useCountdown
 
-<<< ./code/useCountdown.ts
+::: details 详细代码
+<<< @analysis/vueuse/code/core/useCountdown.ts
+:::
 
 ## 核心函数-浏览器
 
 ### useEventListener
+
 ::: tip 介绍
 
 :::
-<<< ./code/useEventListener.ts
-
+::: details 详细代码
+<<< @analysis/vueuse/code/core/useEventListener.ts
+:::
 
 ## 实用工具
 
@@ -44,4 +50,6 @@ vueuse 的版本为 13.6.0
 
 ### \_configurable.ts
 
-<<< ./code/\_configurable.ts
+::: details 详细代码
+<<< @analysis/vueuse/code/\_configurable.ts
+:::
