@@ -31,5 +31,5 @@ categories:
 - `<time>`：表示日期或时间
 
 `HTML5` 标签选择流程图
-![](./img/html.png)
+![](../img/html.png)
 [HTML 中的语义 —— MDN](https://developer.mozilla.org/zh-CN/docs/Glossary/Semantics)

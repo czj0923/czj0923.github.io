@@ -26,7 +26,7 @@ categories:
 
 | W3C 标准盒模型       | IE 盒模型            |
 | -------------------- | -------------------- |
-| ![](./img/css-1.png) | ![](./img/css-2.png) |
+| ![](../img/css-1.png) | ![](../img/css-2.png) |
 
 ## 什么是BFC?
 
@@ -287,7 +287,7 @@ flex: 2 2 10%;
 然后打开浏览器 `network` 面板去查看具体资源的加载时间
 
 `import.css` 排队时间
-![](./img/css-3.png)
+![](../img/css-3.png)
 `link.css` 排队时间
-![](./img/css-4.png)
+![](../img/css-4.png)
 所以 `@import` 的加载顺序要看其写在哪里，而不能一概而论

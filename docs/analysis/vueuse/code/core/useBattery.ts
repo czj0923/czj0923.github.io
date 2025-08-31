@@ -27,7 +27,7 @@ type NavigatorWithBattery = Navigator & {
  */
 export function useBattery(options: ConfigurableNavigator = {}) {
   const { navigator = defaultNavigator } = options;
-  // [!code ++] 
+  // [!code ++]
   // 定义一个包含电池状态变化相关事件的数组。
   const events = [
     'chargingchange',
@@ -35,7 +35,7 @@ export function useBattery(options: ConfigurableNavigator = {}) {
     'dischargingtimechange',
     'levelchange'
   ];
-  // [!code ++] 
+  // [!code ++]
   // 检测当前浏览器是否支持 navigator.getBattery 方法。
   const isSupported = useSupported(
     () =>
@@ -43,15 +43,22 @@ export function useBattery(options: ConfigurableNavigator = {}) {
       'getBattery' in navigator &&
       typeof navigator.getBattery === 'function'
   );
-
-  const charging = shallowRef(false); // 是否在充电状态
-  const chargingTime = shallowRef(0); // 充满电所需时间
-  const dischargingTime = shallowRef(0); // 当前电量可使用时间
-  const level = shallowRef(1); // 电量水平 0-1
+  // [!code ++]
+  //  是否在充电状态
+  const charging = shallowRef(false);
+  // [!code ++]
+  // 充满电所需时间
+  const chargingTime = shallowRef(0); 
+  // [!code ++]
+  // 当前电量可使用时间
+  const dischargingTime = shallowRef(0); 
+  // [!code ++]
+  // 电量水平 0-1
+  const level = shallowRef(1); 
 
   let battery: BatteryManager | null;
 
-  // [!code ++] 
+  // [!code ++]
   // 更新电池信息函数
   function updateBatteryInfo(this: BatteryManager) {
     charging.value = this.charging;
@@ -60,7 +67,7 @@ export function useBattery(options: ConfigurableNavigator = {}) {
     level.value = this.level;
   }
 
-  // [!code ++] 
+  // [!code ++]
   // 如果支持 navigator.getBattery 方法，则获取电池信息并更新状态。
   if (isSupported.value) {
     (navigator as NavigatorWithBattery).getBattery().then((_battery) => {

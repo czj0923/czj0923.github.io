@@ -221,7 +221,7 @@ module.exports = {
 
 ## 发布到npm
 
-具体发包流程可看我的这篇博客[发布npm包](/blogs/code/npm-package)  
+具体发包流程可看我的这篇博客[发布npm包](/blogs/npm-package)  
 我的cli包命名：`@caozhijie/czj-cli`  
 全局安装：`pnpm i @caozhijie/czj-cli -g`  
 使用： `czj-cli create`

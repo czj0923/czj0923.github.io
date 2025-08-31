@@ -1,5 +1,5 @@
 <template>
-  <ConfigProvider :locale="zhCN" :theme="{
+  <ConfigProvider :theme="{
       token: {
         colorPrimary: 'rgb(255 146 0)',
       },
@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import zhCN from 'ant-design-vue/es/locale/zh_CN';
+// import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import { useData } from 'vitepress'
 import { ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'

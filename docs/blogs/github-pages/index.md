@@ -87,7 +87,7 @@ jobs:
 ### 提示
 
 会报`_plugin-vue_export-helper.js`404  
-解决办法可查看我的这篇博客[Vite + Vue项目GitHub Pages 部署后 \_plugin-vue_export-helper.js 404](/blogs/code/6)
+解决办法可查看我的这篇博客[Vite + Vue项目GitHub Pages 部署后 \_plugin-vue_export-helper.js 404](/blogs/6)
 
 ## Github Actions
 

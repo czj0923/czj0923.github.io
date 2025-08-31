@@ -134,10 +134,8 @@ export function useEventListener<EventType = Event>(
 
 export function useEventListener(...args: Parameters<typeof useEventListener>) {
   const cleanups: Function[] = [];
-  //[!code ++]
-  /**
-   * 清理函数，执行所有注册过的清理函数，并清空清理函数列表 //[!code ++]
-   */ //[!code ++]
+  // [!code ++]
+  // 清理函数，执行所有注册过的清理函数，并清空清理函数列表
   const cleanup = () => {
     cleanups.forEach((fn) => fn());
     cleanups.length = 0;
@@ -163,6 +161,8 @@ export function useEventListener(...args: Parameters<typeof useEventListener>) {
     return test.every((e) => typeof e !== 'string') ? test : undefined;
   });
 
+  //[!code ++]
+  // 第一个参数target可传可不传，firstParamTargets是用来判断是否传了的
   const stopWatch = watchImmediate(
     () =>
       [

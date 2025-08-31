@@ -64,7 +64,8 @@ export default defineConfig({
           note: '笔记',
           race: '比赛记录',
           read: '阅读',
-          calendar: '比赛日历'
+          calendar: '比赛日历',
+          analysis: '源码阅读'
         }
       })
     ],

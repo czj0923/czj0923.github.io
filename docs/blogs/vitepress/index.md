@@ -14,7 +14,7 @@ categories:
 
 之前的博客用的是[vuepress](https://v2.vuepress.vuejs.org/zh/) + [vuepress-theme-reco2](https://theme-reco.vuejs.press/)  
 但是随着 markdown 文件越来越多（超过 100 个），项目启动时间越来越长，而且每次修改配置文件后都需要重新启动项目，非常不方便。  
-再加上这个使用这个主题的时候遇到了一些问题：[用 vuepress-theme-reco2 搭建博客时遇到的一些坑](/blogs/vuepress-reco)  
+再加上这个使用这个主题的时候遇到了一些问题：[用 vuepress-theme-reco2 搭建博客时遇到的一些坑](/blogs/vuepress-reco/)  
 于是把博客迁移到了 vite 驱动的 vitepress，启动时间大大缩短，同时可以使用 vue3 的特性。
 
 ## 对 vitepress 进行改造

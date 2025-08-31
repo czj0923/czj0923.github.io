@@ -37,8 +37,12 @@ export function useIntervalFn(cb: Fn, interval: MaybeRefOrGetter<number> = 1000,
   } = options
 
   let timer: ReturnType<typeof setInterval> | null = null
+  // [!code ++]
+  // 标记是否是执行状态
   const isActive = shallowRef(false)
 
+  // [!code ++]
+  // 清除定时器
   function clean() {
     if (timer) {
       clearInterval(timer)
@@ -46,11 +50,15 @@ export function useIntervalFn(cb: Fn, interval: MaybeRefOrGetter<number> = 1000,
     }
   }
 
+  // [!code ++]
+  // 暂停
   function pause() {
     isActive.value = false
     clean()
   }
 
+  // [!code ++]
+  // 恢复执行
   function resume() {
     const intervalValue = toValue(interval)
     if (intervalValue <= 0)
@@ -66,6 +74,8 @@ export function useIntervalFn(cb: Fn, interval: MaybeRefOrGetter<number> = 1000,
   if (immediate && isClient)
     resume()
 
+  // [!code ++]
+  // 监听interval的变化，如果变化了就恢复执行
   if (isRef(interval) || typeof interval === 'function') {
     const stopWatch = watch(interval, () => {
       if (isActive.value && isClient)

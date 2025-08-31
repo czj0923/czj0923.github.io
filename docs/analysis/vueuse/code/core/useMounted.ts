@@ -5,6 +5,8 @@ import {
   shallowRef,
 } from 'vue'
 
+//[!code ++]
+// 在组件挂载后将 isMounted.value 设置为 true。
 /**
  * Mounted state in ref.
  *

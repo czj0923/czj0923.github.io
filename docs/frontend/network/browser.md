@@ -23,7 +23,7 @@ categories:
 ### Chrome 打开一个页面会有几个进程？
 
 最新的 Chrome 多进程架构图
-![](./img/browser-1.png)
+![](../img/browser-1.png)
 
 - **浏览器主进程**：负责界面显示、用户交互、子进程管理，同时提供存储等功能
 - **渲染进程**：负责将 HTML CSS 和 JavaScript 转换为用户可以与之交互的网页
