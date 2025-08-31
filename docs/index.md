@@ -32,10 +32,10 @@ features:
     link: '/run/note/01'
     linkText: 查看
   - icon: 🧰
-    title: 提效工具
+    title: vueuse源码
     details: 工欲善其事，必先利其器
-    link: '/other/nav'
-    linkText: 立即使用
+    link: '/analysis/vueuse/'
+    linkText: 查看
   - icon: 🗺️
     title: 导航
     details: 常用前端导航
