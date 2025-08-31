@@ -1,9 +1,9 @@
 /* this implementation is original ported from 
 https://github.com/logaretm/vue-use-web by Abdelrahman Awad */
 
-import type { ConfigurableNavigator } from '../_configurable';
+import type { ConfigurableNavigator } from '../configurable';
 import { shallowRef } from 'vue';
-import { defaultNavigator } from '../_configurable';
+import { defaultNavigator } from '../configurable';
 import { useEventListener } from './useEventListener';
 import { useSupported } from './useSupported';
 

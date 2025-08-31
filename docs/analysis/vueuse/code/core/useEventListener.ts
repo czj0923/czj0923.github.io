@@ -8,7 +8,7 @@ import {
 } from '@vueuse/shared';
 // eslint-disable-next-line no-restricted-imports -- We specifically need to use unref here to distinguish between callbacks
 import { computed, toValue, unref } from 'vue';
-import { defaultWindow } from '../_configurable';
+import { defaultWindow } from '../configurable';
 import { unrefElement } from './unrefElement';
 
 interface InferEventTarget<Events> {
