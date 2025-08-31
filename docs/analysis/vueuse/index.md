@@ -18,7 +18,7 @@ vueuse 的版本为 13.6.0
 ::: tip 介绍
 响应式电池状态  
 实现的核心是使用 [useEventListener](#useeventlistener) 钩子为 `battery` 对象添加事件监听器，监听 `chargingchange`、`chargingtimechange`、`dischargingtimechange` 和 `levelchange` 等事件。当这些事件发生时，`updateBatteryInfo` 函数会被调用，从而更新响应式状态。  
-其他的比如 useDeviceMotion,useDeviceOrientation 等实现方式类似，都是通过监听事件来更新响应式状态。  
+传感器类别下的函数比如 useDeviceMotion,useDeviceOrientation 等实现方式类似，都是通过监听事件来更新响应式状态。类似实现方式的函数不再一一列举。  
 一些引用：[configurable](#configurable-ts)
 :::
 
@@ -77,6 +77,26 @@ vueuse 的版本为 13.6.0
 <<< ./code/core/useEventListener.ts
 :::
 
+## 核心函数-元素
+
+### useResizeObserver
+
+::: tip 介绍
+该文件提供了一个`useResizeObserver`组合式 API，用于监听一个或多个元素的尺寸变化，并在变化时执行回调函数。它处理了响应式引用、支持性检测、资源清理等方面。  
+`useMutationObserver`的实现原理类似
+:::
+::: details 详细代码
+<<< ./code/core/useResizeObserver.ts
+:::
+
+### useElementSize
+
+::: tip 介绍
+返回元素的响应式宽高，使用了上面的`useResizeObserver`函数实现。  
+:::
+::: details 详细代码
+<<< ./code/core/useElementSize.ts
+:::
 ## 实用工具
 
 ## 工具函数

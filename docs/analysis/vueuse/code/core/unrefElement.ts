@@ -14,6 +14,10 @@ export type UnRefElementReturn<T extends MaybeElement = MaybeElement> = T extend
  * @param elRef
  */
 export function unrefElement<T extends MaybeElement>(elRef: MaybeComputedElementRef<T>): UnRefElementReturn<T> {
+  //[!code ++]
+  // 把ref值转换成普通值
   const plain = toValue(elRef)
+  //[!code ++]
+  // 如果是vue组件实例，则返回其根元素
   return (plain as VueInstance)?.$el ?? plain
 }

@@ -1,18 +1,18 @@
 <template>
   <ConfigProvider :theme="{
-      token: {
-        colorPrimary: 'rgb(255 146 0)',
-      },
-    }">
+    token: {
+      colorPrimary: 'rgb(255 146 0)',
+    },
+  }">
     <Layout>
     </Layout>
   </ConfigProvider>
 </template>
 
-<script setup>
+<script setup lang="ts">
 // import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import { useData } from 'vitepress'
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import { ConfigProvider } from 'ant-design-vue'
 
