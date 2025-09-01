@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 //import { sidebar } from './sidebar';
+import { fileURLToPath } from 'node:url'
 import autoSidebar from './plugins/vite-plugin-auto-sidebar';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
@@ -75,6 +76,16 @@ export default defineConfig({
           api: 'modern-compiler'
         }
       }
+    },
+    resolve: {
+      alias: [
+        //{
+        //  find: /^.*\/VPNavBar\.vue$/,
+        //  replacement: fileURLToPath(
+        //    new URL('./components/custom-nav-bar.vue', import.meta.url)
+        //  )
+        //}
+      ]
     }
   },
   themeConfig: {

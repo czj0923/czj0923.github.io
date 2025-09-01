@@ -1,5 +1,6 @@
 ---
 aside: false
+layout: home
 ---
   <div class="blog-list">
     <a :href="item.url" class="blog-item" @click="goPage(item.url)" v-for="item in blogsList" :key="item.title">
@@ -42,7 +43,7 @@ const goPage = (url) => {
 
   .blog-item {
     border-radius: 4px;
-    background-color: #fff;
+    background-color: var(--vp-c-bg-soft);
     cursor: pointer;
     transition: all ease .5s;
     display: flex;
