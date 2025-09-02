@@ -2,8 +2,9 @@
 aside: false
 layout: home
 ---
+
   <div class="blog-list">
-    <a :href="item.url" class="blog-item" @click="goPage(item.url)" v-for="item in blogsList" :key="item.title">
+    <a :href="item.url" class="blog-item" v-for="item in blogsList" :key="item.title">
       <div class="blog-item-title">
         <div class="title">{{ item.title }}</div>
         <div class="sticky" v-if="item.sticky">置顶</div>
@@ -17,22 +18,44 @@ layout: home
       <div class="blog-item-content">{{ item.content }}</div>
     </a>
   </div>
-  <Pagination v-model:current="current" style="text-align: center;" :total="total" :page-size="pageSize" />
+  <div ref="more" class="more">{{moreText}}</div>
 
 <script lang="ts" setup>
 import { CalendarOutlined } from "@ant-design/icons-vue"
-import { Pagination} from 'ant-design-vue'
 import {data} from "../../docs/.vitepress/utils/blogs.data"
-import { ref,computed } from 'vue'
+import { ref,computed,useTemplateRef,onMounted } from 'vue'
 
-const current = ref(1)
+const pageNo = ref(1)
 const pageSize = 5
-const total = data.blogsList.length
+const totalPage = Math.ceil(data.blogsList.length / pageSize)
+const blogsList = ref(data.blogsList.slice(0, pageSize))
 
-const blogsList = computed(()=>data.blogsList.slice((current.value - 1) * pageSize, current.value * pageSize))
+const moreText = computed(()=>{
+  if(pageNo.value == totalPage) return '没有更多了'
+  return '加载更多'
+})
 
-const goPage = (url) => {
-  
+const moreEl = useTemplateRef<HTMLDivElement>('more')
+onMounted(()=>{
+  const observerInstance = new IntersectionObserver((entries,observer)=>{
+    console.log(entries,observer,'加载更多')
+    const entry = entries.find(item=>item.target === moreEl.value)
+    if(entry && entry.isIntersecting) {
+      if(pageNo.value >= totalPage){
+        // 滚动到底后就停止监听
+        observerInstance.unobserve(moreEl.value);
+        return
+      }
+      loadMore()
+    }
+  });
+  observerInstance.observe(moreEl.value);
+})
+
+const loadMore = ()=>{
+  pageNo.value++
+  const curPageList = data.blogsList.slice((pageNo.value - 1) * pageSize, pageNo.value * pageSize)
+  blogsList.value = [...blogsList.value,...curPageList]
 }
 </script>
 
@@ -107,5 +130,10 @@ const goPage = (url) => {
       font-size: 14px;
     }
   }
+}
+
+.more{
+  text-align: center;
+  margin-top: 20px;
 }
 </style>
