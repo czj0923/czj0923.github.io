@@ -38,7 +38,7 @@ vitepress 是基于 vite 的，所以可以写一个 vite 插件来自动生成�
 通过`import.meta.glob`导入进行批量注册时，由于是异步的，所以在某个引用组件的页面刷新时，如果组件还未注册，就无法正常显示(但不影响线上环境)，如果一定要让开发环境也没有这个问题，可使用以下方法: 可以在enhanceApp方法中维护一个加载状态，并在所有组件加载完成后改变这个状态。然后，在页面的根组件或布局组件中，根据这个状态来决定是否渲染页面内容。
 :::
 
-<<< @/.vitepress/theme/index.ts
+<<< @/.vitepress/theme/plugins/batch-register.ts
 
 ### 3. 博客列表页
 参考[构建时数据加载](https://vitejs.cn/vitepress/guide/data-loading)  

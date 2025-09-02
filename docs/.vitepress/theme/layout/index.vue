@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-// import zhCN from 'ant-design-vue/es/locale/zh_CN';
+//import zhCN from 'ant-design-vue/es/locale/zh_CN';
 import { useData } from 'vitepress';
 import { onMounted, ref } from 'vue';
 import DefaultTheme from 'vitepress/theme';
