@@ -6,7 +6,7 @@ import matter from 'gray-matter';
 
 interface ConfigInterface {
   dir?: string;
-  ingoreDirList?: string[];
+  ignoreDirList?: string[];
   navTextMap?: Record<string, string>;
 }
 
@@ -17,14 +17,14 @@ interface SidebarItemInterface {
   items?: SidebarItemInterface[];
 }
 
-const defaultIngoreList = ['node_modules', 'dist', '.vitepress'];
+const defaultIgnoreList = ['node_modules', 'dist', '.vitepress'];
 const workRoot = process.cwd();
 
 function generateSidebar(config) {
-  const { dir, ingoreDirList, navTextMap } = config;
-  const siderbar = {};
+  const { dir, ignoreDirList, navTextMap } = config;
+  const sideBar = {};
   // 忽略文件夹列表
-  const ignore = ingoreDirList.map((item) => `${item}/**/*.md`);
+  const ignore = ignoreDirList.map((item) => `${item}/**/*.md`);
 
   const paths = fg.sync('**/*.md', {
     cwd: dir,
@@ -49,15 +49,22 @@ function generateSidebar(config) {
       return;
     }
     const topPath = `/${segments[0]}/`;
-    if (!siderbar[topPath]) {
-      siderbar[topPath] = [];
+    if (!sideBar[topPath]) {
+      sideBar[topPath] = [];
     }
-    let current = siderbar[topPath];
+    let current = sideBar[topPath];
     let currentPath = '';
     segments.forEach((seg, index) => {
+      const isLast = segments.length - 1 === index;
+      // 为了实现排序，规定需要实现排序的md文件以数字+斜杠+文件名来命名，比如01-test.md，这里是为了去除数字
+      // if (isLast && /^\d{1,3}-/.test(seg)) {
+      //   const matches = seg.match(/^\d{1,3}-([a-zA-Z-]+)/);
+      //   if (matches) {
+      //     seg = matches[1] + '.md';
+      //   }
+      // }
       currentPath += `/${seg}`;
       let isMd = false;
-      const isLast = segments.length - 1 === index;
       if (/.md$/i.test(seg)) {
         isMd = true;
         seg = seg.replace('.md', '');
@@ -68,6 +75,7 @@ function generateSidebar(config) {
         current = currentConfig.items;
       } else {
         const { title } = getMdInfo(absolutePath);
+
         const sidebarItem: SidebarItemInterface = {
           text: isMd ? title : segText,
           collapsed: false,
@@ -86,7 +94,7 @@ function generateSidebar(config) {
     });
   });
 
-  return siderbar;
+  return sideBar;
 }
 
 // 读取markdown文件的标题
@@ -105,33 +113,45 @@ function getMdInfo(path) {
   };
 }
 
-
 export default function VitePluginAutoSidebar(optConfig: ConfigInterface) {
-  const { dir = 'docs', ingoreDirList = [], navTextMap = {} } = optConfig;
+  const { dir = 'docs', ignoreDirList = [], navTextMap = {} } = optConfig;
   return {
     name: 'VitePluginAutoSidebar',
     async config(config) {
       const options = {
         dir,
-        ingoreDirList: [...ingoreDirList, ...defaultIngoreList],
+        ignoreDirList: [...ignoreDirList, ...defaultIgnoreList],
         navTextMap
       };
 
-      const siderbar = await generateSidebar(options);
+      const sideBar = await generateSidebar(options);
+
+      // 排序
+      const sortedKeys = Object.values(navTextMap);
+      Object.keys(sideBar).forEach((key) => {
+        const item = sideBar[key];
+        if (Array.isArray(item[0].items)) {
+          item[0].items.sort((a, b) => {
+            const indexA = sortedKeys.indexOf(a.text);
+            const indexB = sortedKeys.indexOf(b.text);
+            return indexA - indexB;
+          });
+        }
+      });
 
       // 如果某个分类下只有一个子元素，并且该子元素下的items下的每个元素items为空，则把它的items提到父目录
       // 这里是为了如果某个一级目录下都是md文件，那么以该一级目录作为目录名
-      Object.keys(siderbar).forEach((key) => {
-        const item = siderbar[key];
+      Object.keys(sideBar).forEach((key) => {
+        const item = sideBar[key];
         if (item && item.length === 1) {
           if (item[0].items.some((el) => el.items.length > 0)) {
             const children = item[0].items;
-            siderbar[key] = [...children];
+            sideBar[key] = [...children];
           }
         }
       });
 
-      config.vitepress.site.themeConfig.sidebar = siderbar;
+      config.vitepress.site.themeConfig.sidebar = sideBar;
       console.log(chalk.blue('[sidebar]'), chalk.green('生成侧边栏数据成功'));
       return config;
     }

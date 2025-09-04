@@ -54,19 +54,20 @@ export default defineConfig({
       // }),
       autoSidebar({
         dir: 'docs',
-        ingoreDirList: ['public', 'blogs', 'other'],
+        ignoreDirList: ['public', 'blogs', 'other'],
         navTextMap: {
-          coding: '编程题',
+          js: 'JavaScript基础知识',
           es6: 'ES6常用知识点',
           html: 'HTML/CSS',
-          js: 'JavaScript基础知识',
           network: '浏览器与网络',
           webpack: 'webpack',
+          coding: '编程题',
           note: '笔记',
           race: '比赛记录',
           read: '阅读',
           calendar: '比赛日历',
-          analysis: '源码阅读'
+          analysis: '源码阅读',
+          interview: '面试题',
         }
       })
     ],

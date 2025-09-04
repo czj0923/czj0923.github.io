@@ -7,7 +7,7 @@ date: 2022/07/07
 
 ## 防抖debounce
 
-```
+``` js
 function debounce(fn,delay){
     let timer = null
     return function(){
@@ -23,7 +23,7 @@ function debounce(fn,delay){
 
 ## 节流throttle
 
-```
+``` js
 function throttle(fn,delay){
     let timer = null
     return function(){
@@ -41,7 +41,7 @@ function throttle(fn,delay){
 
 ## new的过程
 
-```
+``` js
 function _new(fn,...args){
     let obj = {}
     Object.setPrototypeOf(obj,fn.prototype)
@@ -52,7 +52,7 @@ function _new(fn,...args){
 
 ## 深拷贝deepClone
 
-```
+``` js
 function deepClone(target,cache=new WeakMap()){
     if(!(target instanceof Object)) return target
     if(cache.get(target)){
@@ -84,7 +84,7 @@ function deepClone(target,cache=new WeakMap()){
 
 ## instanceof
 
-```
+``` js
 function myInstanceof(L,R){
     if(Object(L) !== L) return false
     let proto = Object.getPropertyOf(L)
@@ -100,7 +100,7 @@ function myInstanceof(L,R){
 
 ## promise.all
 
-```
+``` js
 Promise.myAll = function(promiseList){
     let pArr = Array.from(promiseList)
     let result=[]
@@ -121,7 +121,7 @@ Promise.myAll = function(promiseList){
 
 ## promise.race
 
-```
+``` js
 Promise.myRace = function(promiseList){
     let pArr = Array.from(promiseList)
     let isUse = false
@@ -145,7 +145,7 @@ Promise.myRace = function(promiseList){
 
 ## call
 
-```
+``` js
 Function.prototype.mycall=function(ctx,...args){
     let _ctx = ctx == undefined ? window : ctx
     let fn = Symbol('fn')
@@ -159,7 +159,7 @@ Function.prototype.mycall=function(ctx,...args){
 
 ## apply
 
-```
+``` js
 Function.prototype.myapply=function(ctx,arr){
     let _ctx = ctx == undefined ? window : ctx
     let fn = Symbol('fn')
