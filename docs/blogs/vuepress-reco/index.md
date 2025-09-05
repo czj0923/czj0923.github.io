@@ -11,10 +11,10 @@ categories:
 ## 1
 
 之前github自动部署失败了，一直没管，最近想起来修改，查看git actions报错日志，发现执行到pnpm run build成功之后就没有退出，导致无法执行下一步。
-![alt text](image-1.png)
+![](./img/1.png)
 最终发现是clock.vue这个组件的原因
 因为vuepress是服务端渲染的，不能在created使用setInterval之类的定时器。
-![alt text](image.png)
+![](./img/2.png)
 把定时器放到mounted里面就可以了
 
 ## 2

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { sidebar } from './sidebar';
-import viteConfig from './vite.config'
+import viteConfig from './vite.config';
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -42,7 +42,7 @@ export default defineConfig({
         type: 'text/javascript',
         src: '/my.js'
       }
-    ],
+    ]
   ],
   vite: viteConfig,
   themeConfig: {
@@ -59,7 +59,9 @@ export default defineConfig({
       prev: '上一篇',
       next: '下一篇'
     },
-
+    search: {
+      provider: 'local'
+    },
     // 设置logo
     logo: '/avatar.jpg',
     nav: [
@@ -131,7 +133,7 @@ export default defineConfig({
         text: '其他',
         items: [
           { text: '时钟罗盘', link: '/other/clock' },
-          { text: '参赛地图', link: '/other/map' },
+          { text: '参赛地图', link: '/other/map' }
         ]
       }
     ],
@@ -151,7 +153,7 @@ export default defineConfig({
       copyright: 'Copyright © 2021-present Cao Zhijie'
     }
   },
-  markdown:{
+  markdown: {
     lineNumbers: true,
     image: {
       // 图片懒加载
