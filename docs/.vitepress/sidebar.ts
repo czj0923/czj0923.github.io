@@ -5,7 +5,6 @@ export const sidebar = {
       items: [
         {
           text: '按钮 Button',
-          docFooterText: '111111',
           link: '/component/button'
         }
       ]
@@ -123,40 +122,6 @@ export const sidebar = {
       ]
     }
   ],
-  '/ride/': [
-    {
-      text: '笔记',
-      items: [
-        {
-          text: '骑行攻略',
-          link: '/ride/a-1'
-        }
-      ]
-    }
-    // {
-    //   text: '记录',
-    //   children: ['b-1/']
-    // }
-  ],
-  '/climbing/': [
-    {
-      text: '笔记',
-      items: [
-        {
-          text: '爬山攻略',
-          link: '/climbing/a-1'
-        },
-        {
-          text: '杭州徒步登山线路推荐',
-          link: '/climbing/a-2/'
-        },
-        {
-          text: '标毅线首刷',
-          link: '/climbing/a-3/'
-        }
-      ]
-    }
-  ],
   '/interview/': [
     {
       text: '前端八股文',
@@ -226,5 +191,5 @@ export const sidebar = {
         }
       ]
     }
-  ]
+  ],
 };

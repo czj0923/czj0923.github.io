@@ -7,85 +7,59 @@ tags:
   - vscode
 ---
 
-# vscode常用插件推荐
+# vscode 常用插件推荐
 
-这里列举的是我使用vscode所用到的插件
+这里列举的是我使用 vscode 所用到的插件
 
-## 1.Chinese (Simplified) (简体中文)
+## 主题
 
-适用于 VS Code 的中文（简体）语言包。
-![](./img/1.webp)
+| 插件名              | 插件 ID                       | 插件描述           |
+| ------------------- | ----------------------------- | ------------------ |
+| One Dark Pro        | `zhuangtongfa.Material-theme` | 最受欢迎的暗黑主题 |
+| Material Icon Theme | `pkief.material-icon-theme`   | 拥有超多的文件图标 |
 
-## 2.Auto Rename Tag
+## HTML 相关
 
-同步修改 `HTML/XML`标签。
-![](./img/2.webp)
+| 插件名          | 插件 ID                         | 插件描述                         |
+| --------------- | ------------------------------- | -------------------------------- |
+| Auto Rename Tag | `formulahendry.auto-rename-tag` | 自动重命名配对的 HTML / XML 标签 |
+| Auto Close Tag  | `formulahendry.auto-close-tag`  | 自动添加 HTML / XML 关闭标签     |
 
-![](./img/3.webp)
+## CSS 相关
 
-## 3.open in browser
+| 插件名    | 插件 ID             | 插件描述                             |
+| --------- | ------------------- | ------------------------------------ |
+| Easy LESS | `mrcrowl.easy-less` | 保存时自动将 `less` 自动编译为 `css` |
+| px to rem | `sainoba.px-to-rem` | `px` 和 `rem` 互相转换               |
 
-提供右键菜单选项，一键在浏览器打开`html`文件。
-![](./img/4.webp)
-可以选择在默认浏览器打开或者选择自己想用的浏览器打开。
-![](./img/5.webp)
+## 语法支持与代码格式检查
+| 插件名                    | 插件 ID              | 插件描述               |
+| ------------------------- | -------------------- | ---------------------- |
+|Vue (Official)|`vue.volar`|原`volar`，vue3建议使用此插件|
+| Vue Peek | `dariofuzinato.vue-peek` | vue组件跳转 |
+|ESLint|`dbaeumer.vscode-eslint`|	将 ESLint 集成到 VSCode 中|
+|Prettier - Code formatter	|`esbenp.prettier-vscode`|代码格式化|
+|HTML CSS Support|`ecmel.vscode-html-css`|写 CSS 代码快捷神器|
 
-## 4.Live Server
+## AI 代码提示
 
-开启一个实时的本地服务器。
-![](./img/6.jpeg)
-一个非常好用的插件，相比于`open in browser`每次保存文件后到浏览器都要刷新才能看到最新的变化，有了这个插件，就可以实时监听文件的变化，自动刷新。真的非常推荐刚开始学`html`，`css`，`js`的同学使用这个插件学习，很方便。
-![](./img/7.webp)
+| 插件名                    | 插件 ID              | 插件描述               |
+| ------------------------- | -------------------- | ---------------------- |
+| 文心快码 ( Baidu Comate ) | `baiducomate.comate` | 百度的 AI 编码辅助工具 |
 
-## 5.Path Intellisense
+## 开发体验提升
 
-智能路径补全。
-![](./img/8.webp)
-其实VSCode对大部分都是有路径感知的，这个插件的一个比较好的功能是配置路径别名，用框架写项目的时候用的会比较多。
-![](./img/9.webp)
+| 插件名                                                    | 插件 ID                                  | 插件描述                                     |
+| --------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| Path Intellisense                                         | `christian-kohler.path-intellisense`     | 自动补全文件路径                             |
+| GitLens — Git supercharged                                | `eamodio.gitlens`                        | 增强构建在 VSCode 中的 Git 功能              |
+| Chinese (Simplified) Language Pack for Visual Studio Code | `ms-ceintl.vscode-language-pack-zh-hans` | VSCode 中文语言包                            |
+| Live Server                                               | `ritwickdey.LiveServer`                  | 启动具有实时重新加载功能的本地开发服务       |
+| open in browser                                           | `techer.open-in-browser`                 | 提供右键菜单选项，一键在浏览器打开`html`文件 |
+|Import Cost|`wix.vscode-import-cost`|在编辑器中显示导入/需要包的大小|
 
-## 6.Easy LESS
+## 其他
 
-它可以直接编译less 自动保存为css文件
-![](./img/10.png)
-
-## 7.JavaScript (ES6) code snippets
-
-`es6`等代码块，语法提示
-![](./img/11.webp)
-
-## 8.One Dark Pro
-
-最受欢迎的暗黑主题，也是VSCode中下载量最高的主题。
-![](./img/13.jfif)
-
-## 9.Material Icon Theme
-
-拥有超多的文件图标，下载量也是最高。
-
-## 10.GitLens
-
-Git历史记录
-![](./img/14.png)
-
-## 11.CSS Peek
-
-css定位器
-
-## 12.Auto Close Tag
-
-输入开始标签后，自动添加结束标签。
-![](./img/15.png)
-
-## 13.HTML CSS Support
-
-在VScode中提示CSS相关扩展 这是写CSS代码快捷神器
-![](./img/16.png)
-
-## 14.Volar
-
-随着 Vue3 正式版发布，Vue 团队官方推荐 Volar 插件来代替 Vetur 插件，不仅支持 Vue3 语言高亮、语法检测，还支持 TypeScript 和基于 vue-tsc 的类型检查功能。
-
-## 15.Vue Peek
-
-vue组件跳转
+| 插件名   | 插件 ID              | 插件描述             |
+| -------- | -------------------- | -------------------- |
+| 韭菜盒子 | `giscafer.leek-fund` | 看股票、基金实时数据 |

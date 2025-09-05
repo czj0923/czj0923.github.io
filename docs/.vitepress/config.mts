@@ -1,9 +1,6 @@
 import { defineConfig } from 'vitepress';
-//import { sidebar } from './sidebar';
-import { fileURLToPath } from 'node:url'
-import autoSidebar from './plugins/vite-plugin-auto-sidebar';
-import Components from 'unplugin-vue-components/vite';
-import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+import { sidebar } from './sidebar';
+import viteConfig from './vite.config'
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -47,48 +44,7 @@ export default defineConfig({
       }
     ],
   ],
-  vite: {
-    plugins: [
-      // Components({
-      //   resolvers: [AntDesignVueResolver()]
-      // }),
-      autoSidebar({
-        dir: 'docs',
-        ignoreDirList: ['public', 'blogs', 'other'],
-        navTextMap: {
-          js: 'JavaScript基础知识',
-          es6: 'ES6常用知识点',
-          html: 'HTML/CSS',
-          network: '浏览器与网络',
-          webpack: 'webpack',
-          coding: '编程题',
-          note: '笔记',
-          race: '比赛记录',
-          read: '阅读',
-          calendar: '比赛日历',
-          analysis: '源码阅读',
-          interview: '面试题',
-        }
-      })
-    ],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern-compiler'
-        }
-      }
-    },
-    resolve: {
-      alias: [
-        //{
-        //  find: /^.*\/VPNavBar\.vue$/,
-        //  replacement: fileURLToPath(
-        //    new URL('./components/custom-nav-bar.vue', import.meta.url)
-        //  )
-        //}
-      ]
-    }
-  },
+  vite: viteConfig,
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
@@ -113,10 +69,9 @@ export default defineConfig({
         link: '/blogs/'
       },
       {
-        text: '工具',
+        text: '提效工具',
         items: [
-          { text: '时钟罗盘', link: '/other/clock' },
-          { text: '参赛地图', link: '/other/map' },
+          { text: '环境配置', link: '/other/configuration' },
           { text: '在线工具', link: '/other/nav' },
           { text: '常用导航', link: '/other/web-nav' }
         ]
@@ -171,9 +126,16 @@ export default defineConfig({
           }
         ]
       },
-      { text: '关于我', link: '/other/introduce' }
+      { text: '关于我', link: '/other/introduce' },
+      {
+        text: '其他',
+        items: [
+          { text: '时钟罗盘', link: '/other/clock' },
+          { text: '参赛地图', link: '/other/map' },
+        ]
+      }
     ],
-    sidebar: {}, // 插件生成
+    sidebar,
     socialLinks: [
       {
         icon: 'github',

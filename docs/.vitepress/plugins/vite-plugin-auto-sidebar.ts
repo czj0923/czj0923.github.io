@@ -5,9 +5,10 @@ import fs from 'node:fs';
 import matter from 'gray-matter';
 
 interface ConfigInterface {
-  dir?: string;
-  ignoreDirList?: string[];
-  navTextMap?: Record<string, string>;
+  dir?: string; // 文件夹路径，默认为当前工作目录下的docs文件夹
+  includesDirList?: string[]; // 需要包含的文件夹列表，不传包含所有文件夹
+  ignoreDirList?: string[]; // 忽略的文件夹列表，不传忽略默认列表
+  navTextMap?: Record<string, string>; // 导航文本映射，用于自定义导航文本
 }
 
 interface SidebarItemInterface {
@@ -21,12 +22,20 @@ const defaultIgnoreList = ['node_modules', 'dist', '.vitepress'];
 const workRoot = process.cwd();
 
 function generateSidebar(config) {
-  const { dir, ignoreDirList, navTextMap } = config;
+  const { dir, includesDirList, ignoreDirList, navTextMap } = config;
   const sideBar = {};
+
+  let patterns = [];
+  if (Array.isArray(includesDirList) && includesDirList.length > 0) {
+    for (let path of includesDirList) {
+      patterns.push(`${path}/**/*.md`);
+    }
+  }
+
   // 忽略文件夹列表
   const ignore = ignoreDirList.map((item) => `${item}/**/*.md`);
 
-  const paths = fg.sync('**/*.md', {
+  const paths = fg.sync(patterns, {
     cwd: dir,
     deep: 5,
     dot: false,
@@ -56,13 +65,6 @@ function generateSidebar(config) {
     let currentPath = '';
     segments.forEach((seg, index) => {
       const isLast = segments.length - 1 === index;
-      // 为了实现排序，规定需要实现排序的md文件以数字+斜杠+文件名来命名，比如01-test.md，这里是为了去除数字
-      // if (isLast && /^\d{1,3}-/.test(seg)) {
-      //   const matches = seg.match(/^\d{1,3}-([a-zA-Z-]+)/);
-      //   if (matches) {
-      //     seg = matches[1] + '.md';
-      //   }
-      // }
       currentPath += `/${seg}`;
       let isMd = false;
       if (/.md$/i.test(seg)) {
@@ -114,30 +116,23 @@ function getMdInfo(path) {
 }
 
 export default function VitePluginAutoSidebar(optConfig: ConfigInterface) {
-  const { dir = 'docs', ignoreDirList = [], navTextMap = {} } = optConfig;
+  const {
+    dir = 'docs',
+    includesDirList = [],
+    ignoreDirList = [],
+    navTextMap = {}
+  } = optConfig;
   return {
     name: 'VitePluginAutoSidebar',
     async config(config) {
       const options = {
         dir,
+        includesDirList,
         ignoreDirList: [...ignoreDirList, ...defaultIgnoreList],
         navTextMap
       };
 
       const sideBar = await generateSidebar(options);
-
-      // 排序
-      const sortedKeys = Object.values(navTextMap);
-      Object.keys(sideBar).forEach((key) => {
-        const item = sideBar[key];
-        if (Array.isArray(item[0].items)) {
-          item[0].items.sort((a, b) => {
-            const indexA = sortedKeys.indexOf(a.text);
-            const indexB = sortedKeys.indexOf(b.text);
-            return indexA - indexB;
-          });
-        }
-      });
 
       // 如果某个分类下只有一个子元素，并且该子元素下的items下的每个元素items为空，则把它的items提到父目录
       // 这里是为了如果某个一级目录下都是md文件，那么以该一级目录作为目录名
@@ -150,8 +145,13 @@ export default function VitePluginAutoSidebar(optConfig: ConfigInterface) {
           }
         }
       });
+      console.log(sideBar, 'sideBar');
 
-      config.vitepress.site.themeConfig.sidebar = sideBar;
+      // 与现有配置合并
+      config.vitepress.site.themeConfig.sidebar = {
+        ...config.vitepress.site.themeConfig.sidebar,
+        ...sideBar
+      };
       console.log(chalk.blue('[sidebar]'), chalk.green('生成侧边栏数据成功'));
       return config;
     }

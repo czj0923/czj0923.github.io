@@ -1,6 +1,5 @@
 <template>
   <div>
-    <date-picker/>
     <div id="container"></div>
     <Modal :cancel-button-props="{ style: { display: 'none' } }" @ok="visible = false" v-model:open="visible" title="比赛详情">
       <div class="item">
