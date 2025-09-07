@@ -1,6 +1,6 @@
 import DefaultTheme from 'vitepress/theme';
 // 自定义样式
-import './style.scss';
+import './style/index.scss';
 import MyLayout from './layout/index.vue';
 import Directives from './plugins/directives';
 import batchRegister from './plugins/batch-register';

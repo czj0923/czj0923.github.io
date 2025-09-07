@@ -84,12 +84,12 @@ export default {
     border: 1px solid #f6f6f7;
     transition: all 0.25s;
     border-radius: 8px;
-    background-color: #f6f6f7;
+    background-color: var(--vp-c-bg-soft);
     padding: 12px;
+    text-decoration: none;
 
     &:hover {
       border-color: #00a98e;
-      background-color: #f9f9fa;
       box-shadow:
         0 3px 12px rgba(0, 0, 0, 0.07),
         0 1px 4px rgba(0, 0, 0, 0.07);
@@ -130,14 +130,14 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        color: #3c3c43;
+        color: var(--vp-c-text-1);
       }
     }
 
     .desc {
       font-size: 12px;
       line-height: 1.5;
-      color: rgba(60, 60, 67, 0.75);
+      color: var(--vp-c-text-2);
       text-overflow: ellipsis;
       -webkit-line-clamp: 2;
       display: -webkit-box;
