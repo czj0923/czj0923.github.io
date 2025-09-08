@@ -48,5 +48,7 @@ features:
     linkText: 前往
 ---
 
+<home-underline />
+<!-- <confetti/> -->
 <h2 style="text-align:center;">今天码了没</h2>
 <img style="width: 100%;" src="https://ghchart.rshah.org/czj0923" alt="czj0923's Github chart" />

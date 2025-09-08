@@ -19,6 +19,9 @@ categories:
 
 ## 对 vitepress 进行改造
 
+参考：[vitepress美化教程](https://vitepress.yiov.top/style.html)  
+以下是我自己的改造  
+
 ### 1. 自动生成侧边栏
 
 vitepress 是基于 vite 的，所以可以写一个 vite 插件来自动生成侧边栏。  
@@ -43,10 +46,9 @@ vitepress 是基于 vite 的，所以可以写一个 vite 插件来自动生成�
 ### 3. 博客列表页
 参考[构建时数据加载](https://vitejs.cn/vitepress/guide/data-loading)  
 先获取所有博客文章，然后给页面返回一个博客列表的数据结构渲染  
+同时实现了博客列表的滚动加载
 
+:::code-group
 <<< @/.vitepress/utils/blogs.data.ts
-
-### 4.在vitepress中设置ant-design-vue组件为中文
-由于`vitepress`根组件并不是像传统 `Vue` 应用那样显式定义在一个特定的文件中，所以需要自定义布局，使用`ConfigProvider`包裹在布局组件外层，如下：
-
-<<< @/.vitepress/theme/layout/index.vue
+<<< ../index.md
+:::

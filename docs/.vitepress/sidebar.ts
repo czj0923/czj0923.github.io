@@ -65,7 +65,7 @@ export const sidebar = {
       items: [
         {
           text: 'ES6常用知识点',
-          link: '/frontend/es6/'
+          link: '/frontend/es6/es6'
         }
       ]
     },

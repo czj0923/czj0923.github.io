@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress';
 import { sidebar } from './sidebar';
-import viteConfig from './vite.config';
+import {
+  groupIconMdPlugin,
+  groupIconVitePlugin
+} from 'vitepress-plugin-group-icons';
+import autoSidebar from './plugins/vite-plugin-auto-sidebar';
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -44,7 +48,43 @@ export default defineConfig({
       }
     ]
   ],
-  vite: viteConfig,
+  vite: {
+    plugins: [
+      // 不需要排序的侧边栏可以交给插件处理
+      autoSidebar({
+        dir: 'docs',
+        ignoreDirList: ['public'],
+        includesDirList: [
+          'run',
+          'trail',
+          'climbing',
+          'ride',
+          'calendar',
+          'analysis',
+          'php'
+        ],
+        navTextMap: {
+          calendar: '比赛日历',
+          climbing: '笔记',
+          ride: '笔记',
+          note: '笔记',
+          race: '比赛记录',
+          analysis: '源码解析'
+        }
+      }),
+      groupIconVitePlugin()
+    ]
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler'
+      }
+    }
+  },
+  resolve: {
+    alias: []
+  },
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
@@ -165,6 +205,15 @@ export default defineConfig({
       dangerLabel: '危险',
       infoLabel: '信息',
       detailsLabel: '详细信息'
+    },
+    // 组件插入h1标题下
+    config: (md) => {
+      md.use(groupIconMdPlugin);
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+        let htmlResult = slf.renderToken(tokens, idx, options);
+        if (tokens[idx].tag === 'h1') htmlResult += `<article-metadata />`;
+        return htmlResult;
+      };
     }
   }
 });

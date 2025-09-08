@@ -1,3 +1,10 @@
 @use "./style.scss";
 @use "./blur.scss";
 @use "./hidden.scss";
+@use "./vp-code-group.scss"; // 代码组Mac分格
+@use "./vp-code.scss"; // 代码块Mac分格
+@use "./custom-block.scss"; 
+@use "./rainbow.scss"; // 彩虹渐变
+// @use "./vp-code-title.scss"; // 代码块标题
+@use "./sidebarIcon.scss"; // 侧边栏样式
+@use "./blockquote.scss"; // 引用样式
