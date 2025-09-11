@@ -73,17 +73,17 @@ export default defineConfig({
         }
       }),
       groupIconVitePlugin()
-    ]
-  },
-  css: {
-    preprocessorOptions: {
-      scss: {
-        api: 'modern-compiler'
+    ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler'
+        }
       }
+    },
+    resolve: {
+      alias: []
     }
-  },
-  resolve: {
-    alias: []
   },
   themeConfig: {
     // 展示 2,3 级标题在目录中

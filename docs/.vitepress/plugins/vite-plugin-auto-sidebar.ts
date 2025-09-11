@@ -145,7 +145,7 @@ export default function VitePluginAutoSidebar(optConfig: ConfigInterface) {
           }
         }
       });
-      console.log(sideBar, 'sideBar');
+      //console.log(sideBar, 'sideBar');
 
       // 与现有配置合并
       config.vitepress.site.themeConfig.sidebar = {
