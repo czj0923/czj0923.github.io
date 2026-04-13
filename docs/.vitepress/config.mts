@@ -51,27 +51,27 @@ export default defineConfig({
   vite: {
     plugins: [
       // 不需要排序的侧边栏可以交给插件处理
-      autoSidebar({
-        dir: 'docs',
-        ignoreDirList: ['public'],
-        includesDirList: [
-          'run',
-          'trail',
-          'climbing',
-          'ride',
-          'calendar',
-          'analysis',
-          'php'
-        ],
-        navTextMap: {
-          calendar: '比赛日历',
-          climbing: '笔记',
-          ride: '笔记',
-          note: '笔记',
-          race: '比赛记录',
-          analysis: '源码解析'
-        }
-      }),
+      // autoSidebar({
+      //   dir: 'docs',
+      //   ignoreDirList: ['public'],
+      //   includesDirList: [
+      //     'run',
+      //     'trail',
+      //     'climbing',
+      //     'ride',
+      //     'calendar',
+      //     'analysis',
+      //     'php'
+      //   ],
+      //   navTextMap: {
+      //     calendar: '比赛日历',
+      //     climbing: '笔记',
+      //     ride: '笔记',
+      //     note: '笔记',
+      //     race: '比赛记录',
+      //     analysis: '源码解析'
+      //   }
+      // }),
       groupIconVitePlugin()
     ],
     css: {
@@ -166,6 +166,15 @@ export default defineConfig({
               { text: '数据库', link: '/php/sql' }
             ]
           }
+        ]
+      },
+      {
+        text: 'leetcode',
+        items: [
+          {
+            text: 'hot100题解',
+            link: '/leetcode/hot100/01'
+          },
         ]
       },
       { text: '关于我', link: '/other/introduce' },
