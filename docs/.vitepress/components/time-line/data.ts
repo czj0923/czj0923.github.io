@@ -121,6 +121,16 @@ const record = {
       title: '2024年12月1日',
       content: '半马的10公里分段 PB 40:58',
       content2: '2024乍浦半程马拉松'
+    },
+    {
+      title: '2026年4月19日',
+      content: 'PB 40:31',
+      content2: '2026无锡马山十公里精英赛'
+    },
+    {
+      title: '2026年4月26日',
+      content: 'PB 39:48',
+      content2: '2026嘉善大云十公里精英赛'
     }
   ],
   3: [
