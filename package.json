@@ -5,7 +5,8 @@
   "author": "Cao Zhijie",
   "license": "MIT",
   "engines": {
-    "node": "22.13.0"
+    "node": "20.19.1",
+    "pnpm": "10.13.1"
   },
   "scripts": {
     "dev": "vitepress dev docs",
