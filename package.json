@@ -4,6 +4,7 @@
   "private": true,
   "author": "Cao Zhijie",
   "license": "MIT",
+  "node": ">=22.13",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
