@@ -582,7 +582,7 @@ export const sidebar = {
         {
           text: '探索地图',
           collapsed: false,
-          link: '/travel/map',
+          link: '/travel/explore',
           items: []
         },
         {
@@ -593,6 +593,24 @@ export const sidebar = {
               text: '青岛',
               collapsed: false,
               link: '/travel/guide/shandong/qingdao',
+              items: []
+            },
+            {
+              text: '泰安',
+              collapsed: false,
+              link: '/travel/guide/shandong/taian',
+              items: []
+            },
+            {
+              text: '威海',
+              collapsed: false,
+              link: '/travel/guide/shandong/weihai',
+              items: []
+            },
+            {
+              text: '烟台',
+              collapsed: false,
+              link: '/travel/guide/shandong/yantai',
               items: []
             }
           ]
@@ -605,6 +623,18 @@ export const sidebar = {
               text: '嘉兴',
               collapsed: false,
               link: '/travel/guide/zhejiang/jiaxing',
+              items: []
+            }
+          ]
+        },
+        {
+          text: '江苏',
+          collapsed: false,
+          items: [
+            {
+              text: '连云港',
+              collapsed: false,
+              link: '/travel/guide/jiangsu/lianyungang',
               items: []
             }
           ]
