@@ -137,7 +137,7 @@ export const sidebar = {
         {
           text: '2023龙游马拉松',
           collapsed: false,
-          link: '/run/race/2023-5-2.md',
+          link: '/run/race/2023-4-30.md',
           items: []
         },
         {
