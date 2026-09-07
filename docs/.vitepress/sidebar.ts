@@ -137,205 +137,205 @@ export const sidebar = {
         {
           text: '2023龙游马拉松',
           collapsed: false,
-          link: '/run/race/01.md',
+          link: '/run/race/2023-5-2.md',
           items: []
         },
         {
           text: '2023嘉善大云中国10公里精英赛',
           collapsed: false,
-          link: '/run/race/02.md',
+          link: '/run/race/2023-5-20.md',
           items: []
         },
         {
           text: '2023江苏太湖精英赛',
           collapsed: false,
-          link: '/run/race/03.md',
+          link: '/run/race/2023-6-24.md',
           items: []
         },
         {
           text: '2023苏州太湖马拉松',
           collapsed: false,
-          link: '/run/race/04.md',
+          link: '/run/race/2023-10-22.md',
           items: []
         },
         {
           text: '2023 桐庐半程马拉松',
           collapsed: false,
-          link: '/run/race/05.md',
+          link: '/run/race/2023-10-29.md',
           items: []
         },
         {
           text: '2023河山马拉松',
           collapsed: false,
-          link: '/run/race/06.md',
+          link: '/run/race/2023-11-12.md',
           items: []
         },
         {
           text: '2023苏州环太湖1号公路马拉松',
           collapsed: false,
-          link: '/run/race/07.md',
+          link: '/run/race/2023-11-19.md',
           items: []
         },
         {
           text: '2023年12月3日 桐乡半程马拉松',
           collapsed: false,
-          link: '/run/race/08.md',
+          link: '/run/race/2023-12-3.md',
           items: []
         },
         {
           text: '2023诸暨西施马拉松',
           collapsed: false,
-          link: '/run/race/09.md',
+          link: '/run/race/2023-12-10.md',
           items: []
         },
         {
           text: '2023德清莫干山竹海马拉松',
           collapsed: false,
-          link: '/run/race/10.md',
+          link: '/run/race/2023-12-24.md',
           items: []
         },
         {
           text: '嘉兴10公里大众等级达标系列赛',
           collapsed: false,
-          link: '/run/race/11.md',
+          link: '/run/race/2023-12-31.md',
           items: []
         },
         {
           text: '2024杭州梦想小镇半程马拉松',
           collapsed: false,
-          link: '/run/race/12.md',
+          link: '/run/race/2024-3-31.md',
           items: []
         },
         {
           text: '2024苏州东太湖半程马拉松',
           collapsed: false,
-          link: '/run/race/13.md',
+          link: '/run/race/2024-4-7.md',
           items: []
         },
         {
           text: '2024苏州马拉松',
           collapsed: false,
-          link: '/run/race/14.md',
+          link: '/run/race/2024-4-14.md',
           items: []
         },
         {
           text: '2024苏州太湖数字半程马拉松',
           collapsed: false,
-          link: '/run/race/15.md',
+          link: '/run/race/2024-5-5.md',
           items: []
         },
         {
           text: '2024余姚牟山湖半程马拉松',
           collapsed: false,
-          link: '/run/race/16.md',
+          link: '/run/race/2024-5-26.md',
           items: []
         },
         {
           text: '2024泰州马拉松',
           collapsed: false,
-          link: '/run/race/18.md',
+          link: '/run/race/2024-10-20.md',
           items: []
         },
         {
           text: '2024神仙湖半程马拉松',
           collapsed: false,
-          link: '/run/race/19.md',
+          link: '/run/race/2024-10-26.md',
           items: []
         },
         {
           text: '2024河山乡村半程马拉松',
           collapsed: false,
-          link: '/run/race/20.md',
+          link: '/run/race/2024-11-9.md',
           items: []
         },
         {
           text: '2024绍兴马拉松',
           collapsed: false,
-          link: '/run/race/21.md',
+          link: '/run/race/2024-11-10.md',
           items: []
         },
         {
           text: '2024沪浙乡村半程马拉松',
           collapsed: false,
-          link: '/run/race/22.md',
+          link: '/run/race/2024-11-17.md',
           items: []
         },
         {
           text: '2024嘉兴马拉松',
           collapsed: false,
-          link: '/run/race/23.md',
+          link: '/run/race/2024-11-24.md',
           items: []
         },
         {
           text: '2024乍浦山海半程马拉松',
           collapsed: false,
-          link: '/run/race/24.md',
+          link: '/run/race/2024-12-1.md',
           items: []
         },
         {
           text: '2024桐乡半程马拉松',
           collapsed: false,
-          link: '/run/race/25.md',
+          link: '/run/race/2024-12-8.md',
           items: []
         },
         {
           text: '2025苏州马拉松',
           collapsed: false,
-          link: '/run/race/26.md',
+          link: '/run/race/2025-3-2.md',
           items: []
         },
         {
           text: '2025崇福乡村健康跑',
           collapsed: false,
-          link: '/run/race/27.md',
+          link: '/run/race/2025-3-22.md',
           items: []
         },
         {
           text: '2025临平半程马拉松',
           collapsed: false,
-          link: '/run/race/28.md',
+          link: '/run/race/2025-3-23.md',
           items: []
         },
         {
           text: '2025杭州梦想小镇半程马拉松',
           collapsed: false,
-          link: '/run/race/29.md',
+          link: '/run/race/2025-3-30.md',
           items: []
         },
         {
           text: '2025海宁追潮半程马拉松',
           collapsed: false,
-          link: '/run/race/30.md',
+          link: '/run/race/2025-4-6.md',
           items: []
         },
         {
           text: '2025上海佘山半程马拉松',
           collapsed: false,
-          link: '/run/race/31.md',
+          link: '/run/race/2025-4-13.md',
           items: []
         },
         {
           text: '2025石门乡村健康跑',
           collapsed: false,
-          link: '/run/race/32.md',
+          link: '/run/race/2025-4-19.md',
           items: []
         },
         {
           text: '2025富阳半程马拉松',
           collapsed: false,
-          link: '/run/race/33.md',
+          link: '/run/race/2025-4-20.md',
           items: []
         },
         {
           text: '2025中国田径协会10公里精英赛',
           collapsed: false,
-          link: '/run/race/34.md',
+          link: '/run/race/2025-5-11.md',
           items: []
         },
         {
           text: '2025西湖半程马拉松',
           collapsed: false,
-          link: '/run/race/35.md',
+          link: '/run/race/2025-5-25.md',
           items: []
         }
       ]
@@ -567,4 +567,18 @@ export const sidebar = {
       ]
     }
   ],
+  '/travel/': [
+    {
+      text: '旅行指南',
+      collapsed: false,
+      link: '/travel/index.md',
+      items: []
+    },
+    {
+      text: '探索',
+      collapsed: false,
+      link: '/travel/explore.md',
+      items: []
+    },
+  ]
 };

@@ -32,9 +32,9 @@ features:
     link: '/run/note/01'
     linkText: 查看
   - icon: 🧰
-    title: vueuse源码
-    details: 工欲善其事，必先利其器
-    link: '/analysis/vueuse/'
+    title: 旅行
+    details: 行至水穷云起处，山河万里入襟怀
+    link: '/travel'
     linkText: 查看
   - icon: 🗺️
     title: 导航
