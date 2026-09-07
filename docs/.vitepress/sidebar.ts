@@ -385,7 +385,7 @@ export const sidebar = {
         {
           text: '临平之巅山径赛',
           collapsed: false,
-          link: '/trail/race/04.md',
+          link: '/trail/race/2024-3-10.md',
           items: []
         },
         {
@@ -397,43 +397,43 @@ export const sidebar = {
         {
           text: '水口镇越野赛',
           collapsed: false,
-          link: '/trail/race/06.md',
+          link: '/trail/race/2024-6-1.md',
           items: []
         },
         {
           text: '踏云九溪山径赛',
           collapsed: false,
-          link: '/trail/race/07.md',
+          link: '/trail/race/2024-7-7.md',
           items: []
         },
         {
           text: '碧岩寺夜跑',
           collapsed: false,
-          link: '/trail/race/08.md',
+          link: '/trail/race/2024-7-27.md',
           items: []
         },
         {
           text: '2024凯乐石FUGA训练赛光福落日跑',
           collapsed: false,
-          link: '/trail/race/09.md',
+          link: '/trail/race/2024-8-31.md',
           items: []
         },
         {
           text: '拓野钱塘之泗乡奔月赛',
           collapsed: false,
-          link: '/trail/race/10.md',
+          link: '/trail/race/2024-9-17.md',
           items: []
         },
         {
           text: 'salomon月赛诸暨店口站',
           collapsed: false,
-          link: '/trail/race/11.md',
+          link: '/trail/race/2024-9-21.md',
           items: []
         },
         {
           text: 'salomon月赛杭州半山',
           collapsed: false,
-          link: '/trail/race/12.md',
+          link: '/trail/race/2024-9-22.md',
           items: []
         },
         {
@@ -571,14 +571,45 @@ export const sidebar = {
     {
       text: '旅行指南',
       collapsed: false,
-      link: '/travel/index.md',
-      items: []
-    },
-    {
-      text: '探索',
-      collapsed: false,
-      link: '/travel/explore.md',
-      items: []
-    },
+      link: '/travel/',
+      items: [
+        {
+          text: '规划指南',
+          collapsed: false,
+          link: '/travel/',
+          items: []
+        },
+        {
+          text: '探索地图',
+          collapsed: false,
+          link: '/travel/map',
+          items: []
+        },
+        {
+          text: '山东',
+          collapsed: false,
+          items: [
+            {
+              text: '青岛',
+              collapsed: false,
+              link: '/travel/guide/shandong/qingdao',
+              items: []
+            }
+          ]
+        },
+        {
+          text: '浙江',
+          collapsed: false,
+          items: [
+            {
+              text: '嘉兴',
+              collapsed: false,
+              link: '/travel/guide/zhejiang/jiaxing',
+              items: []
+            }
+          ]
+        }
+      ]
+    }
   ]
 };
